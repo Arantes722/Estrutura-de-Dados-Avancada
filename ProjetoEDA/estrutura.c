@@ -5,30 +5,13 @@
 
 int main() {
 
-    Cliente* clientes = NULL;
-    Gestor* gestores = NULL;
-    Meio* meios = NULL;
-    char nome_meio[50];
-    char tipo[50];
-    char nome_utilizador[20];
-    char password[20];
-    int user_tipo; 
-    char nome[50];
-    char email[50];
-    char endereco[100];
-    int idade;
-    float saldo;
-    float preco;
-    char id[50];
-    int disponivel;
-    int quantidade;
-    int nMeios;
+    Cliente* clientes = NULL; //cria um ponteiro chamado "clientes" que aponta para um objeto do tipo "Cliente", e o inicializa com o valor NULL.
+    Gestor* gestores = NULL; // cria um ponteiro chamado "gestores" que aponta para um objeto do tipo "Gestor", e o inicializa com o valor NULL.
+    Meio* meios = NULL; // cria um ponteiro chamado "meios" que aponta para um objeto do tipo "Meio", e o inicializa com o valor NULL.
+    char nome_meio[50], tipo[50], nome_utilizador[50], password[20], nome[50], email[50], endereco[100], id[50];
+    int user_tipo, idade, disponivel, quantidade, nMeios, n; 
+    float saldo, preco, autonomia;
 
-    Meio meioss[3] = {
-        {1, 5.0, 1},
-        {2, 7.5, 1},
-        {3, 10.0, 0}
-    };
 
 
     Cliente cliente = {"cliente1", "123", 0};
@@ -44,136 +27,141 @@ int main() {
         printf("Selecione a opcao:\n");
         scanf("%d", &opcao);
 
-        switch (opcao) {
-            case 1:
+        switch (opcao) { // verifica a opção selecionada pelo usuário
+            case 1: // se for 1, executa o código abaixo
             printf("--------------------------- \n");
-                printf("Insira o nome de utilizador:\n");
-                scanf("%s", &nome_utilizador);
-                printf("Insira a palavra passe:\n");
-                scanf("%s", &password);
+                printf("Insira o nome de utilizador:\n"); // solicita o nome do usuário
+                scanf("%s", &nome_utilizador); // lê o nome do usuário da entrada padrão
+                printf("Insira a palavra passe:\n"); // solicita a senha do usuário
+                scanf("%s", &password); // lê a senha do usuário da entrada padrão
 
+                 // verifica se o nome de usuário e a senha correspondem aos de um cliente
                 if (strcmp(nome_utilizador, cliente.nome_utilizador) == 0 && strcmp(password, cliente.password) == 0) {
                 printf("--------------------------- \n");
-                printf("Bem-vindo, cliente!\n");
+                printf("Bem-vindo, cliente!\n"); // imprime uma mensagem de boas-vindas para o cliente
 
+                // apresenta um menu de opções enquanto o usuário não selecionar a opção "0"
                 while (opcao != 0) {
                                     printf("\nEscolha uma opcao:\n");
-                                    printf("1 - Alugar meio\n");
-                                    printf("2 - Ver meios disponiveis\n");
-                                    printf("3 - Ver saldo\n");
-                                    printf("4 - Carregar saldo\n");
-                                    printf("0 - Sair\n");
+                                    printf("1 - Alugar meio\n"); // oferece a opção de alugar um meio de transporte 
+                                    printf("2 - Ver meios disponiveis\n"); // oferece a opção de ver os meios de transporte disponíveis
+                                    printf("3 - Ver saldo\n"); // oferece a opção de verificar o saldo do cliente
+                                    printf("4 - Carregar saldo\n"); // oferece a opção de carregar o saldo do cliente
+                                    printf("0 - Sair\n");// oferece a opção de sair do programa
                                     
-                                    scanf("%d", &opcao);
+                                    scanf("%d", &opcao); // lê a opção selecionada pelo usuário da entrada padrão
         
-        switch (opcao) {
-            case 1:
-                alugarMeio(meioss, quantidade, &saldo);
-                break;
-            case 2:
-                verMeiosDisponiveis(meios, quantidade);
-                break;
-            case 3:
-                verSaldo(saldo);
-                break;
-            case 4:
-                carregarSaldo(&saldo);
-                break;
+        switch (opcao) {// início da seleção da opção escolhida pelo usuário
+            case 1:// caso a opção escolhida seja 1
+                alugarMeio(meios, quantidade, &saldo);// chama a função alugarMeio, passando o array de meios, a quantidade de meios e o saldo como parâmetros
+                break;// interrompe o switch
+            case 2:// caso a opção escolhida seja 2
+                verMeiosDisponiveis(meios, quantidade);// chama a função verMeiosDisponiveis, passando o array de meios e a quantidade de meios como parâmetros
+                break;// interrompe o switch
+            case 3:// caso a opção escolhida seja 3
+                verSaldo(saldo);// chama a função verSaldo, passando o saldo como parâmetro
+                break;// interrompe o switch
+            case 4:// caso a opção escolhida seja 4
+                carregarSaldo(&saldo);// chama a função carregarSaldo, passando o endereço do saldo como parâmetro
+                break;// interrompe o switch
         }
                 }
-                // código para o menu do cliente
+                // verifica se o nome de usuário e a senha correspondem aos de um gestor
                 } else if (strcmp(nome_utilizador, gestor.nome_utilizador) == 0 && strcmp(password, gestor.password) == 0) {
                 printf("--------------------------- \n");
-                printf("Bem-vindo, gestor!\n");
-                 // código para o menu do administrador
+                printf("Bem-vindo, gestor!\n"); // imprime uma mensagem de boas-vindas para o cliente
+                
 
                                 do {
                     printf("\n");                
-                    printf("Escolha uma opcao:\n");
-                    printf("1. Insercao de novos dados\n");
-                    printf("2. Remocao de dados\n");
-                    printf("3. Alteracao de dados\n");
-                    printf("4. Registo do aluguer de um determinado meio de mobilidade\n");
-                    printf("5. Listagem dos meios de mobilidade eletrica por ordem decrescente de autonomia\n");
-                    printf("6. Listagem dos meios de mobilidade eletrica existentes numa localizacao\n");
-                    printf("0. Sair\n");
+                    printf("Escolha uma opcao:\n"); 
+                    printf("1. Insercao de novos dados\n"); // oferece a opção de inserir novos dados
+                    printf("2. Remocao de dados\n"); // oferece a opção de remover dados
+                    printf("3. Alteracao de dados\n"); // oferece a opção de alterar dados
+                    printf("4. Registo do aluguer de um determinado meio de mobilidade\n"); // oferece a opção de registrar o aluguel de um meio de transporte
+                    printf("5. Listagem dos meios de mobilidade eletrica por ordem decrescente de autonomia\n"); // oferece a opção de listar os meios de transporte eletrônicos por ordem decrescente de autonomia
+                    printf("6. Listagem dos meios de mobilidade eletrica existentes numa localizacao\n"); // oferece a opção de listar os meios de transporte eletrônicos disponíveis em uma determinada localização
+                    printf("0. Sair\n"); // oferece a opção de sair do programa
                     printf("--------------------------- \n");
 
-                    scanf("%d", &opcao);
+                    scanf("%d", &opcao); // lê a opção selecionada pelo usuário da entrada padrão
 
                     switch (opcao) {
-                        case 1:
+                        case 1: // se a opção selecionada for 1
                             do {
-                                printf("1. Inserir novo cliente\n");
-                                printf("2. Inserir novo gestor\n");
-                                printf("3. Inserir novo meio de mobilidade eletrica\n");
-                                printf("4. Guardar dados inseridos\n");
-                                printf("5. Sair\n");
+                                printf("1. Inserir novo cliente\n"); // oferece a opção de inserir um novo cliente
+                                printf("2. Inserir novo gestor\n"); // oferece a opção de inserir um novo gestor
+                                printf("3. Inserir novo meio de mobilidade eletrica\n"); // oferece a opção de inserir um novo meio de transporte eletrônico
+                                printf("4. Guardar dados inseridos\n"); // oferece a opção de salvar os dados inseridos
+                                printf("5. Sair\n"); // oferece a opção de sair do submenu
                                 printf("Selecione uma opcao: ");
 
-                                scanf("%d", &opcao);
+                                scanf("%d", &opcao); // lê a opção selecionada pelo usuário da entrada padrão
 
-                                switch (opcao) {
-                                                case 1:
-                                                        printf("Insira o nome de utilizador: \n");
-                                                        scanf("%s",&nome_utilizador);
-                                                        printf("Insira a password: \n");
-                                                        scanf("%s",&password);
-                                                        printf("Insira o nome: \n");
-                                                        scanf("%s",&nome);
-                                                        printf("Insira o email: \n");
-                                                        scanf("%s",&email);
-                                                        printf("Insira o endereco: \n");
-                                                        scanf("%s",&endereco);
-                                                        printf("Cliente registado com sucesso! \n");
+                                switch (opcao) { //indica o início de um switch/case para a variável opcao.
+                                                case 1: // inicia o primeiro caso em que o valor de opcao é 1.
+                                                        printf("Insira o nome de utilizador: \n"); //exibe a mensagem para o usuário inserir o nome de utilizador.
+                                                        scanf("%s",&nome_utilizador); //lê o valor inserido pelo usuário e armazena na variável nome_utilizador.
+                                                        printf("Insira a password: \n"); //exibe a mensagem para o usuário inserir a senha.
+                                                        scanf("%s",&password); //lê o valor inserido pelo usuário e armazena na variável password.
+                                                        printf("Insira o nome: \n"); //exibe a mensagem para o usuário inserir o nome.
+                                                        scanf("%s",&nome); //lê o valor inserido pelo usuário e armazena na variável nome.
+                                                        printf("Insira o email: \n"); //exibe a mensagem para o usuário inserir o e-mail.
+                                                        scanf("%s",&email); //lê o valor inserido pelo usuário e armazena na variável email.
+                                                        printf("Insira o endereco: \n"); //exibe a mensagem para o usuário inserir o endereço.
+                                                        scanf("%s",&endereco); //lê o valor inserido pelo usuário e armazena na variável endereco.
+                                                        printf("Cliente registado com sucesso! \n"); //exibe a mensagem de sucesso.
                                                      
-                                                        clientes = inserirCliente(clientes,nome_utilizador,password,nome,email,endereco);
+                                                        clientes = inserirCliente(clientes,nome_utilizador,password,nome,email,endereco); //chama a função inserirCliente para inserir um novo cliente na lista de clientes.
 
-                                                        break;
-                                                case 2:
-                                                        printf("Insira o nome de utilizador: \n");
-                                                        scanf("%s",&nome_utilizador);
-                                                        printf("Insira a password: \n");
-                                                        scanf("%s",&password);
-                                                        printf("Insira o nome: \n");
-                                                        scanf("%s",&nome);
-                                                        printf("Insira o email: \n");
-                                                        scanf("%s",&email);
+                                                        break; //indica que o caso foi finalizado.
+                                                case 2: //início do segundo caso do switch
+                                                        printf("Insira o nome de utilizador: \n"); //solicita ao usuário que insira o nome de utilizador do gestor
+                                                        scanf("%s",&nome_utilizador); //lê o nome de utilizador inserido pelo usuário
+                                                        printf("Insira a password: \n"); //solicita ao usuário que insira a password do gestor
+                                                        scanf("%s",&password); //lê a password inserida pelo usuário
+                                                        printf("Insira o nome: \n"); //solicita ao usuário que insira o nome do gestor
+                                                        scanf("%s",&nome); // lê o nome inserido pelo usuário
+                                                        printf("Insira o email: \n"); //solicita ao usuário que insira o email do gestor
+                                                        scanf("%s",&email);//lê o email inserido pelo usuário
+                                                        printf("Gestor registado com sucesso! \n"); //exibe uma mensagem informando que o gestor foi registrado com sucesso
 
+                                                        gestores = inserirGestor(gestores,nome_utilizador,password,nome,email); //chama a função "inserirGestor" para inserir o gestor na lista de gestores
 
-                                                        printf("Gestor registado com sucesso! \n");
-
-                                                        gestores = inserirGestor(gestores,nome_utilizador,password,nome,email);
-
-                                                        break;
+                                                        break; //encerra o segundo caso do switch.
                                                 case 3:
-                                                        printf("Insira o nome do meio: \n");
-                                                        scanf("%s",&nome_meio);
-                                                        printf("Insira o tipo de meio: \n");
-                                                        scanf("%s",&tipo);
-                                                        printf("Insira o preco do meio por hora: \n");
-                                                        scanf("%.2f",&preco);
-                                                        printf("Insira a quantidade de meios destes a adicionar: \n");
-                                                        scanf("%d",&quantidade);
-                                                        printf("Insira a disponibilidade do meio: \n");
-                                                        scanf("%d",&disponivel);
+                                                        printf("Insira o nome do meio: \n"); // pede ao utilizador para inserir o nome do meio
+                                                        scanf("%s",&nome_meio); // lê o nome do meio inserido pelo utilizador
+                                                        printf("Insira o tipo de meio: \n"); // pede ao utilizador para inserir o tipo de meio
+                                                        scanf("%s",&tipo); // lê o tipo de meio inserido pelo utilizador
+                                                        printf("Insira o preco do meio por hora: \n"); // pede ao utilizador para inserir o preço do meio por hora
+                                                        scanf("%f",&preco); // lê o preço do meio por hora inserido pelo utilizador
+                                                        printf("Insira a quantidade de meios destes a adicionar: \n"); // pede ao utilizador para inserir a quantidade de meios a adicionar
+                                                        scanf("%d",&quantidade); // lê a quantidade de meios a adicionar inserida pelo utilizador
+                                                        printf("Insira a disponibilidade do meio: \n"); // pede ao utilizador para inserir a disponibilidade do meio
+                                                        scanf("%d",&disponivel); // lê a disponibilidade do meio inserida pelo utilizador
+                                                        printf("Insira a autonomia do meio: \n"); // pede ao utilizador para inserir a autonomia do meio
+                                                        scanf("%.2f",&autonomia); // lê a autonomia do meio inserida pelo utilizador
 
-                                                        printf("Meio registado com sucesso! \n");
+                                                        printf("Meio registado com sucesso! \n"); // informa o utilizador que o meio foi registado com sucesso
 
-                                                        meios = inserirMeio(meios,nome_meio,tipo,preco,quantidade,disponivel);
+
+                                                        meios = inserirMeio(meios,nome_meio,tipo,preco,quantidade,disponivel,autonomia); // insere o meio na lista de meios
 
                                                         break;
 
                                                 case 4:
-                                                guardarClientes(clientes);
-                                                guardarMeios(meios);
-                                                guardarGestores(gestores);
+                                                guardarClientes(clientes); // guarda a lista de clientes num ficheiro
+                                                guardarMeios(meios); // guarda a lista de meios num ficheiro
+                                                guardarGestores(gestores); // guarda a lista de gestores num ficheiro
+
+                                                printf("Dados guardados com sucesso!\n"); // informa o utilizador que os dados foram guardados com sucesso
                                                 break;
 
                 
                 break;
             case 5:
-                printf("Saindo...\n");
+                printf("Saindo...\n"); // oferece a opção de sair do submenu
                 break;
             default:
                 printf("Opção inválida! Tente novamente.\n");
@@ -186,37 +174,43 @@ int main() {
                         case 2:
                             // Remover dados
                             do {
-                                printf("1. Remover cliente\n");
-                                printf("2. Remover gestor\n");
-                                printf("3. Remover meio de mobilidade eletrica\n");
-                                printf("4. Sair\n");
-                                printf("Selecione uma opcao: ");
+                                printf("1. Remover cliente\n"); //Exibe a opção de remover cliente.
+                                printf("2. Remover gestor\n"); //Exibe a opção de remover gestor.
+                                printf("3. Remover meio de mobilidade eletrica\n"); //Exibe a opção de remover meio de mobilidade elétrica.
+                                printf("4. Sair\n"); //Exibe a opção de sair do menu de remoção de dados.
+                                printf("Selecione uma opcao: "); //Solicita ao usuário que selecione uma opção do menu.
 
-                                scanf("%d", &opcao);
+                                scanf("%d", &opcao); //Recebe a opção selecionada pelo usuário.
 
-                                switch (opcao) {
-                                                case 1:
-                                                        printf("Nome do cliente a remover?\n");
+                                switch (opcao) { //Inicia um switch case para tratar a opção selecionada.
+                                                case 1: //Caso a opção seja "1", o usuário é solicitado a inserir o nome do cliente que deseja remover e a função "removerCliente" é chamada passando como parâmetro a lista de clientes e o nome do cliente a ser removido. Em seguida, exibe uma mensagem informando que o cliente foi removido com sucesso.
+                                                        printf("Nome do cliente a remover: \n");
                                                         scanf("%s",&nome_utilizador);
                                                         clientes = removerCliente(clientes, nome_utilizador);
+
+                                                        printf("Cliente removido com sucesso!\n");
                                                     
                                                         break;
-                                                case 2:
+                                                case 2: //Caso a opção seja "2", o usuário é solicitado a inserir o nome do gestor que deseja remover e a função "removerGestor" é chamada passando como parâmetro a lista de gestores e o nome do gestor a ser removido. Em seguida, exibe uma mensagem informando que o gestor foi removido com sucesso.
                                                         printf("Nome do gestor a remover?\n");
                                                         scanf("%s",&nome_utilizador);
                                                         gestores = removerGestor(gestores, nome_utilizador);
+
+                                                        printf("Gestor removido com sucesso!\n");
                                                     
                                                         break;
-                                                case 3:
+                                                case 3: //Caso a opção seja "3", o usuário é solicitado a inserir o nome do meio de mobilidade elétrica que deseja remover e a função "removerMeio" é chamada passando como parâmetro a lista de meios e o nome do meio a ser removido. Em seguida, exibe uma mensagem informando que o meio foi removido com sucesso.
                                                         printf("Nome do meio de mobilidade a remover?\n");
                                                         scanf("%s",&nome_meio);
                                                         meios = removerMeio(meios, nome_meio);
+
+                                                        printf("Gestor removido com sucesso!\n");
                                                     
                                                         break;
-            case 4:
+            case 4: //Caso a opção seja "4", a mensagem "Saindo..." é exibida e o menu de remoção de dados é finalizado.
                 printf("Saindo...\n");
                 break;
-            default:
+            default: //Caso a opção selecionada pelo usuário não seja nenhuma das opções válidas, exibe a mensagem "Opção inválida! Tente novamente." e o menu é apresentado novamente até que o usuário selecione uma opção válida (com exceção da opção "4" que finaliza o menu). O laço do-while na linha 23 é responsável por manter o menu ativo enquanto o usuário não selecionar a opção "4".
                 printf("Opção inválida! Tente novamente.\n");
                 break;
         }
@@ -237,13 +231,13 @@ int main() {
 
                                 switch (opcao) {
                                                 case 1:
-                                                        
+                                                        alterarDadosCliente(clientes);
                                                         break;
                                                 case 2:
-                                                    
+                                                        alterarDadosGestor(gestores);
                                                         break;
                                                 case 3:
-                
+                                                        alterarDadosMeio(meios);
                                                         break;
                                                 case 4:
                                                     printf("Saindo...\n");
@@ -258,10 +252,10 @@ int main() {
                             break;
                         case 4:
                             // Registrar aluguer
-                            printf("Opcao 4 selecionada.\n");
+                            alugarMeio(meios, quantidade, &saldo);
                             break;
                         case 5:
-                            listarMeios(meios);
+                            ordenarMeiosPorAutonomia(meios, n);
                             break;
                         case 6:
                             // Listar meios de mobilidade elétrica em uma localização
