@@ -1,5 +1,0 @@
-Nome de utilizador: joao;
-Password: 123;
-Nome: joaoo;
-Email: joao@gmail.com;
-Endereco: ruadasroas;
