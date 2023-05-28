@@ -1,0 +1,30 @@
+ID: 5
+Nome do meio: carrinha
+Preco do meio por hora: 10
+Autonomia: 100
+Geolocalizacao: slider.condors.roughness
+
+ID: 3
+Nome do meio: troti
+Preco do meio por hora: 10
+Autonomia: 100
+Geolocalizacao: crewcut.condense.perceive
+
+ID: 1
+Nome do meio: mota
+Preco do meio por hora: 10
+Autonomia: 100
+Geolocalizacao: crewcut.condense.perceive
+
+ID: 2
+Nome do meio: carro
+Preco do meio por hora: 10
+Autonomia: 100
+Geolocalizacao: crewcut.condense.perceive
+
+ID: 4
+Nome do meio: motinha
+Preco do meio por hora: 10
+Autonomia: 100
+Geolocalizacao: spied.contract.bounded
+
