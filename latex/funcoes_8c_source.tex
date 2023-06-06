@@ -1,0 +1,935 @@
+\doxysection{funcoes.\+c}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}registos.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ Cliente*\ inserirCliente(Cliente*\ inicio,\ \textcolor{keywordtype}{char}\ nome\_utilizador[],\ \textcolor{keywordtype}{char}\ password[],\ \textcolor{keywordtype}{char}\ nome[],\ \textcolor{keywordtype}{char}\ email[],\ \textcolor{keywordtype}{char}\ endereco[])\ }
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ Cliente*\ novo\ =\ malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct}\ registo\_cliente));\ \textcolor{comment}{//aloca\ memória\ para\ a\ nova\ estrutura\ "{}Cliente"{}\ usando\ a\ função\ "{}malloc"{}.}}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (novo\ !=\ NULL)}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ strcpy(novo-\/>nome\_utilizador,\ nome\_utilizador);\ \textcolor{comment}{//copia\ o\ "{}nome\_utilizador"{}\ para\ o\ campo\ "{}nome\_utilizador"{}\ da\ nova\ estrutura\ usando\ a\ função\ "{}strcpy"{}.}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ strcpy(novo-\/>password,\ password);\ \textcolor{comment}{//copia\ a\ "{}password"{}\ para\ o\ campo\ "{}password"{}\ da\ nova\ estrutura\ usando\ a\ função\ "{}strcpy"{}.}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ strcpy(novo-\/>nome,\ nome);\ \textcolor{comment}{//copia\ o\ "{}nome"{}\ para\ o\ campo\ "{}nome"{}\ da\ nova\ estrutura\ usando\ a\ função\ "{}strcpy"{}.}}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ strcpy(novo-\/>email,\ email);\ \textcolor{comment}{//copia\ o\ "{}email"{}\ para\ o\ campo\ "{}email"{}\ da\ nova\ estrutura\ usando\ a\ função\ "{}strcpy"{}.}}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ strcpy(novo-\/>endereco,\ endereco);\ \textcolor{comment}{//copia\ o\ "{}endereco"{}\ para\ o\ campo\ "{}endereco"{}\ da\ nova\ estrutura\ usando\ a\ função\ "{}strcpy"{}.}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>seguinte\ =\ inicio;\ \textcolor{comment}{//define\ o\ campo\ "{}seguinte"{}\ da\ nova\ estrutura\ como\ apontando\ para\ a\ lista\ "{}inicio"{}.}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}(novo);\ \textcolor{comment}{//retorna\ a\ nova\ estrutura\ se\ a\ alocação\ de\ memória\ for\ bem\ sucedida\ e\ se\ não\ houver\ um\ cliente\ com\ o\ mesmo\ "{}nome\_utilizador"{}\ na\ lista.}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ Gestor*\ inserirGestor(Gestor*\ inicio,\ \textcolor{keywordtype}{char}\ nome\_utilizador[],\ \textcolor{keywordtype}{char}\ password[],\ \textcolor{keywordtype}{char}\ nome[],\ \textcolor{keywordtype}{char}\ email[])}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ Gestor*\ novo\ =\ malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct}\ registo\_gestor));\ \textcolor{comment}{//aloca\ espaço\ na\ memória\ para\ um\ novo\ gestor\ "{}novo"{}\ usando\ a\ função\ "{}malloc"{}.\ O\ tamanho\ alocado\ é\ do\ tamanho\ da\ estrutura\ "{}registo\_gestor"{}.\ Se\ a\ alocação\ for\ bem\ sucedida,\ entra\ no\ bloco\ "{}if"{}.\ Se\ a\ alocação\ falhar,\ retorna\ NULL.}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (novo\ !=\ NULL)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//copia\ o\ "{}nome\_utilizador"{},\ "{}password"{},\ "{}nome"{}\ e\ "{}email"{}\ para\ o\ novo\ gestor\ "{}novo"{}\ usando\ a\ função\ "{}strcpy"{}.}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ strcpy(novo-\/>nome\_utilizador,\ nome\_utilizador);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ strcpy(novo-\/>password,\ password);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ strcpy(novo-\/>nome,\ nome);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ strcpy(novo-\/>email,\ email);}
+\DoxyCodeLine{00033\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>seguinte\ =\ inicio;\ \textcolor{comment}{//atualiza\ o\ apontador\ "{}seguinte"{}\ do\ novo\ gestor\ "{}novo"{}\ para\ o\ início\ da\ lista\ ligada\ "{}inicio"{}.}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}(novo);\ \textcolor{comment}{//retorna\ o\ endereço\ do\ novo\ gestor\ "{}novo"{}.}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ Meio*\ inserirMeio(Meio*\ inicio,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\textcolor{keywordtype}{char}\ nome\_meio[],\ \textcolor{keywordtype}{int}\ preco,\ \textcolor{keywordtype}{int}\ autonomia,\ \textcolor{keywordtype}{char}\ geolocalizacao[])}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ Meio*\ novo\ =\ malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct}\ registo\_meio));}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (novo\ !=\ NULL)}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>id=id;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ strcpy(novo-\/>nome\_meio,\ nome\_meio);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>preco=preco;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>autonomia=autonomia;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ novo-\/>seguinte\ =\ inicio;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ strcpy(novo-\/>geolocalizacao,\ geolocalizacao);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}(novo);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00056\ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ Meio*\ removerMeio(Meio*\ inicio,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ Meio*\ anterior\ =\ NULL;}
+\DoxyCodeLine{00062\ \ \ \ \ Meio*\ atual\ =\ inicio;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{if}\ (atual\ ==\ NULL)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (atual-\/>id\ ==\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ inicio\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ free(atual);}
+\DoxyCodeLine{00069\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (atual\ !=\ NULL\ \&\&\ atual-\/>id\ !=\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ anterior\ =\ atual;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ atual\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (atual\ !=\ NULL)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ anterior-\/>seguinte\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ free(atual);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ atualizarListaMeio(inicio);\ \textcolor{comment}{//\ Atualiza\ o\ arquivo\ com\ a\ lista\ atualizada}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ inicio;}
+\DoxyCodeLine{00082\ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ Cliente*\ removerCliente(Cliente*\ inicio,\ \textcolor{keywordtype}{char}\ nome\_utilizador[])\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ Cliente*\ anterior\ =\ NULL;}
+\DoxyCodeLine{00088\ \ \ \ \ Cliente*\ atual\ =\ inicio;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{if}\ (atual\ ==\ NULL)}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(atual-\/>nome\_utilizador,\ nome\_utilizador)\ ==\ 0)\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ inicio\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ free(atual);}
+\DoxyCodeLine{00095\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (atual\ !=\ NULL\ \&\&\ strcmp(atual-\/>nome\_utilizador,\ nome\_utilizador)\ !=\ 0)\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ anterior\ =\ atual;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ atual\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (atual\ !=\ NULL)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ anterior-\/>seguinte\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ free(atual);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ atualizarListaCliente(inicio);\ \textcolor{comment}{//\ Atualiza\ o\ arquivo\ com\ a\ lista\ atualizada}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{return}\ inicio;}
+\DoxyCodeLine{00108\ \}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ Gestor*\ removerGestor(Gestor*\ inicio,\ \textcolor{keywordtype}{char}\ nome\_utilizador[])\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ Gestor*\ anterior\ =\ NULL;}
+\DoxyCodeLine{00116\ \ \ \ \ Gestor*\ atual\ =\ inicio;}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordflow}{if}\ (atual\ ==\ NULL)}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(atual-\/>nome\_utilizador,\ nome\_utilizador)\ ==\ 0)\ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ inicio\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ free(atual);}
+\DoxyCodeLine{00123\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (atual\ !=\ NULL\ \&\&\ strcmp(atual-\/>nome\_utilizador,\ nome\_utilizador)\ !=\ 0)\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ anterior\ =\ atual;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ atual\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (atual\ !=\ NULL)\ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ anterior-\/>seguinte\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ free(atual);}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ atualizarListaGestor(inicio);\ \textcolor{comment}{//\ Atualiza\ o\ arquivo\ com\ a\ lista\ atualizada}}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{return}\ inicio;}
+\DoxyCodeLine{00136\ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{keywordtype}{void}\ listarMeios(Meio*\ inicio)\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00141\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00142\ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ \ ID\ \ \ |\ \ \ Nome\ do\ Meio\ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ \ Preco\ por\ hora\ \ \ |\ \ \ Autonomia\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00143\ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00144\ \ \ \ \ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{while}\ (inicio\ !=\ NULL)\ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ \ \%-\/4d\ |\ \ \ \%-\/25s\ |\ \ \ \%-\/16d\ |\ \ \ \%-\/30d\ |\(\backslash\)n"{}},\ inicio-\/>id,\ inicio-\/>nome\_meio,\ inicio-\/>preco,\ inicio-\/>autonomia);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ inicio\ =\ inicio-\/>seguinte;}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ }
+\DoxyCodeLine{00150\ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00151\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00152\ \}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{keywordtype}{void}\ listarClientes(Cliente*\ inicio)\ \{}
+\DoxyCodeLine{00156\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00157\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00158\ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ \ Nome\ de\ utilizador\ \ \ \ |\ \ \ Password\ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ \ Nome\ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ \ Email\ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ \ Endereco\ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00159\ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordflow}{while}\ (inicio\ !=\ NULL)\ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ \ \%-\/22s\ |\ \ \ \%-\/21s\ |\ \ \ \%-\/18s\ |\ \ \ \%-\/18s\ |\ \ \ \%-\/22s\ |\(\backslash\)n"{}},\ inicio-\/>nome\_utilizador,\ inicio-\/>password,\ inicio-\/>nome,\ inicio-\/>email,\ inicio-\/>endereco);}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ inicio\ =\ inicio-\/>seguinte;}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00167\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00168\ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{keywordtype}{void}\ listarGestores(Gestor*\ inicio)\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00173\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"{}});}
+\DoxyCodeLine{00174\ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ \ Nome\ de\ utilizador\ \ \ \ |\ \ \ Password\ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ \ Nome\ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ \ Email\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00175\ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordflow}{while}\ (inicio\ !=\ NULL)\ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ \ \%-\/22s\ |\ \ \ \%-\/21s\ |\ \ \ \%-\/18s\ |\ \ \ \%-\/25s\ |\(\backslash\)n"{}},\ inicio-\/>nome\_utilizador,\ inicio-\/>password,\ inicio-\/>nome,\ inicio-\/>email);}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ inicio\ =\ inicio-\/>seguinte;}
+\DoxyCodeLine{00180\ \ \ \ \ \}}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00183\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00184\ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{keywordtype}{void}\ verSaldo(\textcolor{keywordtype}{float}\ saldo)\ \{}
+\DoxyCodeLine{00188\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Saldo\ atual:\ \%.2f\(\backslash\)n"{}},\ saldo);}
+\DoxyCodeLine{00189\ \}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \textcolor{keywordtype}{void}\ carregarSaldo(\textcolor{keywordtype}{float}\ *saldo)\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{float}\ valor;}
+\DoxyCodeLine{00193\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Digite\ o\ valor\ a\ ser\ carregado:\ "{}});}
+\DoxyCodeLine{00194\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%f"{}},\ \&valor);}
+\DoxyCodeLine{00195\ \ \ \ \ *saldo\ +=\ valor;}
+\DoxyCodeLine{00196\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Saldo\ carregado\ com\ sucesso!\(\backslash\)n"{}});}
+\DoxyCodeLine{00197\ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \textcolor{keywordtype}{int}\ guardarMeios(Meio*\ inicio)\ \{}
+\DoxyCodeLine{00200\ \ \ FILE*\ fp;}
+\DoxyCodeLine{00201\ \ \ fp\ =\ fopen(\textcolor{stringliteral}{"{}meios.txt"{}},\ \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \textcolor{keywordflow}{if}\ (fp\ !=\ NULL)\ \{}
+\DoxyCodeLine{00204\ \ \ \ \ Meio*\ aux\ =\ inicio;}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux\ !=\ NULL)\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\textcolor{stringliteral}{"{}ID:\ \%d\(\backslash\)n"{}},aux-\/>id);}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}Nome\ do\ meio:\ \%s\(\backslash\)n"{}},\ aux-\/>nome\_meio);}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}Preco\ do\ meio\ por\ hora:\ \%d\(\backslash\)n"{}},\ aux-\/>preco);}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}Autonomia:\ \%d\(\backslash\)n"{}},\ aux-\/>autonomia);}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}Geolocalizacao:\ \%s\(\backslash\)n\(\backslash\)n"{}},\ aux-\/>geolocalizacao);}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ aux\ =\ aux-\/>seguinte;}
+\DoxyCodeLine{00212\ \ \ \ \ \}}
+\DoxyCodeLine{00213\ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00215\ \ \ \}\ \textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00217\ \ \ \}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \textcolor{keywordtype}{int}\ guardarMeiosBin(Meio*\ inicio)\ \{}
+\DoxyCodeLine{00220\ \ \ \ \ FILE*\ fp;}
+\DoxyCodeLine{00221\ \ \ \ \ fp\ =\ fopen(\textcolor{stringliteral}{"{}meios.bin"{}},\ \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordflow}{if}\ (fp\ !=\ NULL)\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ Meio*\ aux\ =\ inicio;}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (aux\ !=\ NULL)\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(\&(aux-\/>id),\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ fp);}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(aux-\/>nome\_meio,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),\ strlen(aux-\/>nome\_meio)\ +\ 1,\ fp);}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(\&(aux-\/>preco),\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ fp);}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(\&(aux-\/>autonomia),\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}),\ 1,\ fp);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(aux-\/>geolocalizacao,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),\ strlen(aux-\/>geolocalizacao)\ +\ 1,\ fp);}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ aux\ =\ aux-\/>seguinte;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00235\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00237\ \ \ \ \ \}}
+\DoxyCodeLine{00238\ \}}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \textcolor{keywordtype}{int}\ guardarClientes(Cliente*\ inicio)}
+\DoxyCodeLine{00242\ \{FILE*\ fp;}
+\DoxyCodeLine{00243\ \ fp\ =\ fopen(\textcolor{stringliteral}{"{}clientes.txt"{}},\textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{00244\ \ \textcolor{keywordflow}{if}\ (fp!=NULL)}
+\DoxyCodeLine{00245\ \ \{}
+\DoxyCodeLine{00246\ \ Cliente*\ aux=\ inicio;}
+\DoxyCodeLine{00247\ \ \textcolor{keywordflow}{while}\ (aux\ !=\ NULL)}
+\DoxyCodeLine{00248\ \ \{}
+\DoxyCodeLine{00249\ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Nome\ de\ utilizador:\ \%s\(\backslash\)n"{}},aux-\/>nome\_utilizador);}
+\DoxyCodeLine{00250\ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Password:\ \%s\(\backslash\)n"{}},aux-\/>password);}
+\DoxyCodeLine{00251\ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Nome:\ \%s\(\backslash\)n"{}},\ aux-\/>nome);}
+\DoxyCodeLine{00252\ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Email:\ \%s\(\backslash\)n"{}},aux-\/>email);}
+\DoxyCodeLine{00253\ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Endereco:\ \%s\(\backslash\)n\(\backslash\)n"{}},aux-\/>endereco);}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \ \ aux\ =\ aux-\/>seguinte;}
+\DoxyCodeLine{00256\ \ \}}
+\DoxyCodeLine{00257\ \ fclose(fp);}
+\DoxyCodeLine{00258\ \ \textcolor{keywordflow}{return}(1);}
+\DoxyCodeLine{00259\ \ \}}
+\DoxyCodeLine{00260\ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00261\ \}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \textcolor{keywordtype}{int}\ guardarClientesBin(Cliente*\ inicio)\ \{}
+\DoxyCodeLine{00264\ \ \ \ \ FILE*\ fp;}
+\DoxyCodeLine{00265\ \ \ \ \ fp\ =\ fopen(\textcolor{stringliteral}{"{}clientes.bin"{}},\ \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{00266\ \ \ \ \ }
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{if}\ (fp\ !=\ NULL)\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ Cliente*\ aux\ =\ inicio;}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (aux\ !=\ NULL)\ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(aux-\/>nome\_utilizador,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),\ strlen(aux-\/>nome\_utilizador)\ +\ 1,\ fp);}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(aux-\/>password,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),\ strlen(aux-\/>password)\ +\ 1,\ fp);}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(aux-\/>nome,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),\ strlen(aux-\/>nome)\ +\ 1,\ fp);}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(aux-\/>email,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),\ strlen(aux-\/>email)\ +\ 1,\ fp);}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(aux-\/>endereco,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),\ strlen(aux-\/>endereco)\ +\ 1,\ fp);}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ aux\ =\ aux-\/>seguinte;}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00282\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00284\ \ \ \ \ \}}
+\DoxyCodeLine{00285\ \}}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00288\ \textcolor{keywordtype}{int}\ guardarGestores(Gestor*\ inicio)}
+\DoxyCodeLine{00289\ \{FILE*\ fp;}
+\DoxyCodeLine{00290\ \ fp\ =\ fopen(\textcolor{stringliteral}{"{}gestores.txt"{}},\textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{00291\ \ \textcolor{keywordflow}{if}\ (fp!=NULL)}
+\DoxyCodeLine{00292\ \ \{}
+\DoxyCodeLine{00293\ \ Gestor*\ aux=\ inicio;}
+\DoxyCodeLine{00294\ \ \textcolor{keywordflow}{while}\ (aux\ !=\ NULL)}
+\DoxyCodeLine{00295\ \ \{}
+\DoxyCodeLine{00296\ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Nome\ de\ utilizador:\ \%s\(\backslash\)n"{}},aux-\/>nome\_utilizador);}
+\DoxyCodeLine{00297\ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Password:\ \%s\(\backslash\)n"{}},aux-\/>password);}
+\DoxyCodeLine{00298\ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Nome:\ \%s\(\backslash\)n"{}},\ aux-\/>nome);}
+\DoxyCodeLine{00299\ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Email:\ \%s\(\backslash\)n\(\backslash\)n"{}},aux-\/>email);}
+\DoxyCodeLine{00300\ }
+\DoxyCodeLine{00301\ \ \ aux\ =\ aux-\/>seguinte;}
+\DoxyCodeLine{00302\ \ \}}
+\DoxyCodeLine{00303\ \ fclose(fp);}
+\DoxyCodeLine{00304\ \ \textcolor{keywordflow}{return}(1);}
+\DoxyCodeLine{00305\ \ \}}
+\DoxyCodeLine{00306\ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00307\ \}}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \textcolor{keywordtype}{int}\ guardarGestoresBin(Gestor*\ inicio)\ \{}
+\DoxyCodeLine{00310\ \ \ \ \ FILE*\ fp;}
+\DoxyCodeLine{00311\ \ \ \ \ fp\ =\ fopen(\textcolor{stringliteral}{"{}gestores.bin"{}},\ \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{00312\ \ \ \ \ }
+\DoxyCodeLine{00313\ \ \ \ \ \textcolor{keywordflow}{if}\ (fp\ !=\ NULL)\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ Gestor*\ aux\ =\ inicio;}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (aux\ !=\ NULL)\ \{}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(aux-\/>nome\_utilizador,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),\ strlen(aux-\/>nome\_utilizador)\ +\ 1,\ fp);}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(aux-\/>password,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),\ strlen(aux-\/>password)\ +\ 1,\ fp);}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(aux-\/>nome,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),\ strlen(aux-\/>nome)\ +\ 1,\ fp);}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ fwrite(aux-\/>email,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}),\ strlen(aux-\/>email)\ +\ 1,\ fp);}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ aux\ =\ aux-\/>seguinte;}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00327\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00329\ \ \ \ \ \}}
+\DoxyCodeLine{00330\ \}}
+\DoxyCodeLine{00331\ }
+\DoxyCodeLine{00332\ \textcolor{comment}{//\ Declaração\ da\ função\ para\ buscar\ o\ cliente\ por\ nome\ de\ utilizador}}
+\DoxyCodeLine{00333\ Cliente*\ buscarClientePorNomeUtilizador(Cliente*\ inicio,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ nome\_utilizador)\ \{}
+\DoxyCodeLine{00334\ \ \ Cliente*\ atual\ =\ inicio;}
+\DoxyCodeLine{00335\ \ \ \textcolor{keywordflow}{while}\ (atual\ !=\ NULL)\ \{}
+\DoxyCodeLine{00336\ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(atual-\/>nome\_utilizador,\ nome\_utilizador)\ ==\ 0)\ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ atual;}
+\DoxyCodeLine{00338\ \ \ \ \ \}}
+\DoxyCodeLine{00339\ \ \ \ \ atual\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00340\ \ \ \}}
+\DoxyCodeLine{00341\ \ \ \textcolor{keywordflow}{return}\ NULL;\ \textcolor{comment}{//\ Retorna\ NULL\ se\ o\ cliente\ com\ o\ nome\ de\ utilizador\ fornecido\ não\ for\ encontrado}}
+\DoxyCodeLine{00342\ \}}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00344\ \textcolor{comment}{//\ Função\ para\ alterar\ os\ dados\ do\ cliente\ por\ nome\ de\ utilizador}}
+\DoxyCodeLine{00345\ \textcolor{keywordtype}{void}\ alterarDadosCliente(Cliente*\ inicio)\ \{}
+\DoxyCodeLine{00346\ \ \ \textcolor{keywordtype}{char}\ nome\_utilizador[50];}
+\DoxyCodeLine{00347\ \ \ printf(\textcolor{stringliteral}{"{}Digite\ o\ nome\ de\ utilizador\ do\ cliente\ que\ deseja\ alterar:\ "{}});}
+\DoxyCodeLine{00348\ \ \ fgets(nome\_utilizador,\ \textcolor{keyword}{sizeof}(nome\_utilizador),\ stdin);}
+\DoxyCodeLine{00349\ \ \ nome\_utilizador[strcspn(nome\_utilizador,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00350\ }
+\DoxyCodeLine{00351\ \ \ Cliente*\ cliente\ =\ buscarClientePorNomeUtilizador(inicio,\ nome\_utilizador);}
+\DoxyCodeLine{00352\ \ \ \textcolor{keywordflow}{if}\ (cliente\ ==\ NULL)\ \{}
+\DoxyCodeLine{00353\ \ \ \ \ printf(\textcolor{stringliteral}{"{}O\ cliente\ com\ o\ nome\ de\ utilizador\ fornecido\ não\ foi\ encontrado.\(\backslash\)n"{}});}
+\DoxyCodeLine{00354\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00355\ \ \ \}}
+\DoxyCodeLine{00356\ }
+\DoxyCodeLine{00357\ \ \ \textcolor{comment}{//\ Aloca\ memória\ para\ uma\ nova\ estrutura\ Cliente}}
+\DoxyCodeLine{00358\ \ \ Cliente*\ novoCliente\ =\ (Cliente*)malloc(\textcolor{keyword}{sizeof}(Cliente));}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00360\ \ \ \textcolor{comment}{//\ Solicita\ ao\ usuário\ que\ digite\ os\ novos\ dados\ do\ cliente}}
+\DoxyCodeLine{00361\ \ \ printf(\textcolor{stringliteral}{"{}Digite\ o\ novo\ nome\ de\ utilizador\ do\ cliente:\ "{}});}
+\DoxyCodeLine{00362\ \ \ fgets(novoCliente-\/>nome\_utilizador,\ \textcolor{keyword}{sizeof}(novoCliente-\/>nome\_utilizador),\ stdin);}
+\DoxyCodeLine{00363\ \ \ novoCliente-\/>nome\_utilizador[strcspn(novoCliente-\/>nome\_utilizador,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00364\ }
+\DoxyCodeLine{00365\ \ \ printf(\textcolor{stringliteral}{"{}Digite\ a\ nova\ password\ do\ cliente:\ "{}});}
+\DoxyCodeLine{00366\ \ \ fgets(novoCliente-\/>password,\ \textcolor{keyword}{sizeof}(novoCliente-\/>password),\ stdin);}
+\DoxyCodeLine{00367\ \ \ novoCliente-\/>password[strcspn(novoCliente-\/>password,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \ \ printf(\textcolor{stringliteral}{"{}Digite\ o\ novo\ nome\ do\ cliente:\ "{}});}
+\DoxyCodeLine{00370\ \ \ fgets(novoCliente-\/>nome,\ \textcolor{keyword}{sizeof}(novoCliente-\/>nome),\ stdin);}
+\DoxyCodeLine{00371\ \ \ novoCliente-\/>nome[strcspn(novoCliente-\/>nome,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00372\ }
+\DoxyCodeLine{00373\ \ \ printf(\textcolor{stringliteral}{"{}Digite\ o\ novo\ email\ do\ cliente:\ "{}});}
+\DoxyCodeLine{00374\ \ \ fgets(novoCliente-\/>email,\ \textcolor{keyword}{sizeof}(novoCliente-\/>email),\ stdin);}
+\DoxyCodeLine{00375\ \ \ novoCliente-\/>email[strcspn(novoCliente-\/>email,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00377\ \ \ printf(\textcolor{stringliteral}{"{}Digite\ o\ novo\ endereco\ do\ cliente:\ "{}});}
+\DoxyCodeLine{00378\ \ \ fgets(novoCliente-\/>endereco,\ \textcolor{keyword}{sizeof}(novoCliente-\/>endereco),\ stdin);}
+\DoxyCodeLine{00379\ \ \ novoCliente-\/>endereco[strcspn(novoCliente-\/>endereco,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00380\ }
+\DoxyCodeLine{00381\ \ \ \textcolor{comment}{//\ Copia\ os\ novos\ dados\ para\ a\ estrutura\ original}}
+\DoxyCodeLine{00382\ \ \ strcpy(cliente-\/>nome\_utilizador,\ novoCliente-\/>nome\_utilizador);}
+\DoxyCodeLine{00383\ \ \ strcpy(cliente-\/>password,\ novoCliente-\/>password);}
+\DoxyCodeLine{00384\ \ \ strcpy(cliente-\/>nome,\ novoCliente-\/>nome);}
+\DoxyCodeLine{00385\ \ \ strcpy(cliente-\/>email,\ novoCliente-\/>email);}
+\DoxyCodeLine{00386\ \ \ strcpy(cliente-\/>endereco,\ novoCliente-\/>endereco);}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \ \ \textcolor{comment}{//\ Libera\ a\ memória\ alocada\ para\ a\ nova\ estrutura}}
+\DoxyCodeLine{00389\ \ \ free(novoCliente);}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ \ \ \textcolor{comment}{//\ Exibe\ mensagem\ confirmando\ que\ os\ dados\ foram\ alterados}}
+\DoxyCodeLine{00392\ \ \ printf(\textcolor{stringliteral}{"{}Dados\ do\ cliente\ atualizados\ com\ sucesso.\(\backslash\)n"{}});}
+\DoxyCodeLine{00393\ \}}
+\DoxyCodeLine{00394\ }
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \textcolor{comment}{//\ Declaração\ da\ função\ para\ buscar\ o\ meio\ por\ ID}}
+\DoxyCodeLine{00398\ Meio*\ buscarMeioPorId(Meio*\ inicio,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{00399\ \ \ Meio*\ atual\ =\ inicio;}
+\DoxyCodeLine{00400\ \ \ \textcolor{keywordflow}{while}\ (atual\ !=\ NULL)\ \{}
+\DoxyCodeLine{00401\ \ \ \ \ \textcolor{keywordflow}{if}\ (atual-\/>id\ ==\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ atual;}
+\DoxyCodeLine{00403\ \ \ \ \ \}}
+\DoxyCodeLine{00404\ \ \ \ \ atual\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00405\ \ \ \}}
+\DoxyCodeLine{00406\ \ \ \textcolor{keywordflow}{return}\ NULL;\ \textcolor{comment}{//\ Retorna\ NULL\ se\ o\ meio\ com\ o\ ID\ fornecido\ não\ for\ encontrado}}
+\DoxyCodeLine{00407\ \}}
+\DoxyCodeLine{00408\ }
+\DoxyCodeLine{00409\ \textcolor{comment}{//\ Função\ para\ alterar\ os\ dados\ do\ meio\ por\ ID}}
+\DoxyCodeLine{00410\ \textcolor{keywordtype}{void}\ alterarDadosMeio(Meio*\ inicio)\ \{}
+\DoxyCodeLine{00411\ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00412\ \ \ printf(\textcolor{stringliteral}{"{}Insira\ o\ ID\ do\ meio\ que\ deseja\ alterar:\ "{}});}
+\DoxyCodeLine{00413\ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00414\ }
+\DoxyCodeLine{00415\ \ \ Meio*\ meio\ =\ buscarMeioPorId(inicio,\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00416\ \ \ \textcolor{keywordflow}{if}\ (meio\ ==\ NULL)\ \{}
+\DoxyCodeLine{00417\ \ \ \ \ printf(\textcolor{stringliteral}{"{}O\ meio\ com\ o\ ID\ fornecido\ nao\ foi\ encontrado.\(\backslash\)n"{}});}
+\DoxyCodeLine{00418\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00419\ \ \ \}}
+\DoxyCodeLine{00420\ }
+\DoxyCodeLine{00421\ \ \ \textcolor{comment}{//\ Solicita\ ao\ usuário\ que\ digite\ os\ novos\ dados\ do\ meio}}
+\DoxyCodeLine{00422\ \ \ printf(\textcolor{stringliteral}{"{}Insira\ o\ nome\ do\ meio:\ "{}});}
+\DoxyCodeLine{00423\ \ \ fgets(meio-\/>nome\_meio,\ \textcolor{keyword}{sizeof}(meio-\/>nome\_meio),\ stdin);}
+\DoxyCodeLine{00424\ \ \ meio-\/>nome\_meio[strcspn(meio-\/>nome\_meio,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00425\ }
+\DoxyCodeLine{00426\ \ \ printf(\textcolor{stringliteral}{"{}Insira\ o\ preco\ por\ hora\ do\ meio:\ "{}});}
+\DoxyCodeLine{00427\ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&(meio-\/>preco));\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00428\ }
+\DoxyCodeLine{00429\ \ \ printf(\textcolor{stringliteral}{"{}Insira\ a\ autonomia\ do\ meio:\ "{}});}
+\DoxyCodeLine{00430\ \ \ scanf(\textcolor{stringliteral}{"{}\%d"{}},\ \&(meio-\/>autonomia));\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00432\ \ \ printf(\textcolor{stringliteral}{"{}Insira\ a\ geolocalizacao\ do\ meio:\ "{}});}
+\DoxyCodeLine{00433\ \ \ fgets(meio-\/>geolocalizacao,\ \textcolor{keyword}{sizeof}(meio-\/>geolocalizacao),\ stdin);}
+\DoxyCodeLine{00434\ \ \ meio-\/>geolocalizacao[strcspn(meio-\/>geolocalizacao,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00435\ }
+\DoxyCodeLine{00436\ \ \ \textcolor{comment}{//\ Exibe\ mensagem\ confirmando\ que\ os\ dados\ foram\ alterados}}
+\DoxyCodeLine{00437\ \ \ printf(\textcolor{stringliteral}{"{}Dados\ do\ meio\ atualizados\ com\ sucesso.\(\backslash\)n"{}});}
+\DoxyCodeLine{00438\ \}}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ }
+\DoxyCodeLine{00441\ }
+\DoxyCodeLine{00442\ }
+\DoxyCodeLine{00443\ \textcolor{comment}{//\ Declaração\ da\ função\ para\ buscar\ o\ gestor\ por\ nome\ de\ utilizador}}
+\DoxyCodeLine{00444\ Gestor*\ buscarGestorPorNomeUtilizador(Gestor*\ inicio,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ nome\_utilizador)\ \{}
+\DoxyCodeLine{00445\ \ \ Gestor*\ atual\ =\ inicio;}
+\DoxyCodeLine{00446\ \ \ \textcolor{keywordflow}{while}\ (atual\ !=\ NULL)\ \{}
+\DoxyCodeLine{00447\ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(atual-\/>nome\_utilizador,\ nome\_utilizador)\ ==\ 0)\ \{}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ atual;}
+\DoxyCodeLine{00449\ \ \ \ \ \}}
+\DoxyCodeLine{00450\ \ \ \ \ atual\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00451\ \ \ \}}
+\DoxyCodeLine{00452\ \ \ \textcolor{keywordflow}{return}\ NULL;\ \textcolor{comment}{//\ Retorna\ NULL\ se\ o\ gestor\ com\ o\ nome\ de\ utilizador\ fornecido\ não\ for\ encontrado}}
+\DoxyCodeLine{00453\ \}}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \textcolor{comment}{//\ Função\ para\ alterar\ os\ dados\ do\ gestor\ por\ nome\ de\ utilizador}}
+\DoxyCodeLine{00456\ \textcolor{keywordtype}{void}\ alterarDadosGestor(Gestor*\ inicio)\ \{}
+\DoxyCodeLine{00457\ \ \ \textcolor{keywordtype}{char}\ nome\_utilizador[50];}
+\DoxyCodeLine{00458\ \ \ printf(\textcolor{stringliteral}{"{}Digite\ o\ nome\ de\ utilizador\ do\ gestor\ que\ deseja\ alterar:\ "{}});}
+\DoxyCodeLine{00459\ \ \ fgets(nome\_utilizador,\ \textcolor{keyword}{sizeof}(nome\_utilizador),\ stdin);}
+\DoxyCodeLine{00460\ \ \ nome\_utilizador[strcspn(nome\_utilizador,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00462\ \ \ Gestor*\ gestor\ =\ buscarGestorPorNomeUtilizador(inicio,\ nome\_utilizador);}
+\DoxyCodeLine{00463\ \ \ \textcolor{keywordflow}{if}\ (gestor\ ==\ NULL)\ \{}
+\DoxyCodeLine{00464\ \ \ \ \ printf(\textcolor{stringliteral}{"{}O\ gestor\ com\ o\ nome\ de\ utilizador\ fornecido\ não\ foi\ encontrado.\(\backslash\)n"{}});}
+\DoxyCodeLine{00465\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00466\ \ \ \}}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00468\ \ \ \textcolor{comment}{//\ Aloca\ memória\ para\ uma\ nova\ estrutura\ Gestor}}
+\DoxyCodeLine{00469\ \ \ Gestor*\ novoGestor\ =\ (Gestor*)malloc(\textcolor{keyword}{sizeof}(Gestor));}
+\DoxyCodeLine{00470\ }
+\DoxyCodeLine{00471\ \ \ \textcolor{comment}{//\ Solicita\ ao\ usuário\ que\ digite\ os\ novos\ dados\ do\ gestor}}
+\DoxyCodeLine{00472\ \ \ printf(\textcolor{stringliteral}{"{}Insira\ o\ novo\ nome\ de\ utilizador\ do\ gestor:\ "{}});}
+\DoxyCodeLine{00473\ \ \ fgets(novoGestor-\/>nome\_utilizador,\ \textcolor{keyword}{sizeof}(novoGestor-\/>nome\_utilizador),\ stdin);}
+\DoxyCodeLine{00474\ \ \ novoGestor-\/>nome\_utilizador[strcspn(novoGestor-\/>nome\_utilizador,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00475\ }
+\DoxyCodeLine{00476\ \ \ printf(\textcolor{stringliteral}{"{}Insira\ a\ nova\ password\ do\ gestor:\ "{}});}
+\DoxyCodeLine{00477\ \ \ fgets(novoGestor-\/>password,\ \textcolor{keyword}{sizeof}(novoGestor-\/>password),\ stdin);}
+\DoxyCodeLine{00478\ \ \ novoGestor-\/>password[strcspn(novoGestor-\/>password,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00479\ }
+\DoxyCodeLine{00480\ \ \ printf(\textcolor{stringliteral}{"{}Insira\ o\ novo\ nome\ do\ gestor:\ "{}});}
+\DoxyCodeLine{00481\ \ \ fgets(novoGestor-\/>nome,\ \textcolor{keyword}{sizeof}(novoGestor-\/>nome),\ stdin);}
+\DoxyCodeLine{00482\ \ \ novoGestor-\/>nome[strcspn(novoGestor-\/>nome,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00483\ }
+\DoxyCodeLine{00484\ \ \ printf(\textcolor{stringliteral}{"{}Insira\ o\ novo\ email\ do\ gestor:\ "{}});}
+\DoxyCodeLine{00485\ \ \ fgets(novoGestor-\/>email,\ \textcolor{keyword}{sizeof}(novoGestor-\/>email),\ stdin);}
+\DoxyCodeLine{00486\ \ \ novoGestor-\/>email[strcspn(novoGestor-\/>email,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{comment}{//\ remove\ o\ caractere\ de\ nova\ linha}}
+\DoxyCodeLine{00487\ }
+\DoxyCodeLine{00488\ \ \ \textcolor{comment}{//\ Copia\ os\ novos\ dados\ para\ a\ estrutura\ original}}
+\DoxyCodeLine{00489\ \ \ strcpy(gestor-\/>nome\_utilizador,\ novoGestor-\/>nome\_utilizador);}
+\DoxyCodeLine{00490\ \ \ strcpy(gestor-\/>password,\ novoGestor-\/>password);}
+\DoxyCodeLine{00491\ \ \ strcpy(gestor-\/>nome,\ novoGestor-\/>nome);}
+\DoxyCodeLine{00492\ \ \ strcpy(gestor-\/>email,\ novoGestor-\/>email);}
+\DoxyCodeLine{00493\ }
+\DoxyCodeLine{00494\ \ \ \textcolor{comment}{//\ Libera\ a\ memória\ alocada\ para\ a\ nova\ estrutura}}
+\DoxyCodeLine{00495\ \ \ free(novoGestor);}
+\DoxyCodeLine{00496\ }
+\DoxyCodeLine{00497\ \ \ \textcolor{comment}{//\ Exibe\ mensagem\ confirmando\ que\ os\ dados\ foram\ alterados}}
+\DoxyCodeLine{00498\ \ \ printf(\textcolor{stringliteral}{"{}Dados\ do\ gestor\ atualizados\ com\ sucesso.\(\backslash\)n"{}});}
+\DoxyCodeLine{00499\ \}}
+\DoxyCodeLine{00500\ }
+\DoxyCodeLine{00501\ }
+\DoxyCodeLine{00502\ }
+\DoxyCodeLine{00503\ Cliente*\ lerClientes()}
+\DoxyCodeLine{00504\ \{FILE*\ fp;}
+\DoxyCodeLine{00505\ \textcolor{keywordtype}{char}\ nome\_utilizador[50],\ password[50],\ nome[50],\ email[50],\ endereco[50];}
+\DoxyCodeLine{00506\ \ Cliente*\ aux=NULL;}
+\DoxyCodeLine{00507\ \ fp\ =\ fopen(\textcolor{stringliteral}{"{}clientes.txt"{}},\textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{00508\ \ \textcolor{keywordflow}{if}\ (fp!=NULL)}
+\DoxyCodeLine{00509\ \ \{\textcolor{keywordflow}{while}\ (!feof(fp))}
+\DoxyCodeLine{00510\ \ \ \{}
+\DoxyCodeLine{00511\ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Nome\ de\ utilizador:\ \%s\(\backslash\)n"{}},nome\_utilizador);}
+\DoxyCodeLine{00512\ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Password:\ \%s\(\backslash\)n"{}},password);}
+\DoxyCodeLine{00513\ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Nome:\ \%s\(\backslash\)n"{}},\ nome);}
+\DoxyCodeLine{00514\ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Email:\ \%s\(\backslash\)n"{}},email);}
+\DoxyCodeLine{00515\ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Endereco:\ \%s\(\backslash\)n\(\backslash\)n"{}},endereco);}
+\DoxyCodeLine{00516\ \ \ \ \ aux\ =\ inserirCliente(aux,\ nome\_utilizador,\ password,\ nome,\ email,endereco);}
+\DoxyCodeLine{00517\ \ \ \}}
+\DoxyCodeLine{00518\ \ \ fclose(fp);}
+\DoxyCodeLine{00519\ \ \}}
+\DoxyCodeLine{00520\ \ \textcolor{keywordflow}{return}(aux);}
+\DoxyCodeLine{00521\ \}}
+\DoxyCodeLine{00522\ }
+\DoxyCodeLine{00523\ Meio*\ lerMeios()}
+\DoxyCodeLine{00524\ \{FILE*\ fp;}
+\DoxyCodeLine{00525\ \textcolor{keywordtype}{char}\ nome\_meio[50],\ geolocalizacao[50];}
+\DoxyCodeLine{00526\ \textcolor{keywordtype}{int}\ autonomia,preco,id;}
+\DoxyCodeLine{00527\ \ Meio*\ aux=NULL;}
+\DoxyCodeLine{00528\ \ fp\ =\ fopen(\textcolor{stringliteral}{"{}meios.txt"{}},\textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{00529\ \ \textcolor{keywordflow}{if}\ (fp!=NULL)}
+\DoxyCodeLine{00530\ \ \{\textcolor{keywordflow}{while}\ (!feof(fp))}
+\DoxyCodeLine{00531\ \ \ \{}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \ \ \ \ fscanf(fp,\textcolor{stringliteral}{"{}ID:\ \%d\(\backslash\)n"{}},\&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \ \ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Nome\ do\ meio:\ \%s\(\backslash\)n"{}},nome\_meio);}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \ \ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Preco\ do\ meio\ por\ hora:\ \%d\(\backslash\)n"{}},\&preco);}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \ \ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Autonomia:\ \%d\(\backslash\)n"{}},\&autonomia);}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \ \ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Geolocalizacao:\ \%s\(\backslash\)n\(\backslash\)n"{}},geolocalizacao);}
+\DoxyCodeLine{00537\ \ \ \ \ aux\ =\ inserirMeio(aux,\ \textcolor{keywordtype}{id},\ nome\_meio,\ preco,\ autonomia,\ geolocalizacao);}
+\DoxyCodeLine{00538\ \ \ \}}
+\DoxyCodeLine{00539\ \ \ fclose(fp);}
+\DoxyCodeLine{00540\ \ \}}
+\DoxyCodeLine{00541\ \ \textcolor{keywordflow}{return}(aux);}
+\DoxyCodeLine{00542\ \}}
+\DoxyCodeLine{00543\ }
+\DoxyCodeLine{00544\ Gestor*\ lerGestores()}
+\DoxyCodeLine{00545\ \{FILE*\ fp;}
+\DoxyCodeLine{00546\ \textcolor{keywordtype}{char}\ nome\_utilizador[50],\ password[50],\ nome[50],\ email[50];}
+\DoxyCodeLine{00547\ \ Gestor*\ aux=NULL;}
+\DoxyCodeLine{00548\ \ fp\ =\ fopen(\textcolor{stringliteral}{"{}gestores.txt"{}},\textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{00549\ \ \textcolor{keywordflow}{if}\ (fp!=NULL)}
+\DoxyCodeLine{00550\ \ \{\textcolor{keywordflow}{while}\ (!feof(fp))}
+\DoxyCodeLine{00551\ \ \ \{}
+\DoxyCodeLine{00552\ \ \ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Nome\ de\ utilizador:\ \%s\(\backslash\)n"{}},nome\_utilizador);}
+\DoxyCodeLine{00553\ \ \ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Password:\ \%s\(\backslash\)n"{}},password);}
+\DoxyCodeLine{00554\ \ \ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Nome:\ \%s\(\backslash\)n"{}},nome);}
+\DoxyCodeLine{00555\ \ \ \ \ fscanf(fp,\textcolor{stringliteral}{"{}Email:\ \%s\(\backslash\)n\(\backslash\)n"{}},email);}
+\DoxyCodeLine{00556\ \ \ \ \ aux\ =\ inserirGestor(aux,\ nome\_utilizador,\ password,\ nome,email);}
+\DoxyCodeLine{00557\ \ \ \}}
+\DoxyCodeLine{00558\ \ \ fclose(fp);}
+\DoxyCodeLine{00559\ \ \}}
+\DoxyCodeLine{00560\ \ \textcolor{keywordflow}{return}(aux);}
+\DoxyCodeLine{00561\ \}}
+\DoxyCodeLine{00562\ }
+\DoxyCodeLine{00563\ \textcolor{keywordtype}{void}\ listarMeiosOrdem(Meio\ *\ inicio)}
+\DoxyCodeLine{00564\ \{}
+\DoxyCodeLine{00565\ \ \ \ \ \textcolor{comment}{//\ Ordenação\ da\ lista\ pelo\ campo\ autonomia\ usando\ o\ bubble\ sort}}
+\DoxyCodeLine{00566\ \ \ \ \ \textcolor{keywordtype}{int}\ trocou;}
+\DoxyCodeLine{00567\ \ \ \ \ Meio\ *atual;}
+\DoxyCodeLine{00568\ \ \ \ \ Meio\ *anterior\ =\ NULL;}
+\DoxyCodeLine{00569\ \ \ \ \ Meio\ *prox\ =\ NULL;}
+\DoxyCodeLine{00570\ }
+\DoxyCodeLine{00571\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00572\ \ \ \ \ \ \ \ \ trocou\ =\ 0;}
+\DoxyCodeLine{00573\ \ \ \ \ \ \ \ \ atual\ =\ inicio;}
+\DoxyCodeLine{00574\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (atual-\/>seguinte\ !=\ prox)\ \{}
+\DoxyCodeLine{00575\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (atual-\/>autonomia\ <\ atual-\/>seguinte-\/>autonomia)\ \{}
+\DoxyCodeLine{00576\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Troca\ a\ posição\ dos\ elementos}}
+\DoxyCodeLine{00577\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (anterior\ !=\ NULL)\ \{}
+\DoxyCodeLine{00578\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ anterior-\/>seguinte\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00579\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00580\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inicio\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00582\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Meio\ *aux\ =\ atual-\/>seguinte-\/>seguinte;}
+\DoxyCodeLine{00583\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ atual-\/>seguinte-\/>seguinte\ =\ atual;}
+\DoxyCodeLine{00584\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ atual-\/>seguinte\ =\ aux;}
+\DoxyCodeLine{00585\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trocou\ =\ 1;}
+\DoxyCodeLine{00586\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00587\ \ \ \ \ \ \ \ \ \ \ \ \ anterior\ =\ atual;}
+\DoxyCodeLine{00588\ \ \ \ \ \ \ \ \ \ \ \ \ atual\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00589\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00590\ \ \ \ \ \ \ \ \ prox\ =\ atual;}
+\DoxyCodeLine{00591\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (trocou);}
+\DoxyCodeLine{00592\ }
+\DoxyCodeLine{00593\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00594\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00595\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ \ ID\ \ \ |\ \ \ Nome\ do\ Meio\ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ \ Preco\ por\ hora\ \ |\ \ \ Autonomia\ \ \ |\ \ \ Geolocalizacao\ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00596\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00597\ \ \ \ \ }
+\DoxyCodeLine{00598\ \ \ \ \ \textcolor{comment}{//\ Impressão\ da\ lista\ ordenada}}
+\DoxyCodeLine{00599\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (inicio\ !=\ NULL)\ \{}
+\DoxyCodeLine{00600\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ \ \%-\/4d\ |\ \ \ \%-\/25s\ |\ \ \ \%-\/16d\ |\ \ \ \%-\/30d\ |\ \ \ \ \%-\/15s\(\backslash\)n"{}},\ inicio-\/>id,\ inicio-\/>nome\_meio,\ inicio-\/>preco,\ inicio-\/>autonomia,\ inicio-\/>geolocalizacao);}
+\DoxyCodeLine{00601\ \ \ \ \ \ \ \ \ inicio\ =\ inicio-\/>seguinte;}
+\DoxyCodeLine{00602\ \ \ \ \ \}}
+\DoxyCodeLine{00603\ \ \ \ \ }
+\DoxyCodeLine{00604\ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00605\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00606\ \}}
+\DoxyCodeLine{00607\ }
+\DoxyCodeLine{00608\ \textcolor{keywordtype}{void}\ alugarMeio(Meio*\ inicio,\ \textcolor{keywordtype}{float}*\ saldo)\ \{}
+\DoxyCodeLine{00609\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00610\ \ \ \ \ \textcolor{keywordtype}{char}\ nome\_meio[50];}
+\DoxyCodeLine{00611\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Insira\ o\ nome\ do\ meio\ de\ mobilidade\ que\ deseja\ alugar:\ "{}});}
+\DoxyCodeLine{00612\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%s"{}},\ nome\_meio);}
+\DoxyCodeLine{00613\ }
+\DoxyCodeLine{00614\ \ \ \ \ Meio*\ atual\ =\ inicio;}
+\DoxyCodeLine{00615\ \ \ \ \ \textcolor{keywordflow}{while}\ (atual\ !=\ NULL)\ \{}
+\DoxyCodeLine{00616\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(atual-\/>nome\_meio,\ nome\_meio)\ ==\ 0)\ \{}
+\DoxyCodeLine{00617\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (*saldo\ >=\ atual-\/>preco)\ \{}
+\DoxyCodeLine{00618\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ *saldo\ -\/=\ atual-\/>preco;}
+\DoxyCodeLine{00619\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Meio\ alugado\ com\ sucesso.\(\backslash\)n"{}});}
+\DoxyCodeLine{00620\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00621\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Saldo\ insuficiente\ para\ alugar\ o\ meio\ de\ mobilidade.\(\backslash\)n"{}});}
+\DoxyCodeLine{00622\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00623\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00624\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00625\ \ \ \ \ \ \ \ \ atual\ =\ atual-\/>seguinte;}
+\DoxyCodeLine{00626\ \ \ \ \ \}}
+\DoxyCodeLine{00627\ }
+\DoxyCodeLine{00628\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Meio\ com\ o\ nome\ \%s\ nao\ encontrado.\(\backslash\)n"{}},\ nome\_meio);}
+\DoxyCodeLine{00629\ \}}
+\DoxyCodeLine{00630\ }
+\DoxyCodeLine{00631\ }
+\DoxyCodeLine{00632\ \textcolor{keywordtype}{void}\ atualizarListaMeio(Meio*\ inicio)\ \{}
+\DoxyCodeLine{00633\ \ \ \ \ \textcolor{comment}{//\ Abre\ o\ arquivo\ para\ escrita}}
+\DoxyCodeLine{00634\ \ \ \ \ FILE*\ fp\ =\ fopen(\textcolor{stringliteral}{"{}meios.txt"{}},\ \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{00635\ }
+\DoxyCodeLine{00636\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ arquivo\ foi\ aberto\ corretamente}}
+\DoxyCodeLine{00637\ \ \ \ \ \textcolor{keywordflow}{if}\ (fp\ ==\ NULL)\ \{}
+\DoxyCodeLine{00638\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ ao\ abrir\ o\ arquivo.\(\backslash\)n"{}});}
+\DoxyCodeLine{00639\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00640\ \ \ \ \ \}}
+\DoxyCodeLine{00641\ }
+\DoxyCodeLine{00642\ \ \ \ \ \textcolor{comment}{//\ Percorre\ a\ lista\ e\ escreve\ cada\ meio\ no\ arquivo}}
+\DoxyCodeLine{00643\ \ \ \ \ \textcolor{keywordflow}{while}\ (inicio\ !=\ NULL)\ \{}
+\DoxyCodeLine{00644\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\textcolor{stringliteral}{"{}ID:\ \%d\(\backslash\)n"{}},inicio-\/>id);}
+\DoxyCodeLine{00645\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}Nome\ do\ meio:\ \%s\(\backslash\)n"{}},\ inicio-\/>nome\_meio);}
+\DoxyCodeLine{00646\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}Preco\ do\ meio\ por\ hora:\ \%d\(\backslash\)n"{}},\ inicio-\/>preco);}
+\DoxyCodeLine{00647\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}Autonomia:\ \%d\(\backslash\)n"{}},\ inicio-\/>autonomia);}
+\DoxyCodeLine{00648\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}Geolocalizacao:\ \%s\(\backslash\)n\(\backslash\)n"{}},\ inicio-\/>geolocalizacao);}
+\DoxyCodeLine{00649\ \ \ \ \ \ \ \ \ inicio\ =\ inicio-\/>seguinte;}
+\DoxyCodeLine{00650\ \ \ \ \ \}}
+\DoxyCodeLine{00651\ }
+\DoxyCodeLine{00652\ \ \ \ \ \textcolor{comment}{//\ Fecha\ o\ arquivo}}
+\DoxyCodeLine{00653\ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00654\ \}}
+\DoxyCodeLine{00655\ }
+\DoxyCodeLine{00656\ \textcolor{keywordtype}{void}\ verHistoricoAlugueres(Cliente*\ inicio)\ \{}
+\DoxyCodeLine{00657\ \ \ \ \ Aluguel*\ aluguelAtual\ =\ inicio-\/>historicoAlugueres;}
+\DoxyCodeLine{00658\ }
+\DoxyCodeLine{00659\ \ \ \ \ \textcolor{keywordflow}{if}\ (aluguelAtual\ ==\ NULL)\ \{}
+\DoxyCodeLine{00660\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Nenhum\ aluguel\ registado\ por\ este\ cliente.\(\backslash\)n"{}});}
+\DoxyCodeLine{00661\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00662\ \ \ \ \ \}}
+\DoxyCodeLine{00663\ }
+\DoxyCodeLine{00664\ }
+\DoxyCodeLine{00665\ }
+\DoxyCodeLine{00666\ \ \ \ \ \textcolor{keywordflow}{while}\ (aluguelAtual\ !=\ NULL)\ \{}
+\DoxyCodeLine{00667\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Meio\ de\ mobilidade:\ \%s\(\backslash\)n"{}},\ aluguelAtual-\/>nome\_meio);}
+\DoxyCodeLine{00668\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Valor\ pago:\ \%d\(\backslash\)n\(\backslash\)n"{}},\ aluguelAtual-\/>valor\_pago);}
+\DoxyCodeLine{00669\ }
+\DoxyCodeLine{00670\ \ \ \ \ \ \ \ \ aluguelAtual\ =\ aluguelAtual-\/>proximo;}
+\DoxyCodeLine{00671\ \ \ \ \ \}}
+\DoxyCodeLine{00672\ \}}
+\DoxyCodeLine{00673\ }
+\DoxyCodeLine{00674\ }
+\DoxyCodeLine{00675\ \textcolor{keywordtype}{void}\ localizarMeioGeo(Meio*\ inicio,\ \textcolor{keywordtype}{char}\ geolocalizacao[])\ \{}
+\DoxyCodeLine{00676\ \ \ \ \ \textcolor{keywordtype}{int}\ encontrado\ =\ 0;}
+\DoxyCodeLine{00677\ }
+\DoxyCodeLine{00678\ \ \ \ \ \textcolor{keywordflow}{while}\ (inicio\ !=\ NULL)\ \{}
+\DoxyCodeLine{00679\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strcmp(inicio-\/>geolocalizacao,\ geolocalizacao)\ ==\ 0)\ \{}
+\DoxyCodeLine{00680\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00681\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\(\backslash\)n"{}});}
+\DoxyCodeLine{00682\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ \ ID\ \ \ |\ \ \ Nome\ do\ Meio\ \ \ \ \ \ \ \ \ \ \ \ \ |\ \ \ Preco\ por\ hora\ \ |\ \ \ Autonomia\ \ \ |\ \ \ Geolocalizacao\ \ \ \ \ \ \ \ \ |\(\backslash\)n"{}});}
+\DoxyCodeLine{00683\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00684\ \ \ \ \ }
+\DoxyCodeLine{00685\ \ \ \ \ \textcolor{comment}{//\ Impressão\ da\ lista\ ordenada}}
+\DoxyCodeLine{00686\ }
+\DoxyCodeLine{00687\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ \ \%-\/4d\ |\ \ \ \%-\/25s\ |\ \ \ \%-\/16d\ |\ \ \ \%-\/30d\ |\ \ \ \ \%-\/15s\(\backslash\)n"{}},\ inicio-\/>id,\ inicio-\/>nome\_meio,\ inicio-\/>preco,\ inicio-\/>autonomia,\ inicio-\/>geolocalizacao);}
+\DoxyCodeLine{00688\ \ \ \ \ }
+\DoxyCodeLine{00689\ \ \ \ \ }
+\DoxyCodeLine{00690\ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_|\(\backslash\)n"{}});}
+\DoxyCodeLine{00691\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00692\ \ \ \ \ \ \ \ \ \ \ \ \ encontrado\ =\ 1;}
+\DoxyCodeLine{00693\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00694\ \ \ \ \ \ \ \ \ inicio\ =\ inicio-\/>seguinte;}
+\DoxyCodeLine{00695\ \ \ \ \ \}}
+\DoxyCodeLine{00696\ }
+\DoxyCodeLine{00697\ \ \ \ \ \textcolor{keywordflow}{if}\ (!encontrado)\ \{}
+\DoxyCodeLine{00698\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Nenhum\ meio\ encontrado\ na\ geolocalizacao:\ \%s\(\backslash\)n"{}},\ geolocalizacao);}
+\DoxyCodeLine{00699\ \ \ \ \ \}}
+\DoxyCodeLine{00700\ \}}
+\DoxyCodeLine{00701\ }
+\DoxyCodeLine{00702\ \textcolor{keywordtype}{void}\ listarMeiosPorGeolocalizacao(Meio*\ inicio)\ \{}
+\DoxyCodeLine{00703\ \ \ \ \ \textcolor{keywordtype}{char}\ geolocalizacao[50];}
+\DoxyCodeLine{00704\ \ \ \ \ }
+\DoxyCodeLine{00705\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Digite\ a\ geolocalizacao:\ "{}});}
+\DoxyCodeLine{00706\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%s"{}},\ geolocalizacao);}
+\DoxyCodeLine{00707\ \ \ \ \ }
+\DoxyCodeLine{00708\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Meios\ de\ mobilidade\ na\ geolocalizacao\ \%s:\(\backslash\)n"{}},\ geolocalizacao);}
+\DoxyCodeLine{00709\ \ \ \ \ localizarMeioGeo(inicio,\ geolocalizacao);}
+\DoxyCodeLine{00710\ \}}
+\DoxyCodeLine{00711\ }
+\DoxyCodeLine{00712\ \textcolor{keywordtype}{void}\ atualizarListaCliente(Cliente*\ inicio)\ \{}
+\DoxyCodeLine{00713\ \ \ \ \ \textcolor{comment}{//\ Abre\ o\ arquivo\ para\ escrita}}
+\DoxyCodeLine{00714\ \ \ \ \ FILE*\ fp\ =\ fopen(\textcolor{stringliteral}{"{}clientes.txt"{}},\ \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{00715\ }
+\DoxyCodeLine{00716\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ arquivo\ foi\ aberto\ corretamente}}
+\DoxyCodeLine{00717\ \ \ \ \ \textcolor{keywordflow}{if}\ (fp\ ==\ NULL)\ \{}
+\DoxyCodeLine{00718\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ ao\ abrir\ o\ arquivo.\(\backslash\)n"{}});}
+\DoxyCodeLine{00719\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00720\ \ \ \ \ \}}
+\DoxyCodeLine{00721\ }
+\DoxyCodeLine{00722\ \ \ \ \ \textcolor{comment}{//\ Percorre\ a\ lista\ e\ escreve\ cada\ meio\ no\ arquivo}}
+\DoxyCodeLine{00723\ \ \ \ \ \textcolor{keywordflow}{while}\ (inicio\ !=\ NULL)\ \{}
+\DoxyCodeLine{00724\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Nome\ de\ utilizador:\ \%s\(\backslash\)n"{}},inicio-\/>nome\_utilizador);}
+\DoxyCodeLine{00725\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Password:\ \%s\(\backslash\)n"{}},inicio-\/>password);}
+\DoxyCodeLine{00726\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Nome:\ \%s\(\backslash\)n"{}},\ inicio-\/>nome);}
+\DoxyCodeLine{00727\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Email:\ \%s\(\backslash\)n"{}},inicio-\/>email);}
+\DoxyCodeLine{00728\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Endereco:\ \%s\(\backslash\)n\(\backslash\)n"{}},inicio-\/>endereco);}
+\DoxyCodeLine{00729\ \ \ \ \ \ \ \ \ inicio\ =\ inicio-\/>seguinte;}
+\DoxyCodeLine{00730\ \ \ \ \ \}}
+\DoxyCodeLine{00731\ }
+\DoxyCodeLine{00732\ \ \ \ \ \textcolor{comment}{//\ Fecha\ o\ arquivo}}
+\DoxyCodeLine{00733\ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00734\ \}}
+\DoxyCodeLine{00735\ }
+\DoxyCodeLine{00736\ \textcolor{keywordtype}{void}\ atualizarListaGestor(Gestor*\ inicio)\ \{}
+\DoxyCodeLine{00737\ \ \ \ \ \textcolor{comment}{//\ Abre\ o\ arquivo\ para\ escrita}}
+\DoxyCodeLine{00738\ \ \ \ \ FILE*\ fp\ =\ fopen(\textcolor{stringliteral}{"{}gestores.txt"{}},\ \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{00739\ }
+\DoxyCodeLine{00740\ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ arquivo\ foi\ aberto\ corretamente}}
+\DoxyCodeLine{00741\ \ \ \ \ \textcolor{keywordflow}{if}\ (fp\ ==\ NULL)\ \{}
+\DoxyCodeLine{00742\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ ao\ abrir\ o\ arquivo.\(\backslash\)n"{}});}
+\DoxyCodeLine{00743\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00744\ \ \ \ \ \}}
+\DoxyCodeLine{00745\ }
+\DoxyCodeLine{00746\ \ \ \ \ \textcolor{comment}{//\ Percorre\ a\ lista\ e\ escreve\ cada\ meio\ no\ arquivo}}
+\DoxyCodeLine{00747\ \ \ \ \ \textcolor{keywordflow}{while}\ (inicio\ !=\ NULL)\ \{}
+\DoxyCodeLine{00748\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Nome\ de\ utilizador:\ \%s\(\backslash\)n"{}},inicio-\/>nome\_utilizador);}
+\DoxyCodeLine{00749\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Password:\ \%s\(\backslash\)n"{}},inicio-\/>password);}
+\DoxyCodeLine{00750\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Nome:\ \%s\(\backslash\)n"{}},\ inicio-\/>nome);}
+\DoxyCodeLine{00751\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\textcolor{stringliteral}{"{}Email:\ \%s\(\backslash\)n"{}},inicio-\/>email);}
+\DoxyCodeLine{00752\ \ \ \ \ \ \ \ \ inicio\ =\ inicio-\/>seguinte;}
+\DoxyCodeLine{00753\ \ \ \ \ \}}
+\DoxyCodeLine{00754\ }
+\DoxyCodeLine{00755\ \ \ \ \ \textcolor{comment}{//\ Fecha\ o\ arquivo}}
+\DoxyCodeLine{00756\ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00757\ \}}
+\DoxyCodeLine{00758\ }
+\DoxyCodeLine{00759\ \textcolor{keywordtype}{int}\ criarVertice(Grafo\ *g,\ \textcolor{keywordtype}{char}\ novoId[])}
+\DoxyCodeLine{00760\ \{Grafo\ novo\ =\ malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct}\ registo1));}
+\DoxyCodeLine{00761\ \ \textcolor{keywordflow}{if}\ (novo!=NULL)}
+\DoxyCodeLine{00762\ \ \{strcpy(novo-\/>vertice,novoId);}
+\DoxyCodeLine{00763\ \ \ novo-\/>meios\ =\ NULL;}
+\DoxyCodeLine{00764\ \ \ novo-\/>seguinte\ =\ *g;}
+\DoxyCodeLine{00765\ \ \ *g\ =\ novo;}
+\DoxyCodeLine{00766\ \ \ \textcolor{keywordflow}{return}(1);}
+\DoxyCodeLine{00767\ \ \}}
+\DoxyCodeLine{00768\ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00769\ \}}
+\DoxyCodeLine{00770\ }
+\DoxyCodeLine{00771\ \textcolor{comment}{//\ Devolve\ 1\ se\ o\ vertice\ existe\ no\ grafo\ ou\ 0\ caso\ contrário}}
+\DoxyCodeLine{00772\ \textcolor{keywordtype}{int}\ existeVertice(Grafo\ g,\ \textcolor{keywordtype}{char}\ vertice[])}
+\DoxyCodeLine{00773\ \{\textcolor{keywordflow}{while}\ (g!=NULL)}
+\DoxyCodeLine{00774\ \ \{\textcolor{keywordflow}{if}\ (strcmp(g-\/>vertice,vertice)==0)\ \textcolor{keywordflow}{return}(1);}
+\DoxyCodeLine{00775\ \ \ \textcolor{keywordflow}{else}\ g=g-\/>seguinte;}
+\DoxyCodeLine{00776\ \ \}}
+\DoxyCodeLine{00777\ \ \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00778\ \}}
+\DoxyCodeLine{00779\ }
+\DoxyCodeLine{00780\ \textcolor{comment}{//\ Criar\ uma\ nova\ aresta}}
+\DoxyCodeLine{00781\ \textcolor{comment}{//\ Devolve\ 1\ em\ caso\ de\ sucesso\ ou\ 0\ caso\ contrário}}
+\DoxyCodeLine{00782\ \textcolor{keywordtype}{int}\ criarAresta(Grafo\ g,\ \textcolor{keywordtype}{char}\ vOrigem[],\ \textcolor{keywordtype}{char}\ vDestino[],\ \textcolor{keywordtype}{float}\ peso)}
+\DoxyCodeLine{00783\ \{Adjacente\ novo;}
+\DoxyCodeLine{00784\ \ \textcolor{keywordflow}{if}\ (existeVertice(g,vOrigem)\ \&\&\ existeVertice(g,vDestino))}
+\DoxyCodeLine{00785\ \ \{}
+\DoxyCodeLine{00786\ \ \ \textcolor{keywordflow}{while}(strcmp(g-\/>vertice,vOrigem)!=0)\ g=g-\/>seguinte;}
+\DoxyCodeLine{00787\ \ \ novo\ =\ malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct}\ registo1));}
+\DoxyCodeLine{00788\ \ \ \textcolor{keywordflow}{if}\ (novo!=NULL)}
+\DoxyCodeLine{00789\ \ \ \ \ \{strcpy(novo-\/>vertice,vDestino);}
+\DoxyCodeLine{00790\ \ \ \ \ \ novo-\/>peso\ =\ peso;}
+\DoxyCodeLine{00791\ \ \ \ \ \ novo-\/>seguinte=g-\/>adjacentes;}
+\DoxyCodeLine{00792\ \ \ \ \ \ g-\/>adjacentes=novo;}
+\DoxyCodeLine{00793\ \ \ \ \ \ \textcolor{keywordflow}{return}(1);}
+\DoxyCodeLine{00794\ \ \ \ \ \}}
+\DoxyCodeLine{00795\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00796\ \ \}}
+\DoxyCodeLine{00797\ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00798\ \}}
+\DoxyCodeLine{00799\ }
+\DoxyCodeLine{00800\ \textcolor{comment}{//\ Listar\ os\ vértices\ adjacentes\ }}
+\DoxyCodeLine{00801\ \textcolor{keywordtype}{void}\ listarAdjacentes(Grafo\ g,\ \textcolor{keywordtype}{char}\ vertice[])}
+\DoxyCodeLine{00802\ \{Adjacente\ aux;}
+\DoxyCodeLine{00803\ \textcolor{keywordflow}{while}\ (strcmp(g-\/>vertice,vertice)!=0)\ g=g-\/>seguinte;}
+\DoxyCodeLine{00804\ \ \ aux\ =\ g-\/>adjacentes;}
+\DoxyCodeLine{00805\ \ \ \textcolor{keywordflow}{while}\ (aux!=NULL)\ }
+\DoxyCodeLine{00806\ \ \ \{printf(\textcolor{stringliteral}{"{}Geolocalizacao\ proxima:\%s\ \(\backslash\)nDistancia:\%.2f\ metros\(\backslash\)n"{}},\ aux-\/>vertice,\ aux-\/>peso);}
+\DoxyCodeLine{00807\ \ \ \ aux=aux-\/>seguinte;}
+\DoxyCodeLine{00808\ \ \ \}}
+\DoxyCodeLine{00809\ \ }
+\DoxyCodeLine{00810\ \}}
+\DoxyCodeLine{00811\ }
+\DoxyCodeLine{00812\ \textcolor{comment}{//\ Inserir\ meio\ de\ transporte\ na\ localização\ com\ geocódigo\ passado\ por\ parâmetro}}
+\DoxyCodeLine{00813\ \textcolor{comment}{//\ Devolve\ 1\ em\ caso\ de\ sucesso\ ou\ 0\ caso\ contrário}}
+\DoxyCodeLine{00814\ \textcolor{keywordtype}{int}\ inserirMeioG(Grafo\ g,\ \textcolor{keywordtype}{char}\ geolocalizacao[],\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{00815\ \{}
+\DoxyCodeLine{00816\ \ \textcolor{keywordflow}{while}\ ((g!=NULL)\&\&(strcmp(g-\/>vertice,geolocalizacao)!=0))}
+\DoxyCodeLine{00817\ \ \ \ \ \ g=g-\/>seguinte;}
+\DoxyCodeLine{00818\ \ \textcolor{keywordflow}{if}\ (g==NULL)\ \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00819\ \ \textcolor{keywordflow}{else}\ \{Meios\ novo\ =\ malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct}\ registo3));}
+\DoxyCodeLine{00820\ \ \ \ \ \ \ \ novo-\/>id=id;}
+\DoxyCodeLine{00821\ \ \ \ \ \ \ \ novo-\/>seguinte\ =\ g-\/>meios;}
+\DoxyCodeLine{00822\ \ \ \ \ \ \ \ g-\/>meios\ =\ novo;}
+\DoxyCodeLine{00823\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}(1);\ \ \ \ }
+\DoxyCodeLine{00824\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00825\ \}}
+\DoxyCodeLine{00826\ }
+\DoxyCodeLine{00827\ \textcolor{keywordtype}{int}\ inserirClienteG(Grafo\ g,\ \textcolor{keywordtype}{char}\ geolocalizacao[],\ \textcolor{keywordtype}{int}\ idc)}
+\DoxyCodeLine{00828\ \{}
+\DoxyCodeLine{00829\ \ \textcolor{keywordflow}{while}\ ((g!=NULL)\&\&(strcmp(g-\/>vertice,geolocalizacao)!=0))}
+\DoxyCodeLine{00830\ \ \ \ \ \ g=g-\/>seguinte;}
+\DoxyCodeLine{00831\ \ \textcolor{keywordflow}{if}\ (g==NULL)\ \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00832\ \ \textcolor{keywordflow}{else}\ \{Clientes\ novo\ =\ malloc(\textcolor{keyword}{sizeof}(\textcolor{keyword}{struct}\ registo4));}
+\DoxyCodeLine{00833\ \ \ \ \ \ \ \ novo-\/>idc=idc;}
+\DoxyCodeLine{00834\ \ \ \ \ \ \ \ novo-\/>seguinte\ =\ g-\/>clientes;}
+\DoxyCodeLine{00835\ \ \ \ \ \ \ \ g-\/>clientes\ =\ novo;}
+\DoxyCodeLine{00836\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}(1);\ \ \ \ }
+\DoxyCodeLine{00837\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00838\ \}}
+\DoxyCodeLine{00839\ }
+\DoxyCodeLine{00840\ }
+\DoxyCodeLine{00841\ }
+\DoxyCodeLine{00842\ \textcolor{comment}{//\ Listar\ os\ códigos\ dos\ meios\ de\ transporte\ presente\ numa\ determinada\ localização\ passada\ por\ parâmetro}}
+\DoxyCodeLine{00843\ \textcolor{keywordtype}{void}\ listarMeiosG(Grafo\ g,\ \textcolor{keywordtype}{char}\ geolocalizacao[])}
+\DoxyCodeLine{00844\ \{}
+\DoxyCodeLine{00845\ \ \textcolor{keywordflow}{while}\ ((g!=NULL)\&\&(strcmp(g-\/>vertice,geolocalizacao)!=0))}
+\DoxyCodeLine{00846\ \ \ \ \ \ g=g-\/>seguinte;}
+\DoxyCodeLine{00847\ \ \textcolor{keywordflow}{if}\ (g!=NULL)\ }
+\DoxyCodeLine{00848\ \ \{Meios\ aux=g-\/>meios;}
+\DoxyCodeLine{00849\ \ \ \textcolor{keywordflow}{if}\ (aux==NULL)\ printf(\textcolor{stringliteral}{"{}Sem\ meios\ de\ transporte\ nesta\ localizacao.\(\backslash\)n"{}});}
+\DoxyCodeLine{00850\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{while}(aux!=NULL)}
+\DoxyCodeLine{00851\ \ \ \{printf(\textcolor{stringliteral}{"{}ID\ do\ meio:\ \%d\(\backslash\)n"{}},\ aux-\/>id);}
+\DoxyCodeLine{00852\ \ \ \ aux\ =\ aux-\/>seguinte;}
+\DoxyCodeLine{00853\ \ \ \}}
+\DoxyCodeLine{00854\ \ \}}
+\DoxyCodeLine{00855\ \ \textcolor{keywordflow}{else}\ printf(\textcolor{stringliteral}{"{}Geocodigo\ inexistente.\(\backslash\)n"{}});}
+\DoxyCodeLine{00856\ \}}
+\DoxyCodeLine{00857\ }
+\DoxyCodeLine{00858\ \textcolor{keywordtype}{void}\ listarClientesG(Grafo\ g,\ \textcolor{keywordtype}{char}\ geolocalizacao[])}
+\DoxyCodeLine{00859\ \{}
+\DoxyCodeLine{00860\ \ \textcolor{keywordflow}{while}\ ((g!=NULL)\&\&(strcmp(g-\/>vertice,geolocalizacao)!=0))}
+\DoxyCodeLine{00861\ \ \ \ \ \ g=g-\/>seguinte;}
+\DoxyCodeLine{00862\ \ \textcolor{keywordflow}{if}\ (g!=NULL)\ }
+\DoxyCodeLine{00863\ \ \{Clientes\ aux=g-\/>clientes;}
+\DoxyCodeLine{00864\ \ \ \textcolor{keywordflow}{if}\ (aux==NULL)\ printf(\textcolor{stringliteral}{"{}Sem\ clientes\ nesta\ localizacao.\(\backslash\)n"{}});}
+\DoxyCodeLine{00865\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{while}(aux!=NULL)}
+\DoxyCodeLine{00866\ \ \ \{printf(\textcolor{stringliteral}{"{}ID\ do\ cliente:\ \%d\(\backslash\)n"{}},\ aux-\/>idc);}
+\DoxyCodeLine{00867\ \ \ \ aux\ =\ aux-\/>seguinte;}
+\DoxyCodeLine{00868\ \ \ \}}
+\DoxyCodeLine{00869\ \ \}}
+\DoxyCodeLine{00870\ \ \textcolor{keywordflow}{else}\ printf(\textcolor{stringliteral}{"{}Geocodigo\ inexistente.\(\backslash\)n"{}});}
+\DoxyCodeLine{00871\ }
+\DoxyCodeLine{00872\ \ }
+\DoxyCodeLine{00873\ \}}
+\DoxyCodeLine{00874\ }
+\DoxyCodeLine{00875\ \textcolor{keywordtype}{void}\ guardarGrafo(Grafo\ g,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ dados)}
+\DoxyCodeLine{00876\ \{}
+\DoxyCodeLine{00877\ \ \ \ \ FILE*\ fp\ =\ fopen(dados,\ \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{00878\ \ \ \ \ \textcolor{keywordflow}{if}\ (fp\ ==\ NULL)}
+\DoxyCodeLine{00879\ \ \ \ \ \{}
+\DoxyCodeLine{00880\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ ao\ abrir\ o\ arquivo.\(\backslash\)n"{}});}
+\DoxyCodeLine{00881\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00882\ \ \ \ \ \}}
+\DoxyCodeLine{00883\ }
+\DoxyCodeLine{00884\ \ \ \ \ \textcolor{keywordflow}{while}\ (g\ !=\ NULL)}
+\DoxyCodeLine{00885\ \ \ \ \ \{}
+\DoxyCodeLine{00886\ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}Vertice:\ \%s\(\backslash\)n"{}},\ g-\/>vertice);}
+\DoxyCodeLine{00887\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00888\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Escrever\ meios\ de\ transporte}}
+\DoxyCodeLine{00889\ \ \ \ \ \ \ \ \ Meios\ meios\ =\ g-\/>meios;}
+\DoxyCodeLine{00890\ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}Meios\ de\ transporte:\ "{}});}
+\DoxyCodeLine{00891\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (meios\ !=\ NULL)}
+\DoxyCodeLine{00892\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00893\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}\%d\ "{}},\ meios-\/>id);}
+\DoxyCodeLine{00894\ \ \ \ \ \ \ \ \ \ \ \ \ meios\ =\ meios-\/>seguinte;}
+\DoxyCodeLine{00895\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00896\ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00897\ }
+\DoxyCodeLine{00898\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Escrever\ clientes}}
+\DoxyCodeLine{00899\ \ \ \ \ \ \ \ \ Clientes\ clientes\ =\ g-\/>clientes;}
+\DoxyCodeLine{00900\ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}Clientes:\ "{}});}
+\DoxyCodeLine{00901\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (clientes\ !=\ NULL)}
+\DoxyCodeLine{00902\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00903\ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}\%d\ "{}},\ clientes-\/>idc);}
+\DoxyCodeLine{00904\ \ \ \ \ \ \ \ \ \ \ \ \ clientes\ =\ clientes-\/>seguinte;}
+\DoxyCodeLine{00905\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00906\ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00907\ }
+\DoxyCodeLine{00908\ \ \ \ \ \ \ \ \ fprintf(fp,\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00909\ \ \ \ \ \ \ \ \ g\ =\ g-\/>seguinte;}
+\DoxyCodeLine{00910\ \ \ \ \ \}}
+\DoxyCodeLine{00911\ }
+\DoxyCodeLine{00912\ \ \ \ \ fclose(fp);}
+\DoxyCodeLine{00913\ \}}
+\DoxyCodeLine{00914\ }
+\DoxyCodeLine{00915\ }
+\DoxyCodeLine{00916\ }
+\DoxyCodeLine{00917\ }
+\DoxyCodeLine{00918\ }
+\DoxyCodeLine{00919\ }
+\DoxyCodeLine{00920\ }
+\DoxyCodeLine{00921\ }
+\DoxyCodeLine{00922\ }
+\DoxyCodeLine{00923\ }
+\DoxyCodeLine{00924\ }
+\DoxyCodeLine{00925\ }
+\DoxyCodeLine{00926\ }
+\DoxyCodeLine{00927\ }
+\DoxyCodeLine{00928\ }
+\DoxyCodeLine{00929\ }
+\DoxyCodeLine{00930\ }
+
+\end{DoxyCode}

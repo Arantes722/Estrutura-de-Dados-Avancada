@@ -1,0 +1,4201 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\info 
+{\title {\comment Projeto EDA  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+1 \par
+}}Projeto EDA}
+{\comment Generated by doxygen 1.9.6.}
+{\creatim \yr2023\mo6\dy6\hr19\min7\sec16}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt Projeto EDA}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Version 1\par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Tue Jun 6 2023 }}\par
+\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Table of Contents\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Data Structure Index\par \pard\plain 
+{\tc \v Data Structure Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Data Structures\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the data structures with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b registo1} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADX \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b registo2} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAED \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b registo3} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b registo4} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b registo_aluguel} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b registo_cliente} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEU \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b registo_gestor} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b registo_meio} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Index\par \pard\plain 
+{\tc \v File Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+File List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here is a list of all files with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b estrutura.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b funcoes.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b registos.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABX \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Data Structure Documentation{\tc \v Data Structure Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+registo1 Struct Reference\par \pard\plain 
+{\tc\tcl2 \v registo1}
+{\xe \v registo1}
+{\bkmkstart AAAAAAAADX}
+{\bkmkend AAAAAAAADX}
+\par
+{
+{\f2 #include <registos.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b vertice} [{\b TAM}]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Adjacente} {\b adjacentes}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Meios} {\b meios}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Clientes} {\b clientes}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo1} * {\b seguinte}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 103} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v adjacentes\:registo1}
+{\xe \v registo1\:adjacentes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Adjacente} adjacentes}}
+\par
+{\bkmkstart AAAAAAAADY}
+{\bkmkend AAAAAAAADY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 105} of file {\b registos.h}.}\par
+}
+{\xe \v clientes\:registo1}
+{\xe \v registo1\:clientes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Clientes} clientes}}
+\par
+{\bkmkstart AAAAAAAADZ}
+{\bkmkend AAAAAAAADZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 107} of file {\b registos.h}.}\par
+}
+{\xe \v meios\:registo1}
+{\xe \v registo1\:meios}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Meios} meios}}
+\par
+{\bkmkstart AAAAAAAAEA}
+{\bkmkend AAAAAAAAEA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 106} of file {\b registos.h}.}\par
+}
+{\xe \v seguinte\:registo1}
+{\xe \v registo1\:seguinte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b registo1}* seguinte}}
+\par
+{\bkmkstart AAAAAAAAEB}
+{\bkmkend AAAAAAAAEB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 108} of file {\b registos.h}.}\par
+}
+{\xe \v vertice\:registo1}
+{\xe \v registo1\:vertice}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char vertice[{\b TAM}]}}
+\par
+{\bkmkstart AAAAAAAAEC}
+{\bkmkend AAAAAAAAEC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 104} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b registos.h}}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+registo2 Struct Reference\par \pard\plain 
+{\tc\tcl2 \v registo2}
+{\xe \v registo2}
+{\bkmkstart AAAAAAAAED}
+{\bkmkend AAAAAAAAED}
+\par
+{
+{\f2 #include <registos.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b vertice} [{\b TAM}]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b peso}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo2} * {\b seguinte}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 97} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v peso\:registo2}
+{\xe \v registo2\:peso}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float peso}}
+\par
+{\bkmkstart AAAAAAAAEE}
+{\bkmkend AAAAAAAAEE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 99} of file {\b registos.h}.}\par
+}
+{\xe \v seguinte\:registo2}
+{\xe \v registo2\:seguinte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b registo2}* seguinte}}
+\par
+{\bkmkstart AAAAAAAAEF}
+{\bkmkend AAAAAAAAEF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 100} of file {\b registos.h}.}\par
+}
+{\xe \v vertice\:registo2}
+{\xe \v registo2\:vertice}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char vertice[{\b TAM}]}}
+\par
+{\bkmkstart AAAAAAAAEG}
+{\bkmkend AAAAAAAAEG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 98} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b registos.h}}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+registo3 Struct Reference\par \pard\plain 
+{\tc\tcl2 \v registo3}
+{\xe \v registo3}
+{\bkmkstart AAAAAAAAEH}
+{\bkmkend AAAAAAAAEH}
+\par
+{
+{\f2 #include <registos.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Meio} * {\b meio}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b id}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b nome_meio} [50]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo3} * {\b seguinte}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 88} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v id\:registo3}
+{\xe \v registo3\:id}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int id}}
+\par
+{\bkmkstart AAAAAAAAEI}
+{\bkmkend AAAAAAAAEI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 91} of file {\b registos.h}.}\par
+}
+{\xe \v meio\:registo3}
+{\xe \v registo3\:meio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Meio}* meio}}
+\par
+{\bkmkstart AAAAAAAAEJ}
+{\bkmkend AAAAAAAAEJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 90} of file {\b registos.h}.}\par
+}
+{\xe \v nome_meio\:registo3}
+{\xe \v registo3\:nome_meio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char nome_meio[50]}}
+\par
+{\bkmkstart AAAAAAAAEK}
+{\bkmkend AAAAAAAAEK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 92} of file {\b registos.h}.}\par
+}
+{\xe \v seguinte\:registo3}
+{\xe \v registo3\:seguinte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b registo3}* seguinte}}
+\par
+{\bkmkstart AAAAAAAAEL}
+{\bkmkend AAAAAAAAEL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 93} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b registos.h}}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+registo4 Struct Reference\par \pard\plain 
+{\tc\tcl2 \v registo4}
+{\xe \v registo4}
+{\bkmkstart AAAAAAAAEM}
+{\bkmkend AAAAAAAAEM}
+\par
+{
+{\f2 #include <registos.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Cliente} * {\b cliente}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b idc}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo4} * {\b seguinte}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 80} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v cliente\:registo4}
+{\xe \v registo4\:cliente}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Cliente}* cliente}}
+\par
+{\bkmkstart AAAAAAAAEN}
+{\bkmkend AAAAAAAAEN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 82} of file {\b registos.h}.}\par
+}
+{\xe \v idc\:registo4}
+{\xe \v registo4\:idc}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int idc}}
+\par
+{\bkmkstart AAAAAAAAEO}
+{\bkmkend AAAAAAAAEO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 83} of file {\b registos.h}.}\par
+}
+{\xe \v seguinte\:registo4}
+{\xe \v registo4\:seguinte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b registo4}* seguinte}}
+\par
+{\bkmkstart AAAAAAAAEP}
+{\bkmkend AAAAAAAAEP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 84} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b registos.h}}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+registo_aluguel Struct Reference\par \pard\plain 
+{\tc\tcl2 \v registo_aluguel}
+{\xe \v registo_aluguel}
+{\bkmkstart AAAAAAAAEQ}
+{\bkmkend AAAAAAAAEQ}
+\par
+{
+{\f2 #include <registos.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b nome_meio} [50]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b valor_pago}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo_aluguel} * {\b proximo}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 70} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v nome_meio\:registo_aluguel}
+{\xe \v registo_aluguel\:nome_meio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char nome_meio[50]}}
+\par
+{\bkmkstart AAAAAAAAER}
+{\bkmkend AAAAAAAAER}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 71} of file {\b registos.h}.}\par
+}
+{\xe \v proximo\:registo_aluguel}
+{\xe \v registo_aluguel\:proximo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b registo_aluguel}* proximo}}
+\par
+{\bkmkstart AAAAAAAAES}
+{\bkmkend AAAAAAAAES}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 73} of file {\b registos.h}.}\par
+}
+{\xe \v valor_pago\:registo_aluguel}
+{\xe \v registo_aluguel\:valor_pago}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float valor_pago}}
+\par
+{\bkmkstart AAAAAAAAET}
+{\bkmkend AAAAAAAAET}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 72} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b registos.h}}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+registo_cliente Struct Reference\par \pard\plain 
+{\tc\tcl2 \v registo_cliente}
+{\xe \v registo_cliente}
+{\bkmkstart AAAAAAAAEU}
+{\bkmkend AAAAAAAAEU}
+\par
+{
+{\f2 #include <registos.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b nome_utilizador} [20]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b password} [20]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b nome} [50]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b email} [50]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b endereco} [100]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b idade}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+float {\b saldo}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo_cliente} * {\b seguinte}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo_aluguel} * {\b historicoAlugueres}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct No * {\b localizacao}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 25} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v email\:registo_cliente}
+{\xe \v registo_cliente\:email}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char email[50]}}
+\par
+{\bkmkstart AAAAAAAAEV}
+{\bkmkend AAAAAAAAEV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 29} of file {\b registos.h}.}\par
+}
+{\xe \v endereco\:registo_cliente}
+{\xe \v registo_cliente\:endereco}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char endereco[100]}}
+\par
+{\bkmkstart AAAAAAAAEW}
+{\bkmkend AAAAAAAAEW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 30} of file {\b registos.h}.}\par
+}
+{\xe \v historicoAlugueres\:registo_cliente}
+{\xe \v registo_cliente\:historicoAlugueres}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b registo_aluguel}* historicoAlugueres}}
+\par
+{\bkmkstart AAAAAAAAEX}
+{\bkmkend AAAAAAAAEX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 34} of file {\b registos.h}.}\par
+}
+{\xe \v idade\:registo_cliente}
+{\xe \v registo_cliente\:idade}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int idade}}
+\par
+{\bkmkstart AAAAAAAAEY}
+{\bkmkend AAAAAAAAEY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 31} of file {\b registos.h}.}\par
+}
+{\xe \v localizacao\:registo_cliente}
+{\xe \v registo_cliente\:localizacao}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct No* localizacao}}
+\par
+{\bkmkstart AAAAAAAAEZ}
+{\bkmkend AAAAAAAAEZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 35} of file {\b registos.h}.}\par
+}
+{\xe \v nome\:registo_cliente}
+{\xe \v registo_cliente\:nome}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char nome[50]}}
+\par
+{\bkmkstart AAAAAAAAFA}
+{\bkmkend AAAAAAAAFA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 28} of file {\b registos.h}.}\par
+}
+{\xe \v nome_utilizador\:registo_cliente}
+{\xe \v registo_cliente\:nome_utilizador}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char nome_utilizador[20]}}
+\par
+{\bkmkstart AAAAAAAAFB}
+{\bkmkend AAAAAAAAFB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 26} of file {\b registos.h}.}\par
+}
+{\xe \v password\:registo_cliente}
+{\xe \v registo_cliente\:password}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char password[20]}}
+\par
+{\bkmkstart AAAAAAAAFC}
+{\bkmkend AAAAAAAAFC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 27} of file {\b registos.h}.}\par
+}
+{\xe \v saldo\:registo_cliente}
+{\xe \v registo_cliente\:saldo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+float saldo}}
+\par
+{\bkmkstart AAAAAAAAFD}
+{\bkmkend AAAAAAAAFD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 32} of file {\b registos.h}.}\par
+}
+{\xe \v seguinte\:registo_cliente}
+{\xe \v registo_cliente\:seguinte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b registo_cliente}* seguinte}}
+\par
+{\bkmkstart AAAAAAAAFE}
+{\bkmkend AAAAAAAAFE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 33} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b registos.h}}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+registo_gestor Struct Reference\par \pard\plain 
+{\tc\tcl2 \v registo_gestor}
+{\xe \v registo_gestor}
+{\bkmkstart AAAAAAAAFF}
+{\bkmkend AAAAAAAAFF}
+\par
+{
+{\f2 #include <registos.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b nome_utilizador} [20]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b password} [20]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b user_tipo}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b nome} [20]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b email} [20]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo_gestor} * {\b seguinte}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 48} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v email\:registo_gestor}
+{\xe \v registo_gestor\:email}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char email[20]}}
+\par
+{\bkmkstart AAAAAAAAFG}
+{\bkmkend AAAAAAAAFG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 53} of file {\b registos.h}.}\par
+}
+{\xe \v nome\:registo_gestor}
+{\xe \v registo_gestor\:nome}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char nome[20]}}
+\par
+{\bkmkstart AAAAAAAAFH}
+{\bkmkend AAAAAAAAFH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 52} of file {\b registos.h}.}\par
+}
+{\xe \v nome_utilizador\:registo_gestor}
+{\xe \v registo_gestor\:nome_utilizador}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char nome_utilizador[20]}}
+\par
+{\bkmkstart AAAAAAAAFI}
+{\bkmkend AAAAAAAAFI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 49} of file {\b registos.h}.}\par
+}
+{\xe \v password\:registo_gestor}
+{\xe \v registo_gestor\:password}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char password[20]}}
+\par
+{\bkmkstart AAAAAAAAFJ}
+{\bkmkend AAAAAAAAFJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 50} of file {\b registos.h}.}\par
+}
+{\xe \v seguinte\:registo_gestor}
+{\xe \v registo_gestor\:seguinte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b registo_gestor}* seguinte}}
+\par
+{\bkmkstart AAAAAAAAFK}
+{\bkmkend AAAAAAAAFK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 54} of file {\b registos.h}.}\par
+}
+{\xe \v user_tipo\:registo_gestor}
+{\xe \v registo_gestor\:user_tipo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int user_tipo}}
+\par
+{\bkmkstart AAAAAAAAFL}
+{\bkmkend AAAAAAAAFL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 51} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b registos.h}}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+registo_meio Struct Reference\par \pard\plain 
+{\tc\tcl2 \v registo_meio}
+{\xe \v registo_meio}
+{\bkmkstart AAAAAAAAFM}
+{\bkmkend AAAAAAAAFM}
+\par
+{
+{\f2 #include <registos.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b nome_meio} [50]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char {\b geolocalizacao} [50]\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b preco}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b autonomia}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b id}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo_meio} * {\b seguinte}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 3} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v autonomia\:registo_meio}
+{\xe \v registo_meio\:autonomia}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int autonomia}}
+\par
+{\bkmkstart AAAAAAAAFN}
+{\bkmkend AAAAAAAAFN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 6} of file {\b registos.h}.}\par
+}
+{\xe \v geolocalizacao\:registo_meio}
+{\xe \v registo_meio\:geolocalizacao}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char geolocalizacao[50]}}
+\par
+{\bkmkstart AAAAAAAAFO}
+{\bkmkend AAAAAAAAFO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 5} of file {\b registos.h}.}\par
+}
+{\xe \v id\:registo_meio}
+{\xe \v registo_meio\:id}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int id}}
+\par
+{\bkmkstart AAAAAAAAFP}
+{\bkmkend AAAAAAAAFP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 6} of file {\b registos.h}.}\par
+}
+{\xe \v nome_meio\:registo_meio}
+{\xe \v registo_meio\:nome_meio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char nome_meio[50]}}
+\par
+{\bkmkstart AAAAAAAAFQ}
+{\bkmkend AAAAAAAAFQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 5} of file {\b registos.h}.}\par
+}
+{\xe \v preco\:registo_meio}
+{\xe \v registo_meio\:preco}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int preco}}
+\par
+{\bkmkstart AAAAAAAAFR}
+{\bkmkend AAAAAAAAFR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 6} of file {\b registos.h}.}\par
+}
+{\xe \v seguinte\:registo_meio}
+{\xe \v registo_meio\:seguinte}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+struct {\b registo_meio}* seguinte}}
+\par
+{\bkmkstart AAAAAAAAFS}
+{\bkmkend AAAAAAAAFS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 7} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b registos.h}}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Documentation{\tc \v File Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+estrutura.c File Reference\par \pard\plain 
+{\tc\tcl2 \v estrutura.c}
+{\xe \v estrutura.c}
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <stdio.h>}\par
+{\f2 #include <stdlib.h>}\par
+{\f2 #include <string.h>}\par
+{\f2 #include "registos.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b main} ()\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v main\:estrutura.c}
+{\xe \v estrutura.c\:main}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int main ()}}
+\par
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 7} of file {\b estrutura.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+estrutura.c\par \pard\plain 
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+Go to the documentation of this file.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf21 #include <stdio.h>}\par
+00002 {\cf21 #include <stdlib.h>}\par
+00003 {\cf21 #include <string.h>}\par
+00004 {\cf21 #include "registos.h"}\par
+00005 \par
+00006 \par
+00007 {\cf18 int} main() \{\par
+00008 \par
+00009     Cliente* clientes = NULL; {\cf20 //cria um ponteiro chamado "clientes" que aponta para um objeto do tipo "Cliente", e o inicializa com o valor NULL.}\par
+00010     Gestor* gestores = NULL; {\cf20 // cria um ponteiro chamado "gestores" que aponta para um objeto do tipo "Gestor", e o inicializa com o valor NULL.}\par
+00011     Meio* meios = NULL; {\cf20 // cria um ponteiro chamado "meios" que aponta para um objeto do tipo "Meio", e o inicializa com o valor NULL.}\par
+00012     Grafo g = NULL;\par
+00013     {\cf18 char} nome_meio[50], nome_utilizador[50], password[20], nome[50], email[50], endereco[100],geolocalizacao[50];\par
+00014     {\cf18 int} idade,preco,autonomia,id;\par
+00015     {\cf18 float} saldo;\par
+00016 \par
+00017     Cliente cliente = \{{\cf22 "cliente1"}, {\cf22 "123"}, 0\};\par
+00018     Gestor gestor = \{{\cf22 "gestor"}, {\cf22 "123"}, 1\};\par
+00019 \par
+00020 \par
+00021 \par
+00022 \par
+00023     {\cf18 int} opcao;\par
+00024     {\cf18 int} sair=0;\par
+00025 \par
+00026     {\cf19 while}(!sair) \{\par
+00027         printf({\cf22 " ___________________\\n"});\par
+00028         printf({\cf22 "| BEM-VINDO AO MENU |\\n"});\par
+00029         printf({\cf22 "|                   |\\n"});\par
+00030         printf({\cf22 "| 1 - Login         |\\n"});\par
+00031         printf({\cf22 "| 2 - Registar      |\\n"});\par
+00032         printf({\cf22 "| 0 - Sair          |\\n"});\par
+00033         printf({\cf22 "|___________________|\\n"});\par
+00034         printf({\cf22 "\\n"});\par
+00035         printf({\cf22 "Selecione uma opcao: "});\par
+00036         scanf({\cf22 "%d"}, &opcao);\par
+00037 \par
+00038         {\cf19 switch} (opcao) \{ {\cf20 // verifica a op\'E7\'E3o selecionada pelo usu\'E1rio}\par
+00039             {\cf19 case} 1: {\cf20 // se for 1, executa o c\'F3digo abaixo}\par
+00040             printf({\cf22 "--------------------------- \\n"});\par
+00041                 printf({\cf22 "Insira o nome de utilizador: "}); {\cf20 // solicita o nome do usu\'E1rio}\par
+00042                 scanf({\cf22 "%s"}, &nome_utilizador); {\cf20 // l\'EA o nome do usu\'E1rio da entrada padr\'E3o}\par
+00043                 printf({\cf22 "Insira a palavra passe: "}); {\cf20 // solicita a senha do usu\'E1rio}\par
+00044                 scanf({\cf22 "%s"}, &password); {\cf20 // l\'EA a senha do usu\'E1rio da entrada padr\'E3o}\par
+00045 \par
+00046                  {\cf20 // verifica se o nome de usu\'E1rio e a senha correspondem aos de um cliente}\par
+00047                 {\cf19 if} (strcmp(nome_utilizador, cliente.nome_utilizador) == 0 && strcmp(password, cliente.password) == 0) \{\par
+00048                 printf({\cf22 "--------------------------- \\n"});\par
+00049                 printf({\cf22 "Bem-vindo, cliente!\\n"}); {\cf20 // imprime uma mensagem de boas-vindas para o cliente}\par
+00050 \par
+00051                 {\cf20 // apresenta um menu de op\'E7\'F5es enquanto o usu\'E1rio n\'E3o selecionar a op\'E7\'E3o "0"}\par
+00052                 {\cf19 while} (opcao != 0) \{\par
+00053                                     \par
+00054                                     printf({\cf22 "\\n"});\par
+00055                                     printf({\cf22 "1 - Alugar meio\\n"}); {\cf20 // oferece a op\'E7\'E3o de alugar um meio de transporte }\par
+00056                                     printf({\cf22 "2 - Ver saldo\\n"}); {\cf20 // oferece a op\'E7\'E3o de verificar o saldo do cliente}\par
+00057                                     printf({\cf22 "3 - Carregar saldo\\n"}); {\cf20 // oferece a op\'E7\'E3o de carregar o saldo do cliente}\par
+00058                                     printf({\cf22 "4 - Ver meios proximos\\n"});\par
+00059                                     printf({\cf22 "5 - Ver historico de alugueis\\n"});\par
+00060                                     printf({\cf22 "0 - Sair\\n"});{\cf20 // oferece a op\'E7\'E3o de sair do programa}\par
+00061                                     printf({\cf22 "\\n"});\par
+00062                                     printf({\cf22 "Selecione uma opcao: "});\par
+00063                                     \par
+00064                                     scanf({\cf22 "%d"}, &opcao); {\cf20 // l\'EA a op\'E7\'E3o selecionada pelo usu\'E1rio da entrada padr\'E3o}\par
+00065         \par
+00066         {\cf19 switch} (opcao) \{{\cf20 // in\'EDcio da sele\'E7\'E3o da op\'E7\'E3o escolhida pelo usu\'E1rio}\par
+00067             {\cf19 case} 1:{\cf20 // caso a op\'E7\'E3o escolhida seja 1}\par
+00068                                 meios = lerMeios();\par
+00069                                 clientes = lerClientes();\par
+00070                                 gestores = lerGestores();\par
+00071                 alugarMeio(meios, &saldo);{\cf20 // chama a fun\'E7\'E3o alugarMeio, passando o array de meios, a quantidade de meios e o saldo como par\'E2metros}\par
+00072                 {\cf19 break};{\cf20 // interrompe o switch}\par
+00073             {\cf19 case} 2:{\cf20 // caso a op\'E7\'E3o escolhida seja 2}\par
+00074                 verSaldo(saldo);{\cf20 // chama a fun\'E7\'E3o verSaldo, passando o saldo como par\'E2metro}\par
+00075                 {\cf19 break};{\cf20 // interrompe o switch}\par
+00076             {\cf19 case} 3:{\cf20 // caso a op\'E7\'E3o escolhida seja 3}\par
+00077                 carregarSaldo(&saldo);{\cf20 // chama a fun\'E7\'E3o carregarSaldo, passando o endere\'E7o do saldo como par\'E2metro}\par
+00078                 {\cf19 break};{\cf20 // interrompe o switch}\par
+00079                 {\cf19 case} 4:\par
+00080                         {\cf19 break};\par
+00081                 {\cf19 case} 5:\par
+00082                     \{\par
+00083                 Cliente* cliente = malloc({\cf17 sizeof}(Cliente));\par
+00084                 verHistoricoAlugueres(cliente);\par
+00085                 {\cf19 break};\par
+00086                 \}\par
+00087 \par
+00088         \}\par
+00089                 \}\par
+00090                 {\cf20 // verifica se o nome de usu\'E1rio e a senha correspondem aos de um gestor}\par
+00091                 \} {\cf19 else} {\cf19 if} (strcmp(nome_utilizador, gestor.nome_utilizador) == 0 && strcmp(password, gestor.password) == 0) \{\par
+00092 \par
+00093                 printf({\cf22 "--------------------------- \\n"});\par
+00094                 printf({\cf22 "Bem-vindo, gestor!\\n"}); {\cf20 // imprime uma mensagem de boas-vindas para o cliente}\par
+00095                                 {\cf19 do} \{\par
+00096 \par
+00097 {\cf19 while} (opcao != 0) \{          \par
+00098                                         \par
+00099                     printf({\cf22 "\\n"});                \par
+00100                     printf({\cf22 "1. Insercao de novos dados\\n"}); {\cf20 // oferece a op\'E7\'E3o de inserir novos dados}\par
+00101                     printf({\cf22 "2. Remocao de dados\\n"}); {\cf20 // oferece a op\'E7\'E3o de remover dados}\par
+00102                     printf({\cf22 "3. Alteracao de dados\\n"}); {\cf20 // oferece a op\'E7\'E3o de alterar dados}\par
+00103                     printf({\cf22 "4. Listagem dos meios de mobilidade eletrica existentes numa localizacao\\n"}); {\cf20 // oferece a op\'E7\'E3o de listar os meios de transporte eletr\'F4nicos dispon\'EDveis em uma determinada localiza\'E7\'E3o}\par
+00104                     printf({\cf22 "5. Localizacao dos clientes e meios de mobilidade eletrica\\n"});\par
+00105                     printf({\cf22 "6. Listagem dos clientes\\n"});\par
+00106                     printf({\cf22 "7. Listagem dos meios\\n"});\par
+00107                     printf({\cf22 "8. Listagem dos gestores\\n"});\par
+00108                     printf({\cf22 "0. Sair\\n"}); {\cf20 // oferece a op\'E7\'E3o de sair do programa}\par
+00109                     printf({\cf22 "\\n"});\par
+00110                     printf({\cf22 "Seleciona uma opcao: "});\par
+00111                     scanf({\cf22 "%d"}, &opcao); {\cf20 // l\'EA a op\'E7\'E3o selecionada pelo usu\'E1rio da entrada padr\'E3o}\par
+00112 \par
+00113                                                                     meios = lerMeios();\par
+00114                     clientes = lerClientes();\par
+00115                     gestores = lerGestores(); \par
+00116 \par
+00117 \par
+00118                     {\cf19 switch} (opcao) \{\par
+00119                         {\cf19 case} 1: {\cf20 // se a op\'E7\'E3o selecionada for 1}\par
+00120 \par
+00121                                 printf({\cf22 "\\n"});\par
+00122                                 printf({\cf22 "1. Inserir novo cliente\\n"}); {\cf20 // oferece a op\'E7\'E3o de inserir um novo cliente}\par
+00123                                 printf({\cf22 "2. Inserir novo gestor\\n"}); {\cf20 // oferece a op\'E7\'E3o de inserir um novo gestor}\par
+00124                                 printf({\cf22 "3. Inserir novo meio de mobilidade eletrica\\n"}); {\cf20 // oferece a op\'E7\'E3o de inserir um novo meio de transporte eletr\'F4nico}\par
+00125                                 printf({\cf22 "0. Sair\\n\\n"}); {\cf20 // oferece a op\'E7\'E3o de sair do submenu}\par
+00126                                 printf({\cf22 "Selecione uma opcao: "});\par
+00127 \par
+00128 \par
+00129                                 scanf({\cf22 "%d"}, &opcao); {\cf20 // l\'EA a op\'E7\'E3o selecionada pelo usu\'E1rio da entrada padr\'E3o}\par
+00130 \par
+00131                                 {\cf19 switch} (opcao) \{ {\cf20 //indica o in\'EDcio de um switch/case para a vari\'E1vel opcao.}\par
+00132                                                 {\cf19 case} 1: {\cf20 // inicia o primeiro caso em que o valor de opcao \'E9 1.}\par
+00133                                                 printf({\cf22 "\\n"});\par
+00134                                                         printf({\cf22 "Insira o nome de utilizador: "}); {\cf20 //exibe a mensagem para o usu\'E1rio inserir o nome de utilizador.}\par
+00135                                                         scanf({\cf22 "%s"},&nome_utilizador); {\cf20 //l\'EA o valor inserido pelo usu\'E1rio e armazena na vari\'E1vel nome_utilizador.}\par
+00136                                                         printf({\cf22 "Insira a password: "}); {\cf20 //exibe a mensagem para o usu\'E1rio inserir a senha.}\par
+00137                                                         scanf({\cf22 "%s"},&password); {\cf20 //l\'EA o valor inserido pelo usu\'E1rio e armazena na vari\'E1vel password.}\par
+00138                                                         printf({\cf22 "Insira o nome: "}); {\cf20 //exibe a mensagem para o usu\'E1rio inserir o nome.}\par
+00139                                                         scanf({\cf22 "%s"},&nome); {\cf20 //l\'EA o valor inserido pelo usu\'E1rio e armazena na vari\'E1vel nome.}\par
+00140                                                         printf({\cf22 "Insira o email: "}); {\cf20 //exibe a mensagem para o usu\'E1rio inserir o e-mail.}\par
+00141                                                         scanf({\cf22 "%s"},&email); {\cf20 //l\'EA o valor inserido pelo usu\'E1rio e armazena na vari\'E1vel email.}\par
+00142                                                         printf({\cf22 "Insira o endereco: "}); {\cf20 //exibe a mensagem para o usu\'E1rio inserir o endere\'E7o.}\par
+00143                                                         scanf({\cf22 "%s"},&endereco); {\cf20 //l\'EA o valor inserido pelo usu\'E1rio e armazena na vari\'E1vel endereco.}\par
+00144                                                         printf({\cf22 "\\n"});\par
+00145                                                         printf({\cf22 "Cliente registado com sucesso! \\n"}); {\cf20 //exibe a mensagem de sucesso.}\par
+00146                                                      \par
+00147                                                         clientes = inserirCliente(clientes,nome_utilizador,password,nome,email,endereco); {\cf20 //chama a fun\'E7\'E3o inserirCliente para inserir um novo cliente na lista de clientes.}\par
+00148                                                         guardarClientes(clientes);\par
+00149                                                         guardarClientesBin(clientes);\par
+00150                                                         {\cf19 break}; {\cf20 //indica que o caso foi finalizado.}\par
+00151                                                 {\cf19 case} 2: {\cf20 //in\'EDcio do segundo caso do switch}\par
+00152                                                 printf({\cf22 "\\n"});\par
+00153                                                         printf({\cf22 "Insira o nome de utilizador: "}); {\cf20 //solicita ao usu\'E1rio que insira o nome de utilizador do gestor}\par
+00154                                                         scanf({\cf22 "%s"},&nome_utilizador); {\cf20 //l\'EA o nome de utilizador inserido pelo usu\'E1rio}\par
+00155                                                         printf({\cf22 "Insira a password: "}); {\cf20 //solicita ao usu\'E1rio que insira a password do gestor}\par
+00156                                                         scanf({\cf22 "%s"},&password); {\cf20 //l\'EA a password inserida pelo usu\'E1rio}\par
+00157                                                         printf({\cf22 "Insira o nome: "}); {\cf20 //solicita ao usu\'E1rio que insira o nome do gestor}\par
+00158                                                         scanf({\cf22 "%s"},&nome); {\cf20 // l\'EA o nome inserido pelo usu\'E1rio}\par
+00159                                                         printf({\cf22 "Insira o email: "}); {\cf20 //solicita ao usu\'E1rio que insira o email do gestor}\par
+00160                                                         scanf({\cf22 "%s"},&email);{\cf20 //l\'EA o email inserido pelo usu\'E1rio}\par
+00161                                                         printf({\cf22 "\\n"});\par
+00162                                                         printf({\cf22 "Gestor registado com sucesso! \\n"}); {\cf20 //exibe uma mensagem informando que o gestor foi registrado com sucesso}\par
+00163 \par
+00164                                                         gestores = inserirGestor(gestores,nome_utilizador,password,nome,email); {\cf20 //chama a fun\'E7\'E3o "inserirGestor" para inserir o gestor na lista de gestores}\par
+00165                                                         guardarGestores(gestores);\par
+00166                                                         guardarGestoresBin(gestores);\par
+00167                                                         {\cf19 break}; {\cf20 //encerra o segundo caso do switch.}\par
+00168                                                 {\cf19 case} 3:\par
+00169                                                 printf({\cf22 "\\n"});\par
+00170                                                         printf({\cf22 "Insira o ID do meio: "});\par
+00171                                                         scanf({\cf22 "%d"},&{\cf18 id});\par
+00172                                                         printf({\cf22 "Insira o nome do meio: "}); {\cf20 // pede ao utilizador para inserir o nome do meio}\par
+00173                                                         scanf({\cf22 "%s"},&nome_meio); {\cf20 // l\'EA o nome do meio inserido pelo utilizador}\par
+00174                                                         printf({\cf22 "Insira o preco do meio por hora: "}); {\cf20 // pede ao utilizador para inserir o pre\'E7o do meio por hora}\par
+00175                                                         scanf({\cf22 "%d"},&preco); {\cf20 // l\'EA o pre\'E7o do meio por hora inserido pelo utilizador}\par
+00176                                                         printf({\cf22 "Insira a autonomia do meio: "}); {\cf20 // pede ao utilizador para inserir a autonomia do meio}\par
+00177                                                         scanf({\cf22 "%d"},&autonomia); {\cf20 // l\'EA a autonomia do meio inserida pelo utilizador}\par
+00178                                                         printf({\cf22 "Insira a geolocalizacao do meio: "});\par
+00179                                                         scanf({\cf22 "%s"},&geolocalizacao);\par
+00180                                                         printf({\cf22 "\\n"});\par
+00181                                                         printf({\cf22 "Meio registado com sucesso! \\n"}); {\cf20 // informa o utilizador que o meio foi registado com sucesso}\par
+00182 \par
+00183                                                         \par
+00184                                                         meios = inserirMeio(meios,{\cf18 id},nome_meio,preco,autonomia,geolocalizacao); {\cf20 // insere o meio na lista de meios}\par
+00185                                                         guardarMeios(meios);\par
+00186                                                         guardarMeiosBin(meios);\par
+00187                                                         {\cf19 break};\par
+00188 \par
+00189                 {\cf19 break};\par
+00190             {\cf19 case} 4:\par
+00191                 printf({\cf22 "Saindo...\\n"}); {\cf20 // oferece a op\'E7\'E3o de sair do submenu}\par
+00192                 {\cf19 break};\par
+00193             {\cf19 default}:\par
+00194                 printf({\cf22 "Op\'E7\'E3o inv\'E1lida! Tente novamente.\\n"});\par
+00195                 {\cf19 break};\par
+00196         \}\par
+00197 \par
+00198 \par
+00199 \par
+00200                             {\cf19 break};\par
+00201                         {\cf19 case} 2:\par
+00202                             {\cf20 // Remover dados}\par
+00203 \par
+00204                                 printf({\cf22 "\\n"});\par
+00205                                 printf({\cf22 "1. Remover cliente\\n"}); {\cf20 //Exibe a op\'E7\'E3o de remover cliente.}\par
+00206                                 printf({\cf22 "2. Remover gestor\\n"}); {\cf20 //Exibe a op\'E7\'E3o de remover gestor.}\par
+00207                                 printf({\cf22 "3. Remover meio de mobilidade eletrica\\n"}); {\cf20 //Exibe a op\'E7\'E3o de remover meio de mobilidade el\'E9trica.}\par
+00208                                 printf({\cf22 "0. Sair\\n"}); {\cf20 //Exibe a op\'E7\'E3o de sair do menu de remo\'E7\'E3o de dados.}\par
+00209                                 printf({\cf22 "\\n"});\par
+00210                                 printf({\cf22 "Selecione uma opcao: "}); {\cf20 //Solicita ao usu\'E1rio que selecione uma op\'E7\'E3o do menu.}\par
+00211 \par
+00212                                 scanf({\cf22 "%d"}, &opcao); {\cf20 //Recebe a op\'E7\'E3o selecionada pelo usu\'E1rio.}\par
+00213 \par
+00214                                 {\cf19 switch} (opcao) \{ {\cf20 //Inicia um switch case para tratar a op\'E7\'E3o selecionada.}\par
+00215                                                 {\cf19 case} 1: printf({\cf22 "\\n"});{\cf20 //Caso a op\'E7\'E3o seja "1", o usu\'E1rio \'E9 solicitado a inserir o nome do cliente que deseja remover e a fun\'E7\'E3o "removerCliente" \'E9 chamada passando como par\'E2metro a lista de clientes e o nome do cliente a ser removido. Em seguida, exibe uma mensagem informando que o cliente foi removido com sucesso.}\par
+00216                                                         printf({\cf22 "Nome do cliente a remover: "});\par
+00217                                                         scanf({\cf22 "%s"},&nome_utilizador);\par
+00218                                                         clientes = removerCliente(clientes, nome_utilizador);\par
+00219                                                         printf({\cf22 "Cliente removido com sucesso!\\n"});\par
+00220                                                     \par
+00221                                                         {\cf19 break};\par
+00222                                                 {\cf19 case} 2: printf({\cf22 "\\n"});{\cf20 //Caso a op\'E7\'E3o seja "2", o usu\'E1rio \'E9 solicitado a inserir o nome do gestor que deseja remover e a fun\'E7\'E3o "removerGestor" \'E9 chamada passando como par\'E2metro a lista de gestores e o nome do gestor a ser removido. Em seguida, exibe uma mensagem informando que o gestor foi removido com sucesso.}\par
+00223                                                         printf({\cf22 "Nome do gestor a remover: "});\par
+00224                                                         scanf({\cf22 "%s"},&nome_utilizador);\par
+00225                                                         gestores = removerGestor(gestores, nome_utilizador);\par
+00226 \par
+00227                                                         printf({\cf22 "Gestor removido com sucesso!\\n"});\par
+00228                                                     \par
+00229                                                         {\cf19 break};\par
+00230                                                 {\cf19 case} 3: printf({\cf22 "\\n"});{\cf20 //Caso a op\'E7\'E3o seja "3", o usu\'E1rio \'E9 solicitado a inserir o nome do meio de mobilidade el\'E9trica que deseja remover e a fun\'E7\'E3o "removerMeio" \'E9 chamada passando como par\'E2metro a lista de meios e o nome do meio a ser removido. Em seguida, exibe uma mensagem informando que o meio foi removido com sucesso.}\par
+00231                                                 \par
+00232                                                         printf({\cf22 "ID do meio de mobilidade a remover: "});\par
+00233                                                         scanf({\cf22 "%d"},&{\cf18 id});\par
+00234                                                         meios = removerMeio(meios, {\cf18 id});\par
+00235 \par
+00236                                                         printf({\cf22 "Meio removido com sucesso!\\n"});\par
+00237                                                     \par
+00238                                                         {\cf19 break};\par
+00239             {\cf19 case} 4: {\cf20 //Caso a op\'E7\'E3o seja "4", a mensagem "Saindo..." \'E9 exibida e o menu de remo\'E7\'E3o de dados \'E9 finalizado.}\par
+00240                 printf({\cf22 "Saindo...\\n"});\par
+00241                 {\cf19 break};\par
+00242             {\cf19 default}: {\cf20 //Caso a op\'E7\'E3o selecionada pelo usu\'E1rio n\'E3o seja nenhuma das op\'E7\'F5es v\'E1lidas, exibe a mensagem "Op\'E7\'E3o inv\'E1lida! Tente novamente." e o menu \'E9 apresentado novamente at\'E9 que o usu\'E1rio selecione uma op\'E7\'E3o v\'E1lida (com exce\'E7\'E3o da op\'E7\'E3o "4" que finaliza o menu). O la\'E7o do-while na linha 23 \'E9 respons\'E1vel por manter o menu ativo enquanto o usu\'E1rio n\'E3o selecionar a op\'E7\'E3o "4".}\par
+00243                 printf({\cf22 "Opcao invalida! Tente novamente.\\n"});\par
+00244                 {\cf19 break};\par
+00245         \}\par
+00246 \par
+00247 \par
+00248 \par
+00249                             {\cf19 break};\par
+00250                         {\cf19 case} 3:\par
+00251                             {\cf20 // Alterar dados}\par
+00252                             \par
+00253                                 printf({\cf22 "\\n"});\par
+00254                                 printf({\cf22 "1. Alterar dados do cliente\\n"});\par
+00255                                 printf({\cf22 "2. Alterar dados do gestor\\n"});\par
+00256                                 printf({\cf22 "3. Alterar dados do meio de mobilidade eletrica\\n"});\par
+00257                                 printf({\cf22 "0. Sair\\n"});\par
+00258                                 printf({\cf22 "\\n"});\par
+00259                                 printf({\cf22 "Selecione uma opcao: "});\par
+00260                                 scanf({\cf22 "%d"}, &opcao);\par
+00261 \par
+00262                                 {\cf19 switch} (opcao) \{\par
+00263                                                 {\cf19 case} 1:\par
+00264                                                         printf({\cf22 "\\n"});\par
+00265                                                         alterarDadosCliente(clientes);\par
+00266                                                         {\cf19 break};\par
+00267                                                 {\cf19 case} 2:\par
+00268                                                         printf({\cf22 "\\n"});\par
+00269                                                         alterarDadosGestor(gestores);\par
+00270                                                         {\cf19 break};\par
+00271                                                 {\cf19 case} 3:\par
+00272                                                         printf({\cf22 "\\n"});\par
+00273                                                         alterarDadosMeio(meios);\par
+00274                                                         {\cf19 break};\par
+00275                                                 {\cf19 case} 4:\par
+00276                                                     printf({\cf22 "Saindo...\\n"});\par
+00277                                                     {\cf19 break};\par
+00278                                                 {\cf19 default}:\par
+00279                                                     printf({\cf22 "Opcao invalida! Tente novamente.\\n"});\par
+00280                                                     {\cf19 break};\par
+00281                                             \}\par
+00282 \par
+00283                             {\cf19 break};\par
+00284 \par
+00285 \par
+00286                         {\cf19 case} 4:\par
+00287                             listarMeiosPorGeolocalizacao(meios);\par
+00288                             {\cf19 break};\par
+00289                         {\cf19 case} 5:\par
+00290                             {\cf20 // Listar meios de mobilidade el\'E9trica em uma localiza\'E7\'E3o}\par
+00291                                     criarVertice(&g,{\cf22 "///crewcut.condense.perceive"}); {\cf20 //0}\par
+00292                                     criarVertice(&g,{\cf22 "///deregulated.stress.oval"}); {\cf20 //1}\par
+00293                                     criarVertice(&g,{\cf22 "///spied.contract.bounded"});{\cf20 //2}\par
+00294                                     criarVertice(&g,{\cf22 "///slider.condors.roughness"});{\cf20 //3}\par
+00295                                     \par
+00296                                     criarAresta(g,{\cf22 "///crewcut.condense.perceive"},{\cf22 "///deregulated.stress.oval"},50);\par
+00297                                     criarAresta(g,{\cf22 "///deregulated.stress.oval"},{\cf22 "///spied.contract.bounded"},200);\par
+00298                                     criarAresta(g,{\cf22 "///spied.contract.bounded"},{\cf22 "///crewcut.condense.perceive"},100);\par
+00299                                     criarAresta(g,{\cf22 "///slider.condors.roughness"},{\cf22 "///crewcut.condense.perceive"},50);\par
+00300 \par
+00301                                     inserirClienteG(g,{\cf22 "///crewcut.condense.perceive"},500);\par
+00302                                     inserirClienteG(g,{\cf22 "///deregulated.stress.oval"},501);\par
+00303                                     inserirClienteG(g,{\cf22 "///spied.contract.bounded"},503);\par
+00304 \par
+00305                                     inserirMeioG(g,{\cf22 "///crewcut.condense.perceive"},111);\par
+00306                                     inserirMeioG(g,{\cf22 "///crewcut.condense.perceive"},112);\par
+00307                                     inserirMeioG(g,{\cf22 "///crewcut.condense.perceive"},113);\par
+00308                                     inserirMeioG(g,{\cf22 "///spied.contract.bounded"},200);\par
+00309                                     inserirMeioG(g,{\cf22 "///slider.condors.roughness"},300);\par
+00310 \par
+00311                                     printf({\cf22 "----------------\\n"});\par
+00312                                     printf({\cf22 "Geolocalizacoes perto da localizacao ///crewcut.condense.perceive\\n"});\par
+00313                                     listarAdjacentes(g,{\cf22 "///crewcut.condense.perceive"});\par
+00314                                     printf({\cf22 "----------------\\n"});\par
+00315                                     printf({\cf22 "Geolocalizacoes perto da localizacao ///deregulated.stress.oval\\n"});\par
+00316                                     listarAdjacentes(g,{\cf22 "///deregulated.stress.oval"});\par
+00317                                     printf({\cf22 "----------------\\n"});\par
+00318                                     {\cf20 /*printf("Vertices adjacentes a ///spied.contract.bounded\\n");}\par
+00319 {\cf20                                     listarAdjacentes(g,"///spied.contract.bounded");}\par
+00320 {\cf20                                     printf("----------------\\n");}\par
+00321 {\cf20                                     printf("Vertices adjacentes a ///slider.condors.roughness\\n");}\par
+00322 {\cf20                                     listarAdjacentes(g,"///slider.condors.roughness");}\par
+00323 {\cf20                                     printf("----------------\\n");*/}\par
+00324 \par
+00325                                     printf({\cf22 "Meios de transporte e clientes existentes na localizacao ///crewcut.condense.perceive\\n"});\par
+00326                                     listarMeiosG(g,{\cf22 "///crewcut.condense.perceive"});\par
+00327                                     listarClientesG(g,{\cf22 "///crewcut.condense.perceive"});\par
+00328                                     printf({\cf22 "----------------\\n"});\par
+00329                                     printf({\cf22 "Meios de transporte e clientes existentes na localizacao ///deregulated.stress.oval\\n"});\par
+00330                                     listarMeiosG(g,{\cf22 "///deregulated.stress.oval"});\par
+00331                                     listarClientesG(g,{\cf22 "///deregulated.stress.oval"});\par
+00332                                     printf({\cf22 "----------------\\n"});\par
+00333                                     {\cf20 /*printf("Meios de transporte e clientes existentes na localizacao ///spied.contract.bounded\\n");}\par
+00334 {\cf20                                     listarMeiosG(g,"///spied.contract.bounded");}\par
+00335 {\cf20                                     listarClientesG(g,"///spied.contract.bounded");}\par
+00336 {\cf20                                     printf("----------------\\n");}\par
+00337 {\cf20                                     printf("Meios de transporte e clientes existentes na localizacao ///slider.condors.roughness\\n");}\par
+00338 {\cf20                                     listarMeiosG(g,"///slider.condors.roughness");}\par
+00339 {\cf20                                     listarClientesG(g,"///slider.condors.roughness");}\par
+00340 {\cf20                                     printf("----------------\\n");*/}\par
+00341 \par
+00342                                     guardarGrafo(g, {\cf22 "grafo.txt"});\par
+00343                             {\cf19 break};\par
+00344                         {\cf19 case} 6:\par
+00345                             {\cf20 // Listar meios de mobilidade el\'E9trica em uma localiza\'E7\'E3o}\par
+00346                             listarClientes(clientes);\par
+00347                             {\cf19 break};\par
+00348                         {\cf19 case} 7:\par
+00349                             {\cf20 // Listar meios de mobilidade el\'E9trica em uma localiza\'E7\'E3o}\par
+00350                             listarMeiosOrdem(meios);\par
+00351                             {\cf19 break};\par
+00352                         {\cf19 case} 8:\par
+00353                             {\cf20 // Listar meios de mobilidade el\'E9trica em uma localiza\'E7\'E3o}\par
+00354                             listarGestores(gestores);\par
+00355                             {\cf19 break};\par
+00356                         {\cf19 case} 0:\par
+00357                             printf({\cf22 "Voltando ao menu de login...\\n"});\par
+00358                             system({\cf22 "cls"});\par
+00359                             {\cf19 break};\par
+00360                         {\cf19 default}:\par
+00361                             printf({\cf22 "Opcao invalida.\\n"});\par
+00362         \}\par
+00363 \par
+00364     \}\par
+00365                                  \} {\cf19 while} (opcao != 0);\par
+00366 \par
+00367                 \} {\cf19 else} \{\par
+00368                 printf({\cf22 "Username ou palavra-passe invalidos.\\n"});\par
+00369                 {\cf20 // c\'F3digo para lidar com a falha de autentica\'E7\'E3o}\par
+00370     \}\par
+00371 \par
+00372     \par
+00373 \par
+00374                 {\cf19 break};\par
+00375                                                 {\cf19 case} 2:\par
+00376                                                         printf({\cf22 "Insira o nome de utilizador: \\n"});\par
+00377                                                         scanf({\cf22 "%s"},&nome_utilizador);\par
+00378                                                         printf({\cf22 "Insira a password: \\n"});\par
+00379                                                         scanf({\cf22 "%s"},&password);\par
+00380                                                         printf({\cf22 "Insira o nome: \\n"});\par
+00381                                                         scanf({\cf22 "%s"},&nome);\par
+00382                                                         printf({\cf22 "Insira o email: \\n"});\par
+00383                                                         scanf({\cf22 "%s"},&email);\par
+00384                                                         printf({\cf22 "Insira o endereco: \\n"});\par
+00385                                                         scanf({\cf22 "%s"},&endereco);\par
+00386                                                         printf({\cf22 "Cliente registado com sucesso! \\n"});\par
+00387                                                      \par
+00388                                                         clientes = inserirCliente(clientes,nome_utilizador,password,nome,email,endereco); \par
+00389 \par
+00390                                                         {\cf19 break};\par
+00391                                                 {\cf19 case} 0:\par
+00392                                                 printf({\cf22 "A sair do programa.\\n"});\par
+00393                                                 {\cf19 break};\par
+00394                                                 \par
+00395                                                 {\cf19 default}:\par
+00396                                                 printf({\cf22 "Opcao invalida.\\n"});\par
+00397                                         \}\par
+00398                                     \} {\cf19 while} (opcao != 0);\par
+00399 \par
+00400     {\cf19 return} 0;\par
+00401 \}\par
+00402 \par
+00403 \par
+00404 \par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+funcoes.c File Reference\par \pard\plain 
+{\tc\tcl2 \v funcoes.c}
+{\xe \v funcoes.c}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <stdlib.h>}\par
+{\f2 #include <stdio.h>}\par
+{\f2 #include <string.h>}\par
+{\f2 #include "registos.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Cliente} * {\b inserirCliente} ({\b Cliente} *inicio, char nome_utilizador[], char password[], char nome[], char email[], char endereco[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Gestor} * {\b inserirGestor} ({\b Gestor} *inicio, char nome_utilizador[], char password[], char nome[], char email[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Meio} * {\b inserirMeio} ({\b Meio} *inicio, int id, char nome_meio[], int preco, int autonomia, char geolocalizacao[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Meio} * {\b removerMeio} ({\b Meio} *inicio, int id)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Cliente} * {\b removerCliente} ({\b Cliente} *inicio, char nome_utilizador[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Gestor} * {\b removerGestor} ({\b Gestor} *inicio, char nome_utilizador[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarMeios} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarClientes} ({\b Cliente} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarGestores} ({\b Gestor} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b verSaldo} (float saldo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b carregarSaldo} (float *saldo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b guardarMeios} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b guardarMeiosBin} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b guardarClientes} ({\b Cliente} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b guardarClientesBin} ({\b Cliente} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b guardarGestores} ({\b Gestor} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b guardarGestoresBin} ({\b Gestor} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Cliente} * {\b buscarClientePorNomeUtilizador} ({\b Cliente} *inicio, const char *nome_utilizador)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b alterarDadosCliente} ({\b Cliente} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Meio} * {\b buscarMeioPorId} ({\b Meio} *inicio, int id)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b alterarDadosMeio} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Gestor} * {\b buscarGestorPorNomeUtilizador} ({\b Gestor} *inicio, const char *nome_utilizador)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b alterarDadosGestor} ({\b Gestor} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Cliente} * {\b lerClientes} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Meio} * {\b lerMeios} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Gestor} * {\b lerGestores} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarMeiosOrdem} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b alugarMeio} ({\b Meio} *inicio, float *saldo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b atualizarListaMeio} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b verHistoricoAlugueres} ({\b Cliente} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b localizarMeioGeo} ({\b Meio} *inicio, char geolocalizacao[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarMeiosPorGeolocalizacao} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b atualizarListaCliente} ({\b Cliente} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b atualizarListaGestor} ({\b Gestor} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b criarVertice} ({\b Grafo} *g, char novoId[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b existeVertice} ({\b Grafo} g, char vertice[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b criarAresta} ({\b Grafo} g, char vOrigem[], char vDestino[], float peso)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarAdjacentes} ({\b Grafo} g, char vertice[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b inserirMeioG} ({\b Grafo} g, char geolocalizacao[], int id)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b inserirClienteG} ({\b Grafo} g, char geolocalizacao[], int idc)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarMeiosG} ({\b Grafo} g, char geolocalizacao[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarClientesG} ({\b Grafo} g, char geolocalizacao[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b guardarGrafo} ({\b Grafo} g, const char *dados)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v alterarDadosCliente\:funcoes.c}
+{\xe \v funcoes.c\:alterarDadosCliente}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void alterarDadosCliente ({\b Cliente} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 345} of file {\b funcoes.c}.}\par
+}
+{\xe \v alterarDadosGestor\:funcoes.c}
+{\xe \v funcoes.c\:alterarDadosGestor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void alterarDadosGestor ({\b Gestor} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 456} of file {\b funcoes.c}.}\par
+}
+{\xe \v alterarDadosMeio\:funcoes.c}
+{\xe \v funcoes.c\:alterarDadosMeio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void alterarDadosMeio ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 410} of file {\b funcoes.c}.}\par
+}
+{\xe \v alugarMeio\:funcoes.c}
+{\xe \v funcoes.c\:alugarMeio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void alugarMeio ({\b Meio} *  {\i inicio}, float *  {\i saldo})}}
+\par
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 608} of file {\b funcoes.c}.}\par
+}
+{\xe \v atualizarListaCliente\:funcoes.c}
+{\xe \v funcoes.c\:atualizarListaCliente}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void atualizarListaCliente ({\b Cliente} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 712} of file {\b funcoes.c}.}\par
+}
+{\xe \v atualizarListaGestor\:funcoes.c}
+{\xe \v funcoes.c\:atualizarListaGestor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void atualizarListaGestor ({\b Gestor} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 736} of file {\b funcoes.c}.}\par
+}
+{\xe \v atualizarListaMeio\:funcoes.c}
+{\xe \v funcoes.c\:atualizarListaMeio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void atualizarListaMeio ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 632} of file {\b funcoes.c}.}\par
+}
+{\xe \v buscarClientePorNomeUtilizador\:funcoes.c}
+{\xe \v funcoes.c\:buscarClientePorNomeUtilizador}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Cliente} * buscarClientePorNomeUtilizador ({\b Cliente} *  {\i inicio}, const char *  {\i nome_utilizador})}}
+\par
+{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 333} of file {\b funcoes.c}.}\par
+}
+{\xe \v buscarGestorPorNomeUtilizador\:funcoes.c}
+{\xe \v funcoes.c\:buscarGestorPorNomeUtilizador}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Gestor} * buscarGestorPorNomeUtilizador ({\b Gestor} *  {\i inicio}, const char *  {\i nome_utilizador})}}
+\par
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 444} of file {\b funcoes.c}.}\par
+}
+{\xe \v buscarMeioPorId\:funcoes.c}
+{\xe \v funcoes.c\:buscarMeioPorId}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Meio} * buscarMeioPorId ({\b Meio} *  {\i inicio}, int  {\i id})}}
+\par
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 398} of file {\b funcoes.c}.}\par
+}
+{\xe \v carregarSaldo\:funcoes.c}
+{\xe \v funcoes.c\:carregarSaldo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void carregarSaldo (float *  {\i saldo})}}
+\par
+{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 191} of file {\b funcoes.c}.}\par
+}
+{\xe \v criarAresta\:funcoes.c}
+{\xe \v funcoes.c\:criarAresta}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int criarAresta ({\b Grafo}  {\i g}, char  {\i vOrigem}[], char  {\i vDestino}[], float  {\i peso})}}
+\par
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 782} of file {\b funcoes.c}.}\par
+}
+{\xe \v criarVertice\:funcoes.c}
+{\xe \v funcoes.c\:criarVertice}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int criarVertice ({\b Grafo} *  {\i g}, char  {\i novoId}[])}}
+\par
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 759} of file {\b funcoes.c}.}\par
+}
+{\xe \v existeVertice\:funcoes.c}
+{\xe \v funcoes.c\:existeVertice}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int existeVertice ({\b Grafo}  {\i g}, char  {\i vertice}[])}}
+\par
+{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 772} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarClientes\:funcoes.c}
+{\xe \v funcoes.c\:guardarClientes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int guardarClientes ({\b Cliente} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 241} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarClientesBin\:funcoes.c}
+{\xe \v funcoes.c\:guardarClientesBin}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int guardarClientesBin ({\b Cliente} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 263} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarGestores\:funcoes.c}
+{\xe \v funcoes.c\:guardarGestores}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int guardarGestores ({\b Gestor} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 288} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarGestoresBin\:funcoes.c}
+{\xe \v funcoes.c\:guardarGestoresBin}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int guardarGestoresBin ({\b Gestor} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 309} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarGrafo\:funcoes.c}
+{\xe \v funcoes.c\:guardarGrafo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void guardarGrafo ({\b Grafo}  {\i g}, const char *  {\i dados})}}
+\par
+{\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 875} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarMeios\:funcoes.c}
+{\xe \v funcoes.c\:guardarMeios}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int guardarMeios ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 199} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarMeiosBin\:funcoes.c}
+{\xe \v funcoes.c\:guardarMeiosBin}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int guardarMeiosBin ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 219} of file {\b funcoes.c}.}\par
+}
+{\xe \v inserirCliente\:funcoes.c}
+{\xe \v funcoes.c\:inserirCliente}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Cliente} * inserirCliente ({\b Cliente} *  {\i inicio}, char  {\i nome_utilizador}[], char  {\i password}[], char  {\i nome}[], char  {\i email}[], char  {\i endereco}[])}}
+\par
+{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 6} of file {\b funcoes.c}.}\par
+}
+{\xe \v inserirClienteG\:funcoes.c}
+{\xe \v funcoes.c\:inserirClienteG}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int inserirClienteG ({\b Grafo}  {\i g}, char  {\i geolocalizacao}[], int  {\i idc})}}
+\par
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 827} of file {\b funcoes.c}.}\par
+}
+{\xe \v inserirGestor\:funcoes.c}
+{\xe \v funcoes.c\:inserirGestor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Gestor} * inserirGestor ({\b Gestor} *  {\i inicio}, char  {\i nome_utilizador}[], char  {\i password}[], char  {\i nome}[], char  {\i email}[])}}
+\par
+{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 22} of file {\b funcoes.c}.}\par
+}
+{\xe \v inserirMeio\:funcoes.c}
+{\xe \v funcoes.c\:inserirMeio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Meio} * inserirMeio ({\b Meio} *  {\i inicio}, int  {\i id}, char  {\i nome_meio}[], int  {\i preco}, int  {\i autonomia}, char  {\i geolocalizacao}[])}}
+\par
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 40} of file {\b funcoes.c}.}\par
+}
+{\xe \v inserirMeioG\:funcoes.c}
+{\xe \v funcoes.c\:inserirMeioG}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int inserirMeioG ({\b Grafo}  {\i g}, char  {\i geolocalizacao}[], int  {\i id})}}
+\par
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 814} of file {\b funcoes.c}.}\par
+}
+{\xe \v lerClientes\:funcoes.c}
+{\xe \v funcoes.c\:lerClientes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Cliente} * lerClientes ()}}
+\par
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 503} of file {\b funcoes.c}.}\par
+}
+{\xe \v lerGestores\:funcoes.c}
+{\xe \v funcoes.c\:lerGestores}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Gestor} * lerGestores ()}}
+\par
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 544} of file {\b funcoes.c}.}\par
+}
+{\xe \v lerMeios\:funcoes.c}
+{\xe \v funcoes.c\:lerMeios}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Meio} * lerMeios ()}}
+\par
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 523} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarAdjacentes\:funcoes.c}
+{\xe \v funcoes.c\:listarAdjacentes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarAdjacentes ({\b Grafo}  {\i g}, char  {\i vertice}[])}}
+\par
+{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 801} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarClientes\:funcoes.c}
+{\xe \v funcoes.c\:listarClientes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarClientes ({\b Cliente} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 155} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarClientesG\:funcoes.c}
+{\xe \v funcoes.c\:listarClientesG}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarClientesG ({\b Grafo}  {\i g}, char  {\i geolocalizacao}[])}}
+\par
+{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 858} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarGestores\:funcoes.c}
+{\xe \v funcoes.c\:listarGestores}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarGestores ({\b Gestor} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 171} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarMeios\:funcoes.c}
+{\xe \v funcoes.c\:listarMeios}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarMeios ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 139} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarMeiosG\:funcoes.c}
+{\xe \v funcoes.c\:listarMeiosG}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarMeiosG ({\b Grafo}  {\i g}, char  {\i geolocalizacao}[])}}
+\par
+{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 843} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarMeiosOrdem\:funcoes.c}
+{\xe \v funcoes.c\:listarMeiosOrdem}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarMeiosOrdem ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 563} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarMeiosPorGeolocalizacao\:funcoes.c}
+{\xe \v funcoes.c\:listarMeiosPorGeolocalizacao}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarMeiosPorGeolocalizacao ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 702} of file {\b funcoes.c}.}\par
+}
+{\xe \v localizarMeioGeo\:funcoes.c}
+{\xe \v funcoes.c\:localizarMeioGeo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void localizarMeioGeo ({\b Meio} *  {\i inicio}, char  {\i geolocalizacao}[])}}
+\par
+{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 675} of file {\b funcoes.c}.}\par
+}
+{\xe \v removerCliente\:funcoes.c}
+{\xe \v funcoes.c\:removerCliente}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Cliente} * removerCliente ({\b Cliente} *  {\i inicio}, char  {\i nome_utilizador}[])}}
+\par
+{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 86} of file {\b funcoes.c}.}\par
+}
+{\xe \v removerGestor\:funcoes.c}
+{\xe \v funcoes.c\:removerGestor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Gestor} * removerGestor ({\b Gestor} *  {\i inicio}, char  {\i nome_utilizador}[])}}
+\par
+{\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 114} of file {\b funcoes.c}.}\par
+}
+{\xe \v removerMeio\:funcoes.c}
+{\xe \v funcoes.c\:removerMeio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Meio} * removerMeio ({\b Meio} *  {\i inicio}, int  {\i id})}}
+\par
+{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 60} of file {\b funcoes.c}.}\par
+}
+{\xe \v verHistoricoAlugueres\:funcoes.c}
+{\xe \v funcoes.c\:verHistoricoAlugueres}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void verHistoricoAlugueres ({\b Cliente} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 656} of file {\b funcoes.c}.}\par
+}
+{\xe \v verSaldo\:funcoes.c}
+{\xe \v funcoes.c\:verSaldo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void verSaldo (float  {\i saldo})}}
+\par
+{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 187} of file {\b funcoes.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+funcoes.c\par \pard\plain 
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+Go to the documentation of this file.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf21 #include <stdlib.h>}\par
+00002 {\cf21 #include <stdio.h>}\par
+00003 {\cf21 #include <string.h>}\par
+00004 {\cf21 #include "registos.h"}\par
+00005 \par
+00006 Cliente* inserirCliente(Cliente* inicio, {\cf18 char} nome_utilizador[], {\cf18 char} password[], {\cf18 char} nome[], {\cf18 char} email[], {\cf18 char} endereco[]) \par
+00007 \{\par
+00008 \par
+00009         Cliente* novo = malloc({\cf17 sizeof}({\cf17 struct} registo_cliente)); {\cf20 //aloca mem\'F3ria para a nova estrutura "Cliente" usando a fun\'E7\'E3o "malloc".}\par
+00010         {\cf19 if} (novo != NULL)\par
+00011         \{\par
+00012             strcpy(novo->nome_utilizador, nome_utilizador); {\cf20 //copia o "nome_utilizador" para o campo "nome_utilizador" da nova estrutura usando a fun\'E7\'E3o "strcpy".}\par
+00013             strcpy(novo->password, password); {\cf20 //copia a "password" para o campo "password" da nova estrutura usando a fun\'E7\'E3o "strcpy".}\par
+00014             strcpy(novo->nome, nome); {\cf20 //copia o "nome" para o campo "nome" da nova estrutura usando a fun\'E7\'E3o "strcpy".}\par
+00015             strcpy(novo->email, email); {\cf20 //copia o "email" para o campo "email" da nova estrutura usando a fun\'E7\'E3o "strcpy".}\par
+00016             strcpy(novo->endereco, endereco); {\cf20 //copia o "endereco" para o campo "endereco" da nova estrutura usando a fun\'E7\'E3o "strcpy".}\par
+00017             novo->seguinte = inicio; {\cf20 //define o campo "seguinte" da nova estrutura como apontando para a lista "inicio".}\par
+00018             {\cf19 return}(novo); {\cf20 //retorna a nova estrutura se a aloca\'E7\'E3o de mem\'F3ria for bem sucedida e se n\'E3o houver um cliente com o mesmo "nome_utilizador" na lista.}\par
+00019         \}\par
+00020 \}\par
+00021 \par
+00022 Gestor* inserirGestor(Gestor* inicio, {\cf18 char} nome_utilizador[], {\cf18 char} password[], {\cf18 char} nome[], {\cf18 char} email[])\par
+00023 \{\par
+00024 \par
+00025         Gestor* novo = malloc({\cf17 sizeof}({\cf17 struct} registo_gestor)); {\cf20 //aloca espa\'E7o na mem\'F3ria para um novo gestor "novo" usando a fun\'E7\'E3o "malloc". O tamanho alocado \'E9 do tamanho da estrutura "registo_gestor". Se a aloca\'E7\'E3o for bem sucedida, entra no bloco "if". Se a aloca\'E7\'E3o falhar, retorna NULL.}\par
+00026         {\cf19 if} (novo != NULL)\par
+00027         \{\par
+00028             {\cf20 //copia o "nome_utilizador", "password", "nome" e "email" para o novo gestor "novo" usando a fun\'E7\'E3o "strcpy".}\par
+00029             strcpy(novo->nome_utilizador, nome_utilizador);\par
+00030             strcpy(novo->password, password);\par
+00031             strcpy(novo->nome, nome);\par
+00032             strcpy(novo->email, email);\par
+00033     \par
+00034             novo->seguinte = inicio; {\cf20 //atualiza o apontador "seguinte" do novo gestor "novo" para o in\'EDcio da lista ligada "inicio".}\par
+00035             {\cf19 return}(novo); {\cf20 //retorna o endere\'E7o do novo gestor "novo".}\par
+00036         \}\par
+00037 \par
+00038 \}\par
+00039 \par
+00040 Meio* inserirMeio(Meio* inicio, {\cf18 int} {\cf18 id},{\cf18 char} nome_meio[], {\cf18 int} preco, {\cf18 int} autonomia, {\cf18 char} geolocalizacao[])\par
+00041 \{\par
+00042 \par
+00043         Meio* novo = malloc({\cf17 sizeof}({\cf17 struct} registo_meio));\par
+00044         {\cf19 if} (novo != NULL)\par
+00045         \{\par
+00046             novo->id=id;\par
+00047             strcpy(novo->nome_meio, nome_meio);\par
+00048             novo->preco=preco;\par
+00049             novo->autonomia=autonomia;\par
+00050             novo->seguinte = inicio;\par
+00051             strcpy(novo->geolocalizacao, geolocalizacao);\par
+00052             {\cf19 return}(novo);\par
+00053         \}\par
+00054 \par
+00055     \par
+00056 \}\par
+00057 \par
+00058 \par
+00059 \par
+00060 Meio* removerMeio(Meio* inicio, {\cf18 int} {\cf18 id}) \{\par
+00061     Meio* anterior = NULL;\par
+00062     Meio* atual = inicio;\par
+00063 \par
+00064     {\cf19 if} (atual == NULL)\par
+00065         {\cf19 return} NULL;\par
+00066     {\cf19 else} {\cf19 if} (atual->id == {\cf18 id}) \{\par
+00067         inicio = atual->seguinte;\par
+00068         free(atual);\par
+00069     \} {\cf19 else} \{\par
+00070         {\cf19 while} (atual != NULL && atual->id != {\cf18 id}) \{\par
+00071             anterior = atual;\par
+00072             atual = atual->seguinte;\par
+00073         \}\par
+00074         {\cf19 if} (atual != NULL) \{\par
+00075             anterior->seguinte = atual->seguinte;\par
+00076             free(atual);\par
+00077         \}\par
+00078     \}\par
+00079 \par
+00080     atualizarListaMeio(inicio); {\cf20 // Atualiza o arquivo com a lista atualizada}\par
+00081     {\cf19 return} inicio;\par
+00082 \}\par
+00083 \par
+00084 \par
+00085 \par
+00086 Cliente* removerCliente(Cliente* inicio, {\cf18 char} nome_utilizador[]) \{\par
+00087     Cliente* anterior = NULL;\par
+00088     Cliente* atual = inicio;\par
+00089 \par
+00090     {\cf19 if} (atual == NULL)\par
+00091         {\cf19 return} NULL;\par
+00092     {\cf19 else} {\cf19 if} (strcmp(atual->nome_utilizador, nome_utilizador) == 0) \{\par
+00093         inicio = atual->seguinte;\par
+00094         free(atual);\par
+00095     \} {\cf19 else} \{\par
+00096         {\cf19 while} (atual != NULL && strcmp(atual->nome_utilizador, nome_utilizador) != 0) \{\par
+00097             anterior = atual;\par
+00098             atual = atual->seguinte;\par
+00099         \}\par
+00100         {\cf19 if} (atual != NULL) \{\par
+00101             anterior->seguinte = atual->seguinte;\par
+00102             free(atual);\par
+00103         \}\par
+00104     \}\par
+00105 \par
+00106     atualizarListaCliente(inicio); {\cf20 // Atualiza o arquivo com a lista atualizada}\par
+00107     {\cf19 return} inicio;\par
+00108 \}\par
+00109 \par
+00110 \par
+00111 \par
+00112 \par
+00113 \par
+00114 Gestor* removerGestor(Gestor* inicio, {\cf18 char} nome_utilizador[]) \{\par
+00115     Gestor* anterior = NULL;\par
+00116     Gestor* atual = inicio;\par
+00117 \par
+00118     {\cf19 if} (atual == NULL)\par
+00119         {\cf19 return} NULL;\par
+00120     {\cf19 else} {\cf19 if} (strcmp(atual->nome_utilizador, nome_utilizador) == 0) \{\par
+00121         inicio = atual->seguinte;\par
+00122         free(atual);\par
+00123     \} {\cf19 else} \{\par
+00124         {\cf19 while} (atual != NULL && strcmp(atual->nome_utilizador, nome_utilizador) != 0) \{\par
+00125             anterior = atual;\par
+00126             atual = atual->seguinte;\par
+00127         \}\par
+00128         {\cf19 if} (atual != NULL) \{\par
+00129             anterior->seguinte = atual->seguinte;\par
+00130             free(atual);\par
+00131         \}\par
+00132     \}\par
+00133 \par
+00134     atualizarListaGestor(inicio); {\cf20 // Atualiza o arquivo com a lista atualizada}\par
+00135     {\cf19 return} inicio;\par
+00136 \}\par
+00137 \par
+00138 \par
+00139 {\cf18 void} listarMeios(Meio* inicio) \{\par
+00140     printf({\cf22 "\\n"});\par
+00141     printf({\cf22 " ______________________________________________________________________________________________\\n"});\par
+00142     printf({\cf22 "|   ID   |   Nome do Meio              |   Preco por hora   |   Autonomia                       |\\n"});\par
+00143     printf({\cf22 "|________|____________________________|___________________|____________________________________|\\n"});\par
+00144     \par
+00145     {\cf19 while} (inicio != NULL) \{\par
+00146         printf({\cf22 "|   %-4d |   %-25s |   %-16d |   %-30d |\\n"}, inicio->id, inicio->nome_meio, inicio->preco, inicio->autonomia);\par
+00147         inicio = inicio->seguinte;\par
+00148     \}\par
+00149     \par
+00150     printf({\cf22 "|________|____________________________|___________________|____________________________________|\\n"});\par
+00151     printf({\cf22 "\\n"});\par
+00152 \}\par
+00153 \par
+00154 \par
+00155 {\cf18 void} listarClientes(Cliente* inicio) \{\par
+00156     printf({\cf22 "\\n"});\par
+00157     printf({\cf22 " _________________________________________________________________________________________________________________________\\n"});\par
+00158     printf({\cf22 "|   Nome de utilizador    |   Password              |   Nome              |   Email              |   Endereco              |\\n"});\par
+00159     printf({\cf22 "|_________________________|_________________________|_____________________|_____________________|_________________________|\\n"});\par
+00160 \par
+00161     {\cf19 while} (inicio != NULL) \{\par
+00162         printf({\cf22 "|   %-22s |   %-21s |   %-18s |   %-18s |   %-22s |\\n"}, inicio->nome_utilizador, inicio->password, inicio->nome, inicio->email, inicio->endereco);\par
+00163         inicio = inicio->seguinte;\par
+00164     \}\par
+00165 \par
+00166     printf({\cf22 "|_________________________|_________________________|_____________________|_____________________|_________________________|\\n"});\par
+00167     printf({\cf22 "\\n"});\par
+00168 \}\par
+00169 \par
+00170 \par
+00171 {\cf18 void} listarGestores(Gestor* inicio) \{\par
+00172     printf({\cf22 "\\n"});\par
+00173     printf({\cf22 " ___________________________________________________________________________________________________"});\par
+00174     printf({\cf22 "|   Nome de utilizador    |   Password              |   Nome              |   Email                 |\\n"});\par
+00175     printf({\cf22 "|_________________________|_________________________|_____________________|__________________________|\\n"});\par
+00176 \par
+00177     {\cf19 while} (inicio != NULL) \{\par
+00178         printf({\cf22 "|   %-22s |   %-21s |   %-18s |   %-25s |\\n"}, inicio->nome_utilizador, inicio->password, inicio->nome, inicio->email);\par
+00179         inicio = inicio->seguinte;\par
+00180     \}\par
+00181 \par
+00182     printf({\cf22 "|__________________________|_________________________|_____________________|__________________________|\\n"});\par
+00183     printf({\cf22 "\\n"});\par
+00184 \}\par
+00185 \par
+00186 \par
+00187 {\cf18 void} verSaldo({\cf18 float} saldo) \{\par
+00188     printf({\cf22 "Saldo atual: %.2f\\n"}, saldo);\par
+00189 \}\par
+00190 \par
+00191 {\cf18 void} carregarSaldo({\cf18 float} *saldo) \{\par
+00192     {\cf18 float} valor;\par
+00193     printf({\cf22 "Digite o valor a ser carregado: "});\par
+00194     scanf({\cf22 "%f"}, &valor);\par
+00195     *saldo += valor;\par
+00196     printf({\cf22 "Saldo carregado com sucesso!\\n"});\par
+00197 \}\par
+00198 \par
+00199 {\cf18 int} guardarMeios(Meio* inicio) \{\par
+00200   FILE* fp;\par
+00201   fp = fopen({\cf22 "meios.txt"}, {\cf22 "w"});\par
+00202 \par
+00203   {\cf19 if} (fp != NULL) \{\par
+00204     Meio* aux = inicio;\par
+00205     {\cf19 while} (aux != NULL) \{\par
+00206             fprintf(fp,{\cf22 "ID: %d\\n"},aux->id);\par
+00207             fprintf(fp, {\cf22 "Nome do meio: %s\\n"}, aux->nome_meio);\par
+00208             fprintf(fp, {\cf22 "Preco do meio por hora: %d\\n"}, aux->preco);\par
+00209             fprintf(fp, {\cf22 "Autonomia: %d\\n"}, aux->autonomia);\par
+00210             fprintf(fp, {\cf22 "Geolocalizacao: %s\\n\\n"}, aux->geolocalizacao);\par
+00211       aux = aux->seguinte;\par
+00212     \}\par
+00213     fclose(fp);\par
+00214     {\cf19 return} 1;\par
+00215   \} {\cf19 else} \par
+00216     {\cf19 return} 0;\par
+00217   \}\par
+00218 \par
+00219   {\cf18 int} guardarMeiosBin(Meio* inicio) \{\par
+00220     FILE* fp;\par
+00221     fp = fopen({\cf22 "meios.bin"}, {\cf22 "wb"});\par
+00222 \par
+00223     {\cf19 if} (fp != NULL) \{\par
+00224         Meio* aux = inicio;\par
+00225         {\cf19 while} (aux != NULL) \{\par
+00226             fwrite(&(aux->id), {\cf17 sizeof}({\cf18 int}), 1, fp);\par
+00227             fwrite(aux->nome_meio, {\cf17 sizeof}({\cf18 char}), strlen(aux->nome_meio) + 1, fp);\par
+00228             fwrite(&(aux->preco), {\cf17 sizeof}({\cf18 int}), 1, fp);\par
+00229             fwrite(&(aux->autonomia), {\cf17 sizeof}({\cf18 int}), 1, fp);\par
+00230             fwrite(aux->geolocalizacao, {\cf17 sizeof}({\cf18 char}), strlen(aux->geolocalizacao) + 1, fp);\par
+00231             aux = aux->seguinte;\par
+00232         \}\par
+00233         fclose(fp);\par
+00234         {\cf19 return} 1;\par
+00235     \} {\cf19 else} \{\par
+00236         {\cf19 return} 0;\par
+00237     \}\par
+00238 \}\par
+00239 \par
+00240 \par
+00241 {\cf18 int} guardarClientes(Cliente* inicio)\par
+00242 \{FILE* fp;\par
+00243  fp = fopen({\cf22 "clientes.txt"},{\cf22 "w"});\par
+00244  {\cf19 if} (fp!=NULL)\par
+00245  \{\par
+00246  Cliente* aux= inicio;\par
+00247  {\cf19 while} (aux != NULL)\par
+00248  \{\par
+00249   fprintf(fp,{\cf22 "Nome de utilizador: %s\\n"},aux->nome_utilizador);\par
+00250   fprintf(fp,{\cf22 "Password: %s\\n"},aux->password);\par
+00251   fprintf(fp,{\cf22 "Nome: %s\\n"}, aux->nome);\par
+00252   fprintf(fp,{\cf22 "Email: %s\\n"},aux->email);\par
+00253   fprintf(fp,{\cf22 "Endereco: %s\\n\\n"},aux->endereco);\par
+00254 \par
+00255   aux = aux->seguinte;\par
+00256  \}\par
+00257  fclose(fp);\par
+00258  {\cf19 return}(1);\par
+00259  \}\par
+00260  {\cf19 else} {\cf19 return}(0);\par
+00261 \}\par
+00262 \par
+00263 {\cf18 int} guardarClientesBin(Cliente* inicio) \{\par
+00264     FILE* fp;\par
+00265     fp = fopen({\cf22 "clientes.bin"}, {\cf22 "wb"});\par
+00266     \par
+00267     {\cf19 if} (fp != NULL) \{\par
+00268         Cliente* aux = inicio;\par
+00269         \par
+00270         {\cf19 while} (aux != NULL) \{\par
+00271             fwrite(aux->nome_utilizador, {\cf17 sizeof}({\cf18 char}), strlen(aux->nome_utilizador) + 1, fp);\par
+00272             fwrite(aux->password, {\cf17 sizeof}({\cf18 char}), strlen(aux->password) + 1, fp);\par
+00273             fwrite(aux->nome, {\cf17 sizeof}({\cf18 char}), strlen(aux->nome) + 1, fp);\par
+00274             fwrite(aux->email, {\cf17 sizeof}({\cf18 char}), strlen(aux->email) + 1, fp);\par
+00275             fwrite(aux->endereco, {\cf17 sizeof}({\cf18 char}), strlen(aux->endereco) + 1, fp);\par
+00276             \par
+00277             aux = aux->seguinte;\par
+00278         \}\par
+00279         \par
+00280         fclose(fp);\par
+00281         {\cf19 return} 1;\par
+00282     \} {\cf19 else} \{\par
+00283         {\cf19 return} 0;\par
+00284     \}\par
+00285 \}\par
+00286 \par
+00287 \par
+00288 {\cf18 int} guardarGestores(Gestor* inicio)\par
+00289 \{FILE* fp;\par
+00290  fp = fopen({\cf22 "gestores.txt"},{\cf22 "w"});\par
+00291  {\cf19 if} (fp!=NULL)\par
+00292  \{\par
+00293  Gestor* aux= inicio;\par
+00294  {\cf19 while} (aux != NULL)\par
+00295  \{\par
+00296   fprintf(fp,{\cf22 "Nome de utilizador: %s\\n"},aux->nome_utilizador);\par
+00297   fprintf(fp,{\cf22 "Password: %s\\n"},aux->password);\par
+00298   fprintf(fp,{\cf22 "Nome: %s\\n"}, aux->nome);\par
+00299   fprintf(fp,{\cf22 "Email: %s\\n\\n"},aux->email);\par
+00300 \par
+00301   aux = aux->seguinte;\par
+00302  \}\par
+00303  fclose(fp);\par
+00304  {\cf19 return}(1);\par
+00305  \}\par
+00306  {\cf19 else} {\cf19 return}(0);\par
+00307 \}\par
+00308 \par
+00309 {\cf18 int} guardarGestoresBin(Gestor* inicio) \{\par
+00310     FILE* fp;\par
+00311     fp = fopen({\cf22 "gestores.bin"}, {\cf22 "wb"});\par
+00312     \par
+00313     {\cf19 if} (fp != NULL) \{\par
+00314         Gestor* aux = inicio;\par
+00315         \par
+00316         {\cf19 while} (aux != NULL) \{\par
+00317             fwrite(aux->nome_utilizador, {\cf17 sizeof}({\cf18 char}), strlen(aux->nome_utilizador) + 1, fp);\par
+00318             fwrite(aux->password, {\cf17 sizeof}({\cf18 char}), strlen(aux->password) + 1, fp);\par
+00319             fwrite(aux->nome, {\cf17 sizeof}({\cf18 char}), strlen(aux->nome) + 1, fp);\par
+00320             fwrite(aux->email, {\cf17 sizeof}({\cf18 char}), strlen(aux->email) + 1, fp);\par
+00321             \par
+00322             aux = aux->seguinte;\par
+00323         \}\par
+00324         \par
+00325         fclose(fp);\par
+00326         {\cf19 return} 1;\par
+00327     \} {\cf19 else} \{\par
+00328         {\cf19 return} 0;\par
+00329     \}\par
+00330 \}\par
+00331 \par
+00332 {\cf20 // Declara\'E7\'E3o da fun\'E7\'E3o para buscar o cliente por nome de utilizador}\par
+00333 Cliente* buscarClientePorNomeUtilizador(Cliente* inicio, {\cf17 const} {\cf18 char}* nome_utilizador) \{\par
+00334   Cliente* atual = inicio;\par
+00335   {\cf19 while} (atual != NULL) \{\par
+00336     {\cf19 if} (strcmp(atual->nome_utilizador, nome_utilizador) == 0) \{\par
+00337       {\cf19 return} atual;\par
+00338     \}\par
+00339     atual = atual->seguinte;\par
+00340   \}\par
+00341   {\cf19 return} NULL; {\cf20 // Retorna NULL se o cliente com o nome de utilizador fornecido n\'E3o for encontrado}\par
+00342 \}\par
+00343 \par
+00344 {\cf20 // Fun\'E7\'E3o para alterar os dados do cliente por nome de utilizador}\par
+00345 {\cf18 void} alterarDadosCliente(Cliente* inicio) \{\par
+00346   {\cf18 char} nome_utilizador[50];\par
+00347   printf({\cf22 "Digite o nome de utilizador do cliente que deseja alterar: "});\par
+00348   fgets(nome_utilizador, {\cf17 sizeof}(nome_utilizador), stdin);\par
+00349   nome_utilizador[strcspn(nome_utilizador, {\cf22 "\\n"})] = {\cf23 '\\0'}; {\cf20 // remove o caractere de nova linha}\par
+00350 \par
+00351   Cliente* cliente = buscarClientePorNomeUtilizador(inicio, nome_utilizador);\par
+00352   {\cf19 if} (cliente == NULL) \{\par
+00353     printf({\cf22 "O cliente com o nome de utilizador fornecido n\'E3o foi encontrado.\\n"});\par
+00354     {\cf19 return};\par
+00355   \}\par
+00356 \par
+00357   {\cf20 // Aloca mem\'F3ria para uma nova estrutura Cliente}\par
+00358   Cliente* novoCliente = (Cliente*)malloc({\cf17 sizeof}(Cliente));\par
+00359 \par
+00360   {\cf20 // Solicita ao usu\'E1rio que digite os novos dados do cliente}\par
+00361   printf({\cf22 "Digite o novo nome de utilizador do cliente: "});\par
+00362   fgets(novoCliente->nome_utilizador, {\cf17 sizeof}(novoCliente->nome_utilizador), stdin);\par
+00363   novoCliente->nome_utilizador[strcspn(novoCliente->nome_utilizador, {\cf22 "\\n"})] = {\cf23 '\\0'}; {\cf20 // remove o caractere de nova linha}\par
+00364 \par
+00365   printf({\cf22 "Digite a nova password do cliente: "});\par
+00366   fgets(novoCliente->password, {\cf17 sizeof}(novoCliente->password), stdin);\par
+00367   novoCliente->password[strcspn(novoCliente->password, {\cf22 "\\n"})] = {\cf23 '\\0'}; {\cf20 // remove o caractere de nova linha}\par
+00368 \par
+00369   printf({\cf22 "Digite o novo nome do cliente: "});\par
+00370   fgets(novoCliente->nome, {\cf17 sizeof}(novoCliente->nome), stdin);\par
+00371   novoCliente->nome[strcspn(novoCliente->nome, {\cf22 "\\n"})] = {\cf23 '\\0'}; {\cf20 // remove o caractere de nova linha}\par
+00372 \par
+00373   printf({\cf22 "Digite o novo email do cliente: "});\par
+00374   fgets(novoCliente->email, {\cf17 sizeof}(novoCliente->email), stdin);\par
+00375   novoCliente->email[strcspn(novoCliente->email, {\cf22 "\\n"})] = {\cf23 '\\0'}; {\cf20 // remove o caractere de nova linha}\par
+00376 \par
+00377   printf({\cf22 "Digite o novo endereco do cliente: "});\par
+00378   fgets(novoCliente->endereco, {\cf17 sizeof}(novoCliente->endereco), stdin);\par
+00379   novoCliente->endereco[strcspn(novoCliente->endereco, {\cf22 "\\n"})] = {\cf23 '\\0'}; {\cf20 // remove o caractere de nova linha}\par
+00380 \par
+00381   {\cf20 // Copia os novos dados para a estrutura original}\par
+00382   strcpy(cliente->nome_utilizador, novoCliente->nome_utilizador);\par
+00383   strcpy(cliente->password, novoCliente->password);\par
+00384   strcpy(cliente->nome, novoCliente->nome);\par
+00385   strcpy(cliente->email, novoCliente->email);\par
+00386   strcpy(cliente->endereco, novoCliente->endereco);\par
+00387 \par
+00388   {\cf20 // Libera a mem\'F3ria alocada para a nova estrutura}\par
+00389   free(novoCliente);\par
+00390 \par
+00391   {\cf20 // Exibe mensagem confirmando que os dados foram alterados}\par
+00392   printf({\cf22 "Dados do cliente atualizados com sucesso.\\n"});\par
+00393 \}\par
+00394 \par
+00395 \par
+00396 \par
+00397 {\cf20 // Declara\'E7\'E3o da fun\'E7\'E3o para buscar o meio por ID}\par
+00398 Meio* buscarMeioPorId(Meio* inicio, {\cf18 int} {\cf18 id}) \{\par
+00399   Meio* atual = inicio;\par
+00400   {\cf19 while} (atual != NULL) \{\par
+00401     {\cf19 if} (atual->id == {\cf18 id}) \{\par
+00402       {\cf19 return} atual;\par
+00403     \}\par
+00404     atual = atual->seguinte;\par
+00405   \}\par
+00406   {\cf19 return} NULL; {\cf20 // Retorna NULL se o meio com o ID fornecido n\'E3o for encontrado}\par
+00407 \}\par
+00408 \par
+00409 {\cf20 // Fun\'E7\'E3o para alterar os dados do meio por ID}\par
+00410 {\cf18 void} alterarDadosMeio(Meio* inicio) \{\par
+00411   {\cf18 int} id;\par
+00412   printf({\cf22 "Insira o ID do meio que deseja alterar: "});\par
+00413   scanf({\cf22 "%d"}, &{\cf18 id});\par
+00414 \par
+00415   Meio* meio = buscarMeioPorId(inicio, {\cf18 id});\par
+00416   {\cf19 if} (meio == NULL) \{\par
+00417     printf({\cf22 "O meio com o ID fornecido nao foi encontrado.\\n"});\par
+00418     {\cf19 return};\par
+00419   \}\par
+00420 \par
+00421   {\cf20 // Solicita ao usu\'E1rio que digite os novos dados do meio}\par
+00422   printf({\cf22 "Insira o nome do meio: "});\par
+00423   fgets(meio->nome_meio, {\cf17 sizeof}(meio->nome_meio), stdin);\par
+00424   meio->nome_meio[strcspn(meio->nome_meio, {\cf22 "\\n"})] = {\cf23 '\\0'}; {\cf20 // remove o caractere de nova linha}\par
+00425 \par
+00426   printf({\cf22 "Insira o preco por hora do meio: "});\par
+00427   scanf({\cf22 "%d"}, &(meio->preco)); {\cf20 // remove o caractere de nova linha}\par
+00428 \par
+00429   printf({\cf22 "Insira a autonomia do meio: "});\par
+00430   scanf({\cf22 "%d"}, &(meio->autonomia)); {\cf20 // remove o caractere de nova linha}\par
+00431 \par
+00432   printf({\cf22 "Insira a geolocalizacao do meio: "});\par
+00433   fgets(meio->geolocalizacao, {\cf17 sizeof}(meio->geolocalizacao), stdin);\par
+00434   meio->geolocalizacao[strcspn(meio->geolocalizacao, {\cf22 "\\n"})] = {\cf23 '\\0'};\par
+00435 \par
+00436   {\cf20 // Exibe mensagem confirmando que os dados foram alterados}\par
+00437   printf({\cf22 "Dados do meio atualizados com sucesso.\\n"});\par
+00438 \}\par
+00439 \par
+00440 \par
+00441 \par
+00442 \par
+00443 {\cf20 // Declara\'E7\'E3o da fun\'E7\'E3o para buscar o gestor por nome de utilizador}\par
+00444 Gestor* buscarGestorPorNomeUtilizador(Gestor* inicio, {\cf17 const} {\cf18 char}* nome_utilizador) \{\par
+00445   Gestor* atual = inicio;\par
+00446   {\cf19 while} (atual != NULL) \{\par
+00447     {\cf19 if} (strcmp(atual->nome_utilizador, nome_utilizador) == 0) \{\par
+00448       {\cf19 return} atual;\par
+00449     \}\par
+00450     atual = atual->seguinte;\par
+00451   \}\par
+00452   {\cf19 return} NULL; {\cf20 // Retorna NULL se o gestor com o nome de utilizador fornecido n\'E3o for encontrado}\par
+00453 \}\par
+00454 \par
+00455 {\cf20 // Fun\'E7\'E3o para alterar os dados do gestor por nome de utilizador}\par
+00456 {\cf18 void} alterarDadosGestor(Gestor* inicio) \{\par
+00457   {\cf18 char} nome_utilizador[50];\par
+00458   printf({\cf22 "Digite o nome de utilizador do gestor que deseja alterar: "});\par
+00459   fgets(nome_utilizador, {\cf17 sizeof}(nome_utilizador), stdin);\par
+00460   nome_utilizador[strcspn(nome_utilizador, {\cf22 "\\n"})] = {\cf23 '\\0'}; {\cf20 // remove o caractere de nova linha}\par
+00461 \par
+00462   Gestor* gestor = buscarGestorPorNomeUtilizador(inicio, nome_utilizador);\par
+00463   {\cf19 if} (gestor == NULL) \{\par
+00464     printf({\cf22 "O gestor com o nome de utilizador fornecido n\'E3o foi encontrado.\\n"});\par
+00465     {\cf19 return};\par
+00466   \}\par
+00467 \par
+00468   {\cf20 // Aloca mem\'F3ria para uma nova estrutura Gestor}\par
+00469   Gestor* novoGestor = (Gestor*)malloc({\cf17 sizeof}(Gestor));\par
+00470 \par
+00471   {\cf20 // Solicita ao usu\'E1rio que digite os novos dados do gestor}\par
+00472   printf({\cf22 "Insira o novo nome de utilizador do gestor: "});\par
+00473   fgets(novoGestor->nome_utilizador, {\cf17 sizeof}(novoGestor->nome_utilizador), stdin);\par
+00474   novoGestor->nome_utilizador[strcspn(novoGestor->nome_utilizador, {\cf22 "\\n"})] = {\cf23 '\\0'}; {\cf20 // remove o caractere de nova linha}\par
+00475 \par
+00476   printf({\cf22 "Insira a nova password do gestor: "});\par
+00477   fgets(novoGestor->password, {\cf17 sizeof}(novoGestor->password), stdin);\par
+00478   novoGestor->password[strcspn(novoGestor->password, {\cf22 "\\n"})] = {\cf23 '\\0'}; {\cf20 // remove o caractere de nova linha}\par
+00479 \par
+00480   printf({\cf22 "Insira o novo nome do gestor: "});\par
+00481   fgets(novoGestor->nome, {\cf17 sizeof}(novoGestor->nome), stdin);\par
+00482   novoGestor->nome[strcspn(novoGestor->nome, {\cf22 "\\n"})] = {\cf23 '\\0'}; {\cf20 // remove o caractere de nova linha}\par
+00483 \par
+00484   printf({\cf22 "Insira o novo email do gestor: "});\par
+00485   fgets(novoGestor->email, {\cf17 sizeof}(novoGestor->email), stdin);\par
+00486   novoGestor->email[strcspn(novoGestor->email, {\cf22 "\\n"})] = {\cf23 '\\0'}; {\cf20 // remove o caractere de nova linha}\par
+00487 \par
+00488   {\cf20 // Copia os novos dados para a estrutura original}\par
+00489   strcpy(gestor->nome_utilizador, novoGestor->nome_utilizador);\par
+00490   strcpy(gestor->password, novoGestor->password);\par
+00491   strcpy(gestor->nome, novoGestor->nome);\par
+00492   strcpy(gestor->email, novoGestor->email);\par
+00493 \par
+00494   {\cf20 // Libera a mem\'F3ria alocada para a nova estrutura}\par
+00495   free(novoGestor);\par
+00496 \par
+00497   {\cf20 // Exibe mensagem confirmando que os dados foram alterados}\par
+00498   printf({\cf22 "Dados do gestor atualizados com sucesso.\\n"});\par
+00499 \}\par
+00500 \par
+00501 \par
+00502 \par
+00503 Cliente* lerClientes()\par
+00504 \{FILE* fp;\par
+00505 {\cf18 char} nome_utilizador[50], password[50], nome[50], email[50], endereco[50];\par
+00506  Cliente* aux=NULL;\par
+00507  fp = fopen({\cf22 "clientes.txt"},{\cf22 "r"});\par
+00508  {\cf19 if} (fp!=NULL)\par
+00509  \{{\cf19 while} (!feof(fp))\par
+00510   \{\par
+00511   fscanf(fp,{\cf22 "Nome de utilizador: %s\\n"},nome_utilizador);\par
+00512   fscanf(fp,{\cf22 "Password: %s\\n"},password);\par
+00513   fscanf(fp,{\cf22 "Nome: %s\\n"}, nome);\par
+00514   fscanf(fp,{\cf22 "Email: %s\\n"},email);\par
+00515   fscanf(fp,{\cf22 "Endereco: %s\\n\\n"},endereco);\par
+00516     aux = inserirCliente(aux, nome_utilizador, password, nome, email,endereco);\par
+00517   \}\par
+00518   fclose(fp);\par
+00519  \}\par
+00520  {\cf19 return}(aux);\par
+00521 \}\par
+00522 \par
+00523 Meio* lerMeios()\par
+00524 \{FILE* fp;\par
+00525 {\cf18 char} nome_meio[50], geolocalizacao[50];\par
+00526 {\cf18 int} autonomia,preco,id;\par
+00527  Meio* aux=NULL;\par
+00528  fp = fopen({\cf22 "meios.txt"},{\cf22 "r"});\par
+00529  {\cf19 if} (fp!=NULL)\par
+00530  \{{\cf19 while} (!feof(fp))\par
+00531   \{\par
+00532             fscanf(fp,{\cf22 "ID: %d\\n"},&{\cf18 id});\par
+00533             fscanf(fp,{\cf22 "Nome do meio: %s\\n"},nome_meio);\par
+00534             fscanf(fp,{\cf22 "Preco do meio por hora: %d\\n"},&preco);\par
+00535             fscanf(fp,{\cf22 "Autonomia: %d\\n"},&autonomia);\par
+00536             fscanf(fp,{\cf22 "Geolocalizacao: %s\\n\\n"},geolocalizacao);\par
+00537     aux = inserirMeio(aux, {\cf18 id}, nome_meio, preco, autonomia, geolocalizacao);\par
+00538   \}\par
+00539   fclose(fp);\par
+00540  \}\par
+00541  {\cf19 return}(aux);\par
+00542 \}\par
+00543 \par
+00544 Gestor* lerGestores()\par
+00545 \{FILE* fp;\par
+00546 {\cf18 char} nome_utilizador[50], password[50], nome[50], email[50];\par
+00547  Gestor* aux=NULL;\par
+00548  fp = fopen({\cf22 "gestores.txt"},{\cf22 "r"});\par
+00549  {\cf19 if} (fp!=NULL)\par
+00550  \{{\cf19 while} (!feof(fp))\par
+00551   \{\par
+00552     fscanf(fp,{\cf22 "Nome de utilizador: %s\\n"},nome_utilizador);\par
+00553     fscanf(fp,{\cf22 "Password: %s\\n"},password);\par
+00554     fscanf(fp,{\cf22 "Nome: %s\\n"},nome);\par
+00555     fscanf(fp,{\cf22 "Email: %s\\n\\n"},email);\par
+00556     aux = inserirGestor(aux, nome_utilizador, password, nome,email);\par
+00557   \}\par
+00558   fclose(fp);\par
+00559  \}\par
+00560  {\cf19 return}(aux);\par
+00561 \}\par
+00562 \par
+00563 {\cf18 void} listarMeiosOrdem(Meio * inicio)\par
+00564 \{\par
+00565     {\cf20 // Ordena\'E7\'E3o da lista pelo campo autonomia usando o bubble sort}\par
+00566     {\cf18 int} trocou;\par
+00567     Meio *atual;\par
+00568     Meio *anterior = NULL;\par
+00569     Meio *prox = NULL;\par
+00570 \par
+00571     {\cf19 do} \{\par
+00572         trocou = 0;\par
+00573         atual = inicio;\par
+00574         {\cf19 while} (atual->seguinte != prox) \{\par
+00575             {\cf19 if} (atual->autonomia < atual->seguinte->autonomia) \{\par
+00576                 {\cf20 // Troca a posi\'E7\'E3o dos elementos}\par
+00577                 {\cf19 if} (anterior != NULL) \{\par
+00578                     anterior->seguinte = atual->seguinte;\par
+00579                 \} {\cf19 else} \{\par
+00580                     inicio = atual->seguinte;\par
+00581                 \}\par
+00582                 Meio *aux = atual->seguinte->seguinte;\par
+00583                 atual->seguinte->seguinte = atual;\par
+00584                 atual->seguinte = aux;\par
+00585                 trocou = 1;\par
+00586             \}\par
+00587             anterior = atual;\par
+00588             atual = atual->seguinte;\par
+00589         \}\par
+00590         prox = atual;\par
+00591     \} {\cf19 while} (trocou);\par
+00592 \par
+00593         printf({\cf22 "\\n"});\par
+00594         printf({\cf22 " ______________________________________________________________________________________________________\\n"});\par
+00595         printf({\cf22 "|   ID   |   Nome do Meio             |   Preco por hora  |   Autonomia   |   Geolocalizacao         |\\n"});\par
+00596         printf({\cf22 "|________|____________________________|___________________|_______________|__________________________|\\n"});\par
+00597     \par
+00598     {\cf20 // Impress\'E3o da lista ordenada}\par
+00599         {\cf19 while} (inicio != NULL) \{\par
+00600         printf({\cf22 "|   %-4d |   %-25s |   %-16d |   %-30d |    %-15s\\n"}, inicio->id, inicio->nome_meio, inicio->preco, inicio->autonomia, inicio->geolocalizacao);\par
+00601         inicio = inicio->seguinte;\par
+00602     \}\par
+00603     \par
+00604     printf({\cf22 "|________|____________________________|___________________|____________________________________|\\n"});\par
+00605     printf({\cf22 "\\n"});\par
+00606 \}\par
+00607 \par
+00608 {\cf18 void} alugarMeio(Meio* inicio, {\cf18 float}* saldo) \{\par
+00609     {\cf18 int} id;\par
+00610     {\cf18 char} nome_meio[50];\par
+00611     printf({\cf22 "Insira o nome do meio de mobilidade que deseja alugar: "});\par
+00612     scanf({\cf22 "%s"}, nome_meio);\par
+00613 \par
+00614     Meio* atual = inicio;\par
+00615     {\cf19 while} (atual != NULL) \{\par
+00616          {\cf19 if} (strcmp(atual->nome_meio, nome_meio) == 0) \{\par
+00617             {\cf19 if} (*saldo >= atual->preco) \{\par
+00618                 *saldo -= atual->preco;\par
+00619                 printf({\cf22 "Meio alugado com sucesso.\\n"});\par
+00620             \} {\cf19 else} \{\par
+00621                 printf({\cf22 "Saldo insuficiente para alugar o meio de mobilidade.\\n"});\par
+00622             \}\par
+00623             {\cf19 return};\par
+00624         \}\par
+00625         atual = atual->seguinte;\par
+00626     \}\par
+00627 \par
+00628     printf({\cf22 "Meio com o nome %s nao encontrado.\\n"}, nome_meio);\par
+00629 \}\par
+00630 \par
+00631 \par
+00632 {\cf18 void} atualizarListaMeio(Meio* inicio) \{\par
+00633     {\cf20 // Abre o arquivo para escrita}\par
+00634     FILE* fp = fopen({\cf22 "meios.txt"}, {\cf22 "w"});\par
+00635 \par
+00636     {\cf20 // Verifica se o arquivo foi aberto corretamente}\par
+00637     {\cf19 if} (fp == NULL) \{\par
+00638         printf({\cf22 "Erro ao abrir o arquivo.\\n"});\par
+00639         {\cf19 return};\par
+00640     \}\par
+00641 \par
+00642     {\cf20 // Percorre a lista e escreve cada meio no arquivo}\par
+00643     {\cf19 while} (inicio != NULL) \{\par
+00644             fprintf(fp,{\cf22 "ID: %d\\n"},inicio->id);\par
+00645             fprintf(fp, {\cf22 "Nome do meio: %s\\n"}, inicio->nome_meio);\par
+00646             fprintf(fp, {\cf22 "Preco do meio por hora: %d\\n"}, inicio->preco);\par
+00647             fprintf(fp, {\cf22 "Autonomia: %d\\n"}, inicio->autonomia);\par
+00648             fprintf(fp, {\cf22 "Geolocalizacao: %s\\n\\n"}, inicio->geolocalizacao);\par
+00649         inicio = inicio->seguinte;\par
+00650     \}\par
+00651 \par
+00652     {\cf20 // Fecha o arquivo}\par
+00653     fclose(fp);\par
+00654 \}\par
+00655 \par
+00656 {\cf18 void} verHistoricoAlugueres(Cliente* inicio) \{\par
+00657     Aluguel* aluguelAtual = inicio->historicoAlugueres;\par
+00658 \par
+00659     {\cf19 if} (aluguelAtual == NULL) \{\par
+00660         printf({\cf22 "Nenhum aluguel registado por este cliente.\\n"});\par
+00661         {\cf19 return};\par
+00662     \}\par
+00663 \par
+00664 \par
+00665 \par
+00666     {\cf19 while} (aluguelAtual != NULL) \{\par
+00667         printf({\cf22 "Meio de mobilidade: %s\\n"}, aluguelAtual->nome_meio);\par
+00668         printf({\cf22 "Valor pago: %d\\n\\n"}, aluguelAtual->valor_pago);\par
+00669 \par
+00670         aluguelAtual = aluguelAtual->proximo;\par
+00671     \}\par
+00672 \}\par
+00673 \par
+00674 \par
+00675 {\cf18 void} localizarMeioGeo(Meio* inicio, {\cf18 char} geolocalizacao[]) \{\par
+00676     {\cf18 int} encontrado = 0;\par
+00677 \par
+00678     {\cf19 while} (inicio != NULL) \{\par
+00679         {\cf19 if} (strcmp(inicio->geolocalizacao, geolocalizacao) == 0) \{\par
+00680             printf({\cf22 "\\n"});\par
+00681         printf({\cf22 " ______________________________________________________________________________________________________\\n"});\par
+00682         printf({\cf22 "|   ID   |   Nome do Meio             |   Preco por hora  |   Autonomia   |   Geolocalizacao         |\\n"});\par
+00683         printf({\cf22 "|________|____________________________|___________________|_______________|__________________________|\\n"});\par
+00684     \par
+00685     {\cf20 // Impress\'E3o da lista ordenada}\par
+00686 \par
+00687         printf({\cf22 "|   %-4d |   %-25s |   %-16d |   %-30d |    %-15s\\n"}, inicio->id, inicio->nome_meio, inicio->preco, inicio->autonomia, inicio->geolocalizacao);\par
+00688     \par
+00689     \par
+00690     printf({\cf22 "|________|____________________________|___________________|____________________________________|\\n"});\par
+00691     printf({\cf22 "\\n"});\par
+00692             encontrado = 1;\par
+00693         \}\par
+00694         inicio = inicio->seguinte;\par
+00695     \}\par
+00696 \par
+00697     {\cf19 if} (!encontrado) \{\par
+00698         printf({\cf22 "Nenhum meio encontrado na geolocalizacao: %s\\n"}, geolocalizacao);\par
+00699     \}\par
+00700 \}\par
+00701 \par
+00702 {\cf18 void} listarMeiosPorGeolocalizacao(Meio* inicio) \{\par
+00703     {\cf18 char} geolocalizacao[50];\par
+00704     \par
+00705     printf({\cf22 "Digite a geolocalizacao: "});\par
+00706     scanf({\cf22 "%s"}, geolocalizacao);\par
+00707     \par
+00708     printf({\cf22 "Meios de mobilidade na geolocalizacao %s:\\n"}, geolocalizacao);\par
+00709     localizarMeioGeo(inicio, geolocalizacao);\par
+00710 \}\par
+00711 \par
+00712 {\cf18 void} atualizarListaCliente(Cliente* inicio) \{\par
+00713     {\cf20 // Abre o arquivo para escrita}\par
+00714     FILE* fp = fopen({\cf22 "clientes.txt"}, {\cf22 "w"});\par
+00715 \par
+00716     {\cf20 // Verifica se o arquivo foi aberto corretamente}\par
+00717     {\cf19 if} (fp == NULL) \{\par
+00718         printf({\cf22 "Erro ao abrir o arquivo.\\n"});\par
+00719         {\cf19 return};\par
+00720     \}\par
+00721 \par
+00722     {\cf20 // Percorre a lista e escreve cada meio no arquivo}\par
+00723     {\cf19 while} (inicio != NULL) \{\par
+00724                               fprintf(fp,{\cf22 "Nome de utilizador: %s\\n"},inicio->nome_utilizador);\par
+00725                               fprintf(fp,{\cf22 "Password: %s\\n"},inicio->password);\par
+00726                               fprintf(fp,{\cf22 "Nome: %s\\n"}, inicio->nome);\par
+00727                               fprintf(fp,{\cf22 "Email: %s\\n"},inicio->email);\par
+00728                               fprintf(fp,{\cf22 "Endereco: %s\\n\\n"},inicio->endereco);\par
+00729         inicio = inicio->seguinte;\par
+00730     \}\par
+00731 \par
+00732     {\cf20 // Fecha o arquivo}\par
+00733     fclose(fp);\par
+00734 \}\par
+00735 \par
+00736 {\cf18 void} atualizarListaGestor(Gestor* inicio) \{\par
+00737     {\cf20 // Abre o arquivo para escrita}\par
+00738     FILE* fp = fopen({\cf22 "gestores.txt"}, {\cf22 "w"});\par
+00739 \par
+00740     {\cf20 // Verifica se o arquivo foi aberto corretamente}\par
+00741     {\cf19 if} (fp == NULL) \{\par
+00742         printf({\cf22 "Erro ao abrir o arquivo.\\n"});\par
+00743         {\cf19 return};\par
+00744     \}\par
+00745 \par
+00746     {\cf20 // Percorre a lista e escreve cada meio no arquivo}\par
+00747     {\cf19 while} (inicio != NULL) \{\par
+00748                               fprintf(fp,{\cf22 "Nome de utilizador: %s\\n"},inicio->nome_utilizador);\par
+00749                               fprintf(fp,{\cf22 "Password: %s\\n"},inicio->password);\par
+00750                               fprintf(fp,{\cf22 "Nome: %s\\n"}, inicio->nome);\par
+00751                               fprintf(fp,{\cf22 "Email: %s\\n"},inicio->email);\par
+00752         inicio = inicio->seguinte;\par
+00753     \}\par
+00754 \par
+00755     {\cf20 // Fecha o arquivo}\par
+00756     fclose(fp);\par
+00757 \}\par
+00758 \par
+00759 {\cf18 int} criarVertice(Grafo *g, {\cf18 char} novoId[])\par
+00760 \{Grafo novo = malloc({\cf17 sizeof}({\cf17 struct} registo1));\par
+00761  {\cf19 if} (novo!=NULL)\par
+00762  \{strcpy(novo->vertice,novoId);\par
+00763   novo->meios = NULL;\par
+00764   novo->seguinte = *g;\par
+00765   *g = novo;\par
+00766   {\cf19 return}(1);\par
+00767  \}\par
+00768  {\cf19 else} {\cf19 return}(0);\par
+00769 \}\par
+00770 \par
+00771 {\cf20 // Devolve 1 se o vertice existe no grafo ou 0 caso contr\'E1rio}\par
+00772 {\cf18 int} existeVertice(Grafo g, {\cf18 char} vertice[])\par
+00773 \{{\cf19 while} (g!=NULL)\par
+00774  \{{\cf19 if} (strcmp(g->vertice,vertice)==0) {\cf19 return}(1);\par
+00775   {\cf19 else} g=g->seguinte;\par
+00776  \}\par
+00777  {\cf19 return}(0);\par
+00778 \}\par
+00779 \par
+00780 {\cf20 // Criar uma nova aresta}\par
+00781 {\cf20 // Devolve 1 em caso de sucesso ou 0 caso contr\'E1rio}\par
+00782 {\cf18 int} criarAresta(Grafo g, {\cf18 char} vOrigem[], {\cf18 char} vDestino[], {\cf18 float} peso)\par
+00783 \{Adjacente novo;\par
+00784  {\cf19 if} (existeVertice(g,vOrigem) && existeVertice(g,vDestino))\par
+00785  \{\par
+00786   {\cf19 while}(strcmp(g->vertice,vOrigem)!=0) g=g->seguinte;\par
+00787   novo = malloc({\cf17 sizeof}({\cf17 struct} registo1));\par
+00788   {\cf19 if} (novo!=NULL)\par
+00789     \{strcpy(novo->vertice,vDestino);\par
+00790      novo->peso = peso;\par
+00791      novo->seguinte=g->adjacentes;\par
+00792      g->adjacentes=novo;\par
+00793      {\cf19 return}(1);\par
+00794     \}\par
+00795   {\cf19 else} {\cf19 return}(0);\par
+00796  \}\par
+00797  {\cf19 else} {\cf19 return}(0);\par
+00798 \}\par
+00799 \par
+00800 {\cf20 // Listar os v\'E9rtices adjacentes }\par
+00801 {\cf18 void} listarAdjacentes(Grafo g, {\cf18 char} vertice[])\par
+00802 \{Adjacente aux;\par
+00803 {\cf19 while} (strcmp(g->vertice,vertice)!=0) g=g->seguinte;\par
+00804   aux = g->adjacentes;\par
+00805   {\cf19 while} (aux!=NULL) \par
+00806   \{printf({\cf22 "Geolocalizacao proxima:%s \\nDistancia:%.2f metros\\n"}, aux->vertice, aux->peso);\par
+00807    aux=aux->seguinte;\par
+00808   \}\par
+00809  \par
+00810 \}\par
+00811 \par
+00812 {\cf20 // Inserir meio de transporte na localiza\'E7\'E3o com geoc\'F3digo passado por par\'E2metro}\par
+00813 {\cf20 // Devolve 1 em caso de sucesso ou 0 caso contr\'E1rio}\par
+00814 {\cf18 int} inserirMeioG(Grafo g, {\cf18 char} geolocalizacao[], {\cf18 int} {\cf18 id})\par
+00815 \{\par
+00816  {\cf19 while} ((g!=NULL)&&(strcmp(g->vertice,geolocalizacao)!=0))\par
+00817      g=g->seguinte;\par
+00818  {\cf19 if} (g==NULL) {\cf19 return}(0);\par
+00819  {\cf19 else} \{Meios novo = malloc({\cf17 sizeof}({\cf17 struct} registo3));\par
+00820        novo->id=id;\par
+00821        novo->seguinte = g->meios;\par
+00822        g->meios = novo;\par
+00823        {\cf19 return}(1);    \par
+00824       \}\par
+00825 \}\par
+00826 \par
+00827 {\cf18 int} inserirClienteG(Grafo g, {\cf18 char} geolocalizacao[], {\cf18 int} idc)\par
+00828 \{\par
+00829  {\cf19 while} ((g!=NULL)&&(strcmp(g->vertice,geolocalizacao)!=0))\par
+00830      g=g->seguinte;\par
+00831  {\cf19 if} (g==NULL) {\cf19 return}(0);\par
+00832  {\cf19 else} \{Clientes novo = malloc({\cf17 sizeof}({\cf17 struct} registo4));\par
+00833        novo->idc=idc;\par
+00834        novo->seguinte = g->clientes;\par
+00835        g->clientes = novo;\par
+00836        {\cf19 return}(1);    \par
+00837       \}\par
+00838 \}\par
+00839 \par
+00840 \par
+00841 \par
+00842 {\cf20 // Listar os c\'F3digos dos meios de transporte presente numa determinada localiza\'E7\'E3o passada por par\'E2metro}\par
+00843 {\cf18 void} listarMeiosG(Grafo g, {\cf18 char} geolocalizacao[])\par
+00844 \{\par
+00845  {\cf19 while} ((g!=NULL)&&(strcmp(g->vertice,geolocalizacao)!=0))\par
+00846      g=g->seguinte;\par
+00847  {\cf19 if} (g!=NULL) \par
+00848  \{Meios aux=g->meios;\par
+00849   {\cf19 if} (aux==NULL) printf({\cf22 "Sem meios de transporte nesta localizacao.\\n"});\par
+00850   {\cf19 else} {\cf19 while}(aux!=NULL)\par
+00851   \{printf({\cf22 "ID do meio: %d\\n"}, aux->id);\par
+00852    aux = aux->seguinte;\par
+00853   \}\par
+00854  \}\par
+00855  {\cf19 else} printf({\cf22 "Geocodigo inexistente.\\n"});\par
+00856 \}\par
+00857 \par
+00858 {\cf18 void} listarClientesG(Grafo g, {\cf18 char} geolocalizacao[])\par
+00859 \{\par
+00860  {\cf19 while} ((g!=NULL)&&(strcmp(g->vertice,geolocalizacao)!=0))\par
+00861      g=g->seguinte;\par
+00862  {\cf19 if} (g!=NULL) \par
+00863  \{Clientes aux=g->clientes;\par
+00864   {\cf19 if} (aux==NULL) printf({\cf22 "Sem clientes nesta localizacao.\\n"});\par
+00865   {\cf19 else} {\cf19 while}(aux!=NULL)\par
+00866   \{printf({\cf22 "ID do cliente: %d\\n"}, aux->idc);\par
+00867    aux = aux->seguinte;\par
+00868   \}\par
+00869  \}\par
+00870  {\cf19 else} printf({\cf22 "Geocodigo inexistente.\\n"});\par
+00871 \par
+00872  \par
+00873 \}\par
+00874 \par
+00875 {\cf18 void} guardarGrafo(Grafo g, {\cf17 const} {\cf18 char}* dados)\par
+00876 \{\par
+00877     FILE* fp = fopen(dados, {\cf22 "w"});\par
+00878     {\cf19 if} (fp == NULL)\par
+00879     \{\par
+00880         printf({\cf22 "Erro ao abrir o arquivo.\\n"});\par
+00881         {\cf19 return};\par
+00882     \}\par
+00883 \par
+00884     {\cf19 while} (g != NULL)\par
+00885     \{\par
+00886         fprintf(fp, {\cf22 "Vertice: %s\\n"}, g->vertice);\par
+00887         \par
+00888         {\cf20 // Escrever meios de transporte}\par
+00889         Meios meios = g->meios;\par
+00890         fprintf(fp, {\cf22 "Meios de transporte: "});\par
+00891         {\cf19 while} (meios != NULL)\par
+00892         \{\par
+00893             fprintf(fp, {\cf22 "%d "}, meios->id);\par
+00894             meios = meios->seguinte;\par
+00895         \}\par
+00896         fprintf(fp, {\cf22 "\\n"});\par
+00897 \par
+00898         {\cf20 // Escrever clientes}\par
+00899         Clientes clientes = g->clientes;\par
+00900         fprintf(fp, {\cf22 "Clientes: "});\par
+00901         {\cf19 while} (clientes != NULL)\par
+00902         \{\par
+00903             fprintf(fp, {\cf22 "%d "}, clientes->idc);\par
+00904             clientes = clientes->seguinte;\par
+00905         \}\par
+00906         fprintf(fp, {\cf22 "\\n"});\par
+00907 \par
+00908         fprintf(fp, {\cf22 "\\n"});\par
+00909         g = g->seguinte;\par
+00910     \}\par
+00911 \par
+00912     fclose(fp);\par
+00913 \}\par
+00914 \par
+00915 \par
+00916 \par
+00917 \par
+00918 \par
+00919 \par
+00920 \par
+00921 \par
+00922 \par
+00923 \par
+00924 \par
+00925 \par
+00926 \par
+00927 \par
+00928 \par
+00929 \par
+00930 \par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+registos.h File Reference\par \pard\plain 
+{\tc\tcl2 \v registos.h}
+{\xe \v registos.h}
+{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <stdio.h>}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Structures\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo_meio}\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo_cliente}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo_gestor}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo_aluguel}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo4}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo3}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo2}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b registo1}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TAM}\~ 50\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Typedefs\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b registo_meio} {\b Meio}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b registo_cliente} {\b Cliente}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b registo_gestor} {\b Gestor}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b registo_aluguel} {\b Aluguel}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b registo4} * {\b Clientes}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b registo3} * {\b Meios}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b registo2} * {\b Adjacente}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b registo1} * {\b Grafo}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Meio} * {\b inserirMeio} ({\b Meio} *inicio, int id, char nome_meio[], int preco, int autonomia, char geolocalizacao[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarMeios} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Meio} * {\b removerMeio} ({\b Meio} *inicio, int id)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b alugarMeio} ({\b Meio} *inicio, float *saldo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b guardarMeios} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b alterarDadosMeio} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Meio} * {\b lerMeios} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b guardarMeiosBin} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarMeiosOrdem} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b atualizarListaMeio} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b localizarMeioGeo} ({\b Meio} *inicio, char geolocalizacao[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarMeiosPorGeolocalizacao} ({\b Meio} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Cliente} * {\b inserirCliente} ({\b Cliente} *inicio, char nome_utilizador[], char password[], char nome[], char email[], char endereco[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b existeCliente} ({\b Cliente} *inicio, char nome_utilizador[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Cliente} * {\b removerCliente} ({\b Cliente} *inicio, char nome_utilizador[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b guardarClientes} ({\b Cliente} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b alterarDadosCliente} ({\b Cliente} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Cliente} * {\b lerClientes} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarClientes} ({\b Cliente} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b guardarClientesBin} ({\b Cliente} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b atualizarListaCliente} ({\b Cliente} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Gestor} * {\b inserirGestor} ({\b Gestor} *inicio, char nome_utilizador[], char password[], char nome[], char email[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b existeGestor} ({\b Gestor} *inicio, char nome_utilizador[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Gestor} * {\b removerGestor} ({\b Gestor} *inicio, char nome_utilizador[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b guardarGestores} ({\b Gestor} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b alterarDadosGestor} ({\b Gestor} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b carregarSaldo} (float *saldo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b verSaldo} (float saldo)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarGestores} ({\b Gestor} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b guardarGestoresBin} ({\b Gestor} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Gestor} * {\b lerGestores} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b atualizarListaGestor} ({\b Gestor} *inicio)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b verHistoricoAlugueres} ({\b Cliente} *cliente)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b criarVertice} ({\b Grafo} *g, char novoId[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b criarAresta} ({\b Grafo} g, char vOrigem[], char vDestino[], float peso)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b existe} ({\b Grafo} g, char vertice[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarAdjacentes} ({\b Grafo} g, char vertice[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b inserirMeioG} ({\b Grafo} g, char geolocalizacao[], int id)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarMeiosG} ({\b Grafo} g, char geolocalizacao[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b inserirClienteG} ({\b Grafo} g, char geolocalizacao[], int idc)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b listarClientesG} ({\b Grafo} g, char geolocalizacao[])\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b guardarGrafo} ({\b Grafo} g, const char *dados)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v TAM\:registos.h}
+{\xe \v registos.h\:TAM}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TAM\~ 50}}
+\par
+{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 78} of file {\b registos.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Typedef Documentation\par
+\pard\plain 
+{\xe \v Adjacente\:registos.h}
+{\xe \v registos.h\:Adjacente}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b registo2} * {\b Adjacente}}}
+\par
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Aluguel\:registos.h}
+{\xe \v registos.h\:Aluguel}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b registo_aluguel} {\b Aluguel}}}
+\par
+{\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Cliente\:registos.h}
+{\xe \v registos.h\:Cliente}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b registo_cliente} {\b Cliente}}}
+\par
+{\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Clientes\:registos.h}
+{\xe \v registos.h\:Clientes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b registo4} * {\b Clientes}}}
+\par
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Gestor\:registos.h}
+{\xe \v registos.h\:Gestor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b registo_gestor} {\b Gestor}}}
+\par
+{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Grafo\:registos.h}
+{\xe \v registos.h\:Grafo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b registo1} * {\b Grafo}}}
+\par
+{\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Meio\:registos.h}
+{\xe \v registos.h\:Meio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b registo_meio} {\b Meio}}}
+\par
+{\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v Meios\:registos.h}
+{\xe \v registos.h\:Meios}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b registo3} * {\b Meios}}}
+\par
+{\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v alterarDadosCliente\:registos.h}
+{\xe \v registos.h\:alterarDadosCliente}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void alterarDadosCliente ({\b Cliente} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 345} of file {\b funcoes.c}.}\par
+}
+{\xe \v alterarDadosGestor\:registos.h}
+{\xe \v registos.h\:alterarDadosGestor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void alterarDadosGestor ({\b Gestor} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 456} of file {\b funcoes.c}.}\par
+}
+{\xe \v alterarDadosMeio\:registos.h}
+{\xe \v registos.h\:alterarDadosMeio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void alterarDadosMeio ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 410} of file {\b funcoes.c}.}\par
+}
+{\xe \v alugarMeio\:registos.h}
+{\xe \v registos.h\:alugarMeio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void alugarMeio ({\b Meio} *  {\i inicio}, float *  {\i saldo})}}
+\par
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 608} of file {\b funcoes.c}.}\par
+}
+{\xe \v atualizarListaCliente\:registos.h}
+{\xe \v registos.h\:atualizarListaCliente}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void atualizarListaCliente ({\b Cliente} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 712} of file {\b funcoes.c}.}\par
+}
+{\xe \v atualizarListaGestor\:registos.h}
+{\xe \v registos.h\:atualizarListaGestor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void atualizarListaGestor ({\b Gestor} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 736} of file {\b funcoes.c}.}\par
+}
+{\xe \v atualizarListaMeio\:registos.h}
+{\xe \v registos.h\:atualizarListaMeio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void atualizarListaMeio ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 632} of file {\b funcoes.c}.}\par
+}
+{\xe \v carregarSaldo\:registos.h}
+{\xe \v registos.h\:carregarSaldo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void carregarSaldo (float *  {\i saldo})}}
+\par
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 191} of file {\b funcoes.c}.}\par
+}
+{\xe \v criarAresta\:registos.h}
+{\xe \v registos.h\:criarAresta}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int criarAresta ({\b Grafo}  {\i g}, char  {\i vOrigem}[], char  {\i vDestino}[], float  {\i peso})}}
+\par
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 782} of file {\b funcoes.c}.}\par
+}
+{\xe \v criarVertice\:registos.h}
+{\xe \v registos.h\:criarVertice}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int criarVertice ({\b Grafo} *  {\i g}, char  {\i novoId}[])}}
+\par
+{\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 759} of file {\b funcoes.c}.}\par
+}
+{\xe \v existe\:registos.h}
+{\xe \v registos.h\:existe}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int existe ({\b Grafo}  {\i g}, char  {\i vertice}[])}}
+\par
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v existeCliente\:registos.h}
+{\xe \v registos.h\:existeCliente}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int existeCliente ({\b Cliente} *  {\i inicio}, char  {\i nome_utilizador}[])}}
+\par
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v existeGestor\:registos.h}
+{\xe \v registos.h\:existeGestor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int existeGestor ({\b Gestor} *  {\i inicio}, char  {\i nome_utilizador}[])}}
+\par
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+}
+{\xe \v guardarClientes\:registos.h}
+{\xe \v registos.h\:guardarClientes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int guardarClientes ({\b Cliente} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 241} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarClientesBin\:registos.h}
+{\xe \v registos.h\:guardarClientesBin}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int guardarClientesBin ({\b Cliente} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 263} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarGestores\:registos.h}
+{\xe \v registos.h\:guardarGestores}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int guardarGestores ({\b Gestor} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 288} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarGestoresBin\:registos.h}
+{\xe \v registos.h\:guardarGestoresBin}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int guardarGestoresBin ({\b Gestor} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 309} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarGrafo\:registos.h}
+{\xe \v registos.h\:guardarGrafo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void guardarGrafo ({\b Grafo}  {\i g}, const char *  {\i dados})}}
+\par
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 875} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarMeios\:registos.h}
+{\xe \v registos.h\:guardarMeios}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int guardarMeios ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 199} of file {\b funcoes.c}.}\par
+}
+{\xe \v guardarMeiosBin\:registos.h}
+{\xe \v registos.h\:guardarMeiosBin}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int guardarMeiosBin ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 219} of file {\b funcoes.c}.}\par
+}
+{\xe \v inserirCliente\:registos.h}
+{\xe \v registos.h\:inserirCliente}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Cliente} * inserirCliente ({\b Cliente} *  {\i inicio}, char  {\i nome_utilizador}[], char  {\i password}[], char  {\i nome}[], char  {\i email}[], char  {\i endereco}[])}}
+\par
+{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 6} of file {\b funcoes.c}.}\par
+}
+{\xe \v inserirClienteG\:registos.h}
+{\xe \v registos.h\:inserirClienteG}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int inserirClienteG ({\b Grafo}  {\i g}, char  {\i geolocalizacao}[], int  {\i idc})}}
+\par
+{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 827} of file {\b funcoes.c}.}\par
+}
+{\xe \v inserirGestor\:registos.h}
+{\xe \v registos.h\:inserirGestor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Gestor} * inserirGestor ({\b Gestor} *  {\i inicio}, char  {\i nome_utilizador}[], char  {\i password}[], char  {\i nome}[], char  {\i email}[])}}
+\par
+{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 22} of file {\b funcoes.c}.}\par
+}
+{\xe \v inserirMeio\:registos.h}
+{\xe \v registos.h\:inserirMeio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Meio} * inserirMeio ({\b Meio} *  {\i inicio}, int  {\i id}, char  {\i nome_meio}[], int  {\i preco}, int  {\i autonomia}, char  {\i geolocalizacao}[])}}
+\par
+{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 40} of file {\b funcoes.c}.}\par
+}
+{\xe \v inserirMeioG\:registos.h}
+{\xe \v registos.h\:inserirMeioG}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int inserirMeioG ({\b Grafo}  {\i g}, char  {\i geolocalizacao}[], int  {\i id})}}
+\par
+{\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 814} of file {\b funcoes.c}.}\par
+}
+{\xe \v lerClientes\:registos.h}
+{\xe \v registos.h\:lerClientes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Cliente} * lerClientes ()}}
+\par
+{\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 503} of file {\b funcoes.c}.}\par
+}
+{\xe \v lerGestores\:registos.h}
+{\xe \v registos.h\:lerGestores}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Gestor} * lerGestores ()}}
+\par
+{\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 544} of file {\b funcoes.c}.}\par
+}
+{\xe \v lerMeios\:registos.h}
+{\xe \v registos.h\:lerMeios}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Meio} * lerMeios ()}}
+\par
+{\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 523} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarAdjacentes\:registos.h}
+{\xe \v registos.h\:listarAdjacentes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarAdjacentes ({\b Grafo}  {\i g}, char  {\i vertice}[])}}
+\par
+{\bkmkstart AAAAAAAADJ}
+{\bkmkend AAAAAAAADJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 801} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarClientes\:registos.h}
+{\xe \v registos.h\:listarClientes}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarClientes ({\b Cliente} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAADK}
+{\bkmkend AAAAAAAADK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 155} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarClientesG\:registos.h}
+{\xe \v registos.h\:listarClientesG}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarClientesG ({\b Grafo}  {\i g}, char  {\i geolocalizacao}[])}}
+\par
+{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 858} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarGestores\:registos.h}
+{\xe \v registos.h\:listarGestores}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarGestores ({\b Gestor} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAADM}
+{\bkmkend AAAAAAAADM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 171} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarMeios\:registos.h}
+{\xe \v registos.h\:listarMeios}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarMeios ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAADN}
+{\bkmkend AAAAAAAADN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 139} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarMeiosG\:registos.h}
+{\xe \v registos.h\:listarMeiosG}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarMeiosG ({\b Grafo}  {\i g}, char  {\i geolocalizacao}[])}}
+\par
+{\bkmkstart AAAAAAAADO}
+{\bkmkend AAAAAAAADO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 843} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarMeiosOrdem\:registos.h}
+{\xe \v registos.h\:listarMeiosOrdem}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarMeiosOrdem ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAADP}
+{\bkmkend AAAAAAAADP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 563} of file {\b funcoes.c}.}\par
+}
+{\xe \v listarMeiosPorGeolocalizacao\:registos.h}
+{\xe \v registos.h\:listarMeiosPorGeolocalizacao}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void listarMeiosPorGeolocalizacao ({\b Meio} *  {\i inicio})}}
+\par
+{\bkmkstart AAAAAAAADQ}
+{\bkmkend AAAAAAAADQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 702} of file {\b funcoes.c}.}\par
+}
+{\xe \v localizarMeioGeo\:registos.h}
+{\xe \v registos.h\:localizarMeioGeo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void localizarMeioGeo ({\b Meio} *  {\i inicio}, char  {\i geolocalizacao}[])}}
+\par
+{\bkmkstart AAAAAAAADR}
+{\bkmkend AAAAAAAADR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 675} of file {\b funcoes.c}.}\par
+}
+{\xe \v removerCliente\:registos.h}
+{\xe \v registos.h\:removerCliente}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Cliente} * removerCliente ({\b Cliente} *  {\i inicio}, char  {\i nome_utilizador}[])}}
+\par
+{\bkmkstart AAAAAAAADS}
+{\bkmkend AAAAAAAADS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 86} of file {\b funcoes.c}.}\par
+}
+{\xe \v removerGestor\:registos.h}
+{\xe \v registos.h\:removerGestor}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Gestor} * removerGestor ({\b Gestor} *  {\i inicio}, char  {\i nome_utilizador}[])}}
+\par
+{\bkmkstart AAAAAAAADT}
+{\bkmkend AAAAAAAADT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 114} of file {\b funcoes.c}.}\par
+}
+{\xe \v removerMeio\:registos.h}
+{\xe \v registos.h\:removerMeio}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b Meio} * removerMeio ({\b Meio} *  {\i inicio}, int  {\i id})}}
+\par
+{\bkmkstart AAAAAAAADU}
+{\bkmkend AAAAAAAADU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 60} of file {\b funcoes.c}.}\par
+}
+{\xe \v verHistoricoAlugueres\:registos.h}
+{\xe \v registos.h\:verHistoricoAlugueres}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void verHistoricoAlugueres ({\b Cliente} *  {\i cliente})}}
+\par
+{\bkmkstart AAAAAAAADV}
+{\bkmkend AAAAAAAADV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 656} of file {\b funcoes.c}.}\par
+}
+{\xe \v verSaldo\:registos.h}
+{\xe \v registos.h\:verSaldo}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void verSaldo (float  {\i saldo})}}
+\par
+{\bkmkstart AAAAAAAADW}
+{\bkmkend AAAAAAAADW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 187} of file {\b funcoes.c}.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+registos.h\par \pard\plain 
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+Go to the documentation of this file.{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf21 #include <stdio.h>}\par
+00002 \par
+00003 {\cf17 typedef} {\cf17 struct }registo_meio\par
+00004 \{\par
+00005  {\cf18 char} nome_meio[50],geolocalizacao[50];\par
+00006  {\cf18 int} preco, autonomia,id;\par
+00007  {\cf17 struct }registo_meio* seguinte;\par
+00008 \} Meio;\par
+00009 \par
+00010 \par
+00011 Meio* inserirMeio(Meio* inicio, {\cf18 int} {\cf18 id}, {\cf18 char} nome_meio[], {\cf18 int} preco, {\cf18 int} autonomia, {\cf18 char} geolocalizacao[]); {\cf20 // Inser\'E7\'E3o de um novo registo}\par
+00012 {\cf18 void} listarMeios(Meio* inicio); {\cf20 // listar na consola o conte\'FAdo da lista ligada}\par
+00013 Meio* removerMeio(Meio* inicio, {\cf18 int} {\cf18 id}); {\cf20 // Remover um meio a partir do seu c\'F3digo}\par
+00014 {\cf18 void} alugarMeio(Meio *inicio, {\cf18 float} *saldo); {\cf20 //aluga um meio de mobilidade el\'E9trica a partir da lista ligada.}\par
+00015 {\cf18 int} guardarMeios(Meio* inicio); {\cf20 //guarda os meios de mobilidade el\'E9trica em um arquivo.}\par
+00016 {\cf18 void} alterarDadosMeio(Meio *inicio); {\cf20 //altera os dados de um meio de mobilidade el\'E9trica na lista ligada.}\par
+00017 Meio* lerMeios(); {\cf20 //l\'EA os meios de mobilidade el\'E9trica a partir de um arquivo.}\par
+00018 {\cf18 void} listarMeios(Meio* inicio);\par
+00019 {\cf18 int} guardarMeiosBin(Meio* inicio);\par
+00020 {\cf18 void} listarMeiosOrdem(Meio * inicio);\par
+00021 {\cf18 void} atualizarListaMeio(Meio* inicio);\par
+00022 {\cf18 void} localizarMeioGeo(Meio* inicio, {\cf18 char} geolocalizacao[]);\par
+00023 {\cf18 void} listarMeiosPorGeolocalizacao(Meio* inicio);\par
+00024 \par
+00025 {\cf17 typedef} {\cf17 struct }registo_cliente \{\par
+00026     {\cf18 char} nome_utilizador[20];\par
+00027     {\cf18 char} password[20];\par
+00028     {\cf18 char} nome[50];\par
+00029     {\cf18 char} email[50];\par
+00030     {\cf18 char} endereco[100];\par
+00031     {\cf18 int} idade;\par
+00032     {\cf18 float} saldo;\par
+00033     {\cf17 struct }registo_cliente* seguinte;\par
+00034     {\cf17 struct }registo_aluguel* historicoAlugueres;\par
+00035     {\cf17 struct }No* localizacao;\par
+00036 \} Cliente;\par
+00037 \par
+00038 Cliente* inserirCliente(Cliente* inicio, {\cf18 char} nome_utilizador[], {\cf18 char} password[], {\cf18 char} nome[], {\cf18 char} email[], {\cf18 char} endereco[]); {\cf20 // Inser\'E7\'E3o de um novo registo}\par
+00039 {\cf18 int} existeCliente(Cliente* inicio, {\cf18 char} nome_utilizador[]); {\cf20 //determina se um cliente com um determinado nome de usu\'E1rio existe na lista ligada.}\par
+00040 Cliente* removerCliente(Cliente* inicio, {\cf18 char} nome_utilizador[]); {\cf20 //remove um cliente a partir do seu nome de usu\'E1rio.}\par
+00041 {\cf18 int} guardarClientes(Cliente* inicio); {\cf20 //guarda os clientes em um arquivo.}\par
+00042 {\cf18 void} alterarDadosCliente(Cliente* inicio); {\cf20 //altera os dados de um cliente na lista ligada.}\par
+00043 Cliente* lerClientes();\par
+00044 {\cf18 void} listarClientes(Cliente* inicio);\par
+00045 {\cf18 int} guardarClientesBin(Cliente* inicio);\par
+00046 {\cf18 void} atualizarListaCliente(Cliente* inicio);\par
+00047 \par
+00048 {\cf17 typedef} {\cf17 struct }registo_gestor\{\par
+00049     {\cf18 char} nome_utilizador[20];\par
+00050     {\cf18 char} password[20];\par
+00051     {\cf18 int} user_tipo; {\cf20 // 0 = cliente, 1 = administrador}\par
+00052     {\cf18 char} nome[20];\par
+00053     {\cf18 char} email[20];\par
+00054     {\cf17 struct }registo_gestor* seguinte;\par
+00055 \}Gestor;\par
+00056 \par
+00057 Gestor* inserirGestor(Gestor* inicio, {\cf18 char} nome_utilizador[], {\cf18 char} password[], {\cf18 char} nome[], {\cf18 char} email[]); {\cf20 //insere um novo gestor na lista ligada.}\par
+00058 {\cf18 int} existeGestor(Gestor* inicio, {\cf18 char} nome_utilizador[]); {\cf20 //determina se um gestor com um determinado nome de usu\'E1rio existe na lista ligada.}\par
+00059 Gestor* removerGestor(Gestor* inicio, {\cf18 char} nome_utilizador[]); {\cf20 //remove um gestor a partir do seu nome de usu\'E1rio.}\par
+00060 {\cf18 int} guardarGestores(Gestor* inicio); {\cf20 //guarda os gestores em um arquivo.}\par
+00061 {\cf18 void} alterarDadosGestor(Gestor *inicio); {\cf20 //que altera os dados de um gestor na lista ligada.}\par
+00062  \par
+00063 {\cf18 void} carregarSaldo({\cf18 float} *saldo); {\cf20 //carrega o saldo de uma conta de cliente.}\par
+00064 {\cf18 void} verSaldo({\cf18 float} saldo); {\cf20 //mostra o saldo de uma conta de cliente.}\par
+00065 {\cf18 void} listarGestores(Gestor* inicio);\par
+00066 {\cf18 int} guardarGestoresBin(Gestor* inicio);\par
+00067 Gestor* lerGestores();\par
+00068 {\cf18 void} atualizarListaGestor(Gestor* inicio);\par
+00069 \par
+00070 {\cf17 typedef} {\cf17 struct }registo_aluguel \{\par
+00071     {\cf18 char} nome_meio[50];\par
+00072     {\cf18 float} valor_pago;\par
+00073     {\cf17 struct }registo_aluguel* proximo;\par
+00074 \} Aluguel;\par
+00075 \par
+00076 {\cf18 void} verHistoricoAlugueres(Cliente* cliente);\par
+00077 \par
+00078 {\cf21 #define TAM 50}\par
+00079 \par
+00080 {\cf17 typedef} {\cf17 struct }registo4\par
+00081 \{\par
+00082   Cliente* cliente;\par
+00083   {\cf18 int} idc;\par
+00084   {\cf17 struct }registo4* seguinte;\par
+00085 \} * Clientes;\par
+00086 \par
+00087 \par
+00088 {\cf17 typedef} {\cf17 struct }registo3\par
+00089 \{\par
+00090   Meio* meio;\par
+00091   {\cf18 int} id;\par
+00092   {\cf18 char} nome_meio[50];\par
+00093   {\cf17 struct }registo3* seguinte;\par
+00094 \} * Meios;\par
+00095 \par
+00096 {\cf20 // Representa\'E7\'E3o de um grafo orientado e pesado}\par
+00097 {\cf17 typedef} {\cf17 struct }registo2\par
+00098 \{{\cf18 char} vertice[TAM]; {\cf20 // geoc\'F3digo what3words}\par
+00099  {\cf18 float} peso;\par
+00100  {\cf17 struct }registo2 * seguinte;\par
+00101 \} * Adjacente;\par
+00102 \par
+00103 {\cf17 typedef} {\cf17 struct }registo1\par
+00104 \{{\cf18 char} vertice[TAM]; {\cf20 // geoc\'F3digo what3words}\par
+00105  Adjacente adjacentes;\par
+00106  Meios meios;\par
+00107  Clientes clientes; {\cf20 // Lista ligada com os c\'F3digos dos meios de transporte existente}\par
+00108  {\cf17 struct }registo1 * seguinte;\par
+00109 \} * Grafo;\par
+00110 \par
+00111 \par
+00112 {\cf20 // Prot\'F3tipos}\par
+00113 \par
+00114 {\cf20 // Criar um novo v\'E9rtice}\par
+00115 {\cf20 // Devolve 1 em caso de sucesso ou 0 caso contr\'E1rio}\par
+00116 {\cf18 int} criarVertice(Grafo *g, {\cf18 char} novoId[]);\par
+00117 {\cf20 // Criar uma nova aresta}\par
+00118 {\cf20 // Devolve 1 em caso de sucesso ou 0 caso contr\'E1rio}\par
+00119 {\cf18 int} criarAresta(Grafo g, {\cf18 char} vOrigem[], {\cf18 char} vDestino[], {\cf18 float} peso);\par
+00120 {\cf18 int} existe(Grafo g, {\cf18 char} vertice[]);\par
+00121 {\cf18 void} listarAdjacentes(Grafo g, {\cf18 char} vertice[]);\par
+00122 {\cf20 // Inserir meio de transporte na localiza\'E7\'E3o com geoc\'F3digo passado por par\'E2metro}\par
+00123 {\cf18 int} inserirMeioG(Grafo g, {\cf18 char} geolocalizacao[], {\cf18 int} {\cf18 id});\par
+00124 {\cf20 // Listar os c\'F3digos dos meios de transporte presente numa determinada localiza\'E7\'E3o passada por par\'E2metro}\par
+00125 {\cf18 void} listarMeiosG(Grafo g, {\cf18 char} geolocalizacao[]);\par
+00126 {\cf18 int} inserirClienteG(Grafo g, {\cf18 char} geolocalizacao[], {\cf18 int} idc);\par
+00127 {\cf18 void} listarClientesG(Grafo g, {\cf18 char} geolocalizacao[]);\par
+00128 {\cf18 void} guardarGrafo(Grafo g, {\cf17 const} {\cf18 char}* dados);\par
+00129 \par
+00130 \par
+00131 \par
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}
